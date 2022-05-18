@@ -1,5 +1,5 @@
 parsers: # array
-  - url:  https://api.flowercloud.yt/sub?target=
+  - url:  https://api.flowercloud.yt/sub?target= # 订阅链接
     yaml:
       prepend-rules:
 
