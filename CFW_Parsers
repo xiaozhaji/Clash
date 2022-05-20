@@ -1,5 +1,5 @@
 parsers: # array
-  - url:  https://api.flowercloud.yt/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_Trojan&url=https%3A%2F%2Fflowercloud.xyz%2Fmodules%2Fservers%2FV2raySocks%2Fosubscribe.php%3Fsid%3D4456%26token%3DJ7tm2QODmZRl # 订阅链接
+  - url:  https://api.flowercloud.yt/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SSR&url=https%3A%2F%2Fflowercloud.xyz%2Fmodules%2Fservers%2FV2raySocks%2Fosubscribe.php%3Fsid%3D4456%26token%3DJ7tm2QODmZRl%26ssr%3D1 # 订阅链接
     yaml:
       prepend-rules:
 
