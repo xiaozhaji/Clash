@@ -22,15 +22,16 @@ parsers: # array
       - DOMAIN-SUFFIX,ipip.net,DIRECT
       - DOMAIN-SUFFIX,speed.neu6.edu.cn,DIRECT
       - DOMAIN-SUFFIX,test-ipv6.com,DIRECT
+      #微博
+      - DOMAIN-SUFFIX,weibo.cn,DIRECT
+      - DOMAIN-SUFFIX,weibo.com,DIRECT
+      - DOMAIN-SUFFIX,weibocdn.com,DIRECT
+      - DOMAIN-SUFFIX,sinaimg.cn,DIRECT
+      - DOMAIN-SUFFIX,sina.com.cn,DIRECT
+      - DOMAIN-SUFFIX,sinajs.cn,DIRECT
       #代理
       - DOMAIN-SUFFIX,windy.com,Proxies
       - DOMAIN-SUFFIX,weather.com,Proxies
-      - DOMAIN-SUFFIX,weibo.cn,Proxies
-      - DOMAIN-SUFFIX,weibo.com,Proxies
-      - DOMAIN-SUFFIX,weibocdn.com,Proxies
-      - DOMAIN-SUFFIX,sinaimg.cn,Proxies
-      - DOMAIN-SUFFIX,sina.com.cn,Proxies
-      - DOMAIN-SUFFIX,sinajs.cn,Proxies
       - DOMAIN-SUFFIX,api.themoviedb.org,Proxies
       - DOMAIN-SUFFIX,thetvdb.com,Proxies
       - DOMAIN-SUFFIX,assets.fanart.tv,Proxies
