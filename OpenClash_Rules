@@ -4,9 +4,6 @@
 - DOMAIN-KEYWORD,synology,DIRECT
 - DOMAIN-KEYWORD,quickconnect,DIRECT
 - DOMAIN-KEYWORD,speedtest,DIRECT
-- DOMAIN-SUFFIX,apple.com,Apple
-- DOMAIN-SUFFIX,icloud.com,Apple
-- DOMAIN, gateway.icloud.com,Apple
 - DOMAIN-SUFFIX,xiaozhaji.com,DIRECT
 - DOMAIN-SUFFIX,miwifi.com,DIRECT
 - DOMAIN-SUFFIX,dyndns.com,DIRECT
@@ -15,6 +12,11 @@
 - DOMAIN-SUFFIX,ipip.net,DIRECT
 - DOMAIN-SUFFIX,speed.neu6.edu.cn,DIRECT
 - DOMAIN-SUFFIX,test-ipv6.com,DIRECT
+#苹果
+- DOMAIN-SUFFIX,apple.com,Apple
+- DOMAIN-SUFFIX,icloud.com,Apple
+- DOMAIN, gateway.icloud.com,Apple
+- DOMAIN, captive.apple.com, Apple
 #微博
 - DOMAIN-SUFFIX,weibo.cn,DIRECT
 - DOMAIN-SUFFIX,weibo.com,DIRECT
