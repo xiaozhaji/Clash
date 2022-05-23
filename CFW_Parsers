@@ -32,6 +32,7 @@ parsers: # array
       - DOMAIN-SUFFIX,sina.com.cn,DIRECT
       - DOMAIN-SUFFIX,sinajs.cn,DIRECT
       #代理
+      - DOMAIN,mtalk.google.com,Proxies
       - DOMAIN-SUFFIX,windy.com,Proxies
       - DOMAIN-SUFFIX,weather.com,Proxies
       - DOMAIN-SUFFIX,api.themoviedb.org,Proxies
