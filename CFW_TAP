@@ -1,6 +1,6 @@
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   listen: :53
   enhanced-mode: fake-ip
   nameserver:
