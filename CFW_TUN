@@ -3,7 +3,11 @@ dns:
   ipv6: true
   enhanced-mode: fake-ip
   nameserver:
-  # 真实请求DNS，可多设置几个
+    # 真实请求DNS，可多设置几个
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://dns.rubyfish.cn/dns-query
+    - https://rubyfish.cn/dns-query
     - 223.5.5.5
     - 223.6.6.6
     - 119.29.29.29
