@@ -1,6 +1,6 @@
 dns:
   enable: true
-  ipv6: false
+  ipv6: true
   enhanced-mode: fake-ip
   nameserver:
   # 真实请求DNS，可多设置几个
