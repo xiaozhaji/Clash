@@ -11,6 +11,7 @@ parsers: # array
       - DOMAIN-KEYWORD,synology,DIRECT
       - DOMAIN-KEYWORD,quickconnect,DIRECT
       - DOMAIN-KEYWORD,speedtest,DIRECT
+      - DOMAIN-KEYWORD,ipv6,DIRECT
       - DOMAIN-SUFFIX,xiaozhaji.com,DIRECT
       - DOMAIN-SUFFIX,miwifi.com,DIRECT
       - DOMAIN-SUFFIX,dyndns.com,DIRECT
