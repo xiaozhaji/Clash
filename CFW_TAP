@@ -2,7 +2,7 @@ dns:
   enable: true
   ipv6: false
   listen: :53
-  enhanced-mode: fake-ip
+  enhanced-mode: redir-host
   nameserver:
     # 真实请求DNS，可多设置几个
     - https://dns.alidns.com/dns-query
@@ -12,14 +12,4 @@ dns:
     - 119.29.29.29
     - 119.28.28.28
     - 8.8.8.8
-  fake-ip-filter:
-    - dns.msftncsi.com
-    - www.msftncsi.com
-    - www.msftconnecttest.com
-    - time.windows.com
-    - time.nist.gov
-    - time.apple.com
-    - ntp.aliyun.com
-    - "xiaozhaji.com"
-    - "*.xiaozhaji.com"
 # interface-name: WLAN # 出口网卡名称
