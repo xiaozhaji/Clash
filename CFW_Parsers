@@ -46,7 +46,9 @@ parsers: # array
       - DOMAIN-SUFFIX,acompli.com,Proxies
       - DOMAIN-SUFFIX,acompli.net,Proxies
       - DOMAIN-SUFFIX,aka.ms,Proxies
-      - DOMAIN-SUFFIX,akadns.net,Proxies
+      - DOMAIN-SUFFIX,windows.com.akadns.net,Proxies
+      - DOMAIN-SUFFIX,microsoft.com.akadns.net,Proxies
+      - DOMAIN-SUFFIX,microsoft.com.nsatc.net,Proxies
       - DOMAIN-SUFFIX,aspnetcdn.com,Proxies
       - DOMAIN-SUFFIX,assets-yammer.com,Proxies
       - DOMAIN-SUFFIX,azure.cn,Proxies
