@@ -4,8 +4,8 @@ dns:
   listen: 0.0.0.0:53
   enhanced-mode: redir-host
   nameserver:
-    - https://223.6.6.6/dns-query
-    - https://dns.pub/dns-query
+    - 223.6.6.6
+    - 119.29.29.29
   fallback:
     - https://1.0.0.1/dns-query
     - https://public.dns.iij.jp/dns-query
