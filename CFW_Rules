@@ -1,5 +1,16 @@
+  - name: ADB
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+  - name: Weibo
+    type: select
+    proxies:
+      - DIRECT
+      - Proxies
 rules:
   #拒绝
+  - PROCESS-NAME,CorelDRW.exe,REJECT
   - DOMAIN-KEYWORD,corel,REJECT
   #直连
   - PROCESS-NAME,Speedtest.exe,DIRECT
@@ -12,26 +23,42 @@ rules:
   - DOMAIN-SUFFIX,time.is,DIRECT
   - DOMAIN-SUFFIX,ipip.net,DIRECT
   #微博
-  - DOMAIN-SUFFIX,weibo.cn,DIRECT
-  - DOMAIN-SUFFIX,weibo.com,DIRECT
-  - DOMAIN-SUFFIX,weibocdn.com,DIRECT
-  - DOMAIN-SUFFIX,sinaimg.cn,DIRECT
-  - DOMAIN-SUFFIX,sina.com.cn,DIRECT
-  - DOMAIN-SUFFIX,sinajs.cn,DIRECT
-  #Loyalsoldier规则集
+  - DOMAIN-SUFFIX,weibo.cn,Weibo
+  - DOMAIN-SUFFIX,weibo.com,Weibo
+  - DOMAIN-SUFFIX,weibocdn.com,Weibo
+  - DOMAIN-SUFFIX,sinaimg.cn,Weibo
+  - DOMAIN-SUFFIX,sina.com.cn,Weibo
+  - DOMAIN-SUFFIX,sinajs.cn,Weibo
+  
+  #Loyalsoldier白名单模式
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - RULE-SET,private,DIRECT
   - RULE-SET,reject,REJECT
-  - RULE-SET,proxy,PROXY
+  - RULE-SET,icloud,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,google,DIRECT
+  - RULE-SET,proxy,Proxies
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
-  - RULE-SET,telegramcidr,PROXY
+  - RULE-SET,telegramcidr,Proxies
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,PROXY
+  - MATCH,Proxies
+
+  #Loyalsoldier黑名单模式
+  #- RULE-SET,applications,DIRECT
+  #- DOMAIN,clash.razord.top,DIRECT
+  #- DOMAIN,yacd.haishan.me,DIRECT
+  #- RULE-SET,private,DIRECT
+  #- RULE-SET,reject,ADB
+  #- RULE-SET,tld-not-cn,Proxies
+  #- RULE-SET,gfw,Proxies
+  #- RULE-SET,greatfire,Proxies
+  #- RULE-SET,telegramcidr,Proxies
+  #- MATCH,DIRECT
 proxy-providers: {}
 rule-providers:
   reject:
