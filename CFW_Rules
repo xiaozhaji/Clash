@@ -2,6 +2,12 @@ rules:
   #拒绝
   - DOMAIN-KEYWORD,corel,REJECT
   #直连
+  - PROCESS-NAME,Speedtest.exe,DIRECT
+  - PROCESS-NAME,TeamViewer.exe,DIRECT
+  - PROCESS-NAME,RaiDrive.Service.x64,DIRECT
+  - PROCESS-NAME,cloud-drive-daemon.exe,DIRECT
+  - PROCESS-NAME,cloud-drive-connect.exe,DIRECT
+  - PROCESS-NAME,cloud-drive-ui.exe,DIRECT
   - DOMAIN-KEYWORD,synology,DIRECT
   - DOMAIN-KEYWORD,speedtest,DIRECT
   - DOMAIN-SUFFIX,dyndns.com,DIRECT
