@@ -7,13 +7,6 @@
 - DOMAIN-SUFFIX,ipify.org,DIRECT
 - DOMAIN-SUFFIX,time.is,DIRECT
 - DOMAIN-SUFFIX,ipip.net,DIRECT
-#微博
-- DOMAIN-SUFFIX,weibo.cn,DIRECT
-- DOMAIN-SUFFIX,weibo.com,DIRECT
-- DOMAIN-SUFFIX,weibocdn.com,DIRECT
-- DOMAIN-SUFFIX,sinaimg.cn,DIRECT
-- DOMAIN-SUFFIX,sina.com.cn,DIRECT
-- DOMAIN-SUFFIX,sinajs.cn,DIRECT
 #代理
 - DOMAIN-SUFFIX,api.themoviedb.org,Proxies
 - DOMAIN-SUFFIX,thetvdb.com,Proxies
