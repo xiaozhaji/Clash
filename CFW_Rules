@@ -1,5 +1,5 @@
 #使用前先删除原始配置中的无规则策略组
-- name: ADB
+  - name: ADB
     type: select
     proxies:
       - DIRECT
