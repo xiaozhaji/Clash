@@ -35,31 +35,30 @@ rules:
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,reject,REJECT
-  - RULE-SET,icloud,DIRECT
-  - RULE-SET,apple,DIRECT
-  - RULE-SET,google,DIRECT
-  - RULE-SET,proxy,Proxies
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,lancidr,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,telegramcidr,Proxies
+  #- RULE-SET,private,DIRECT
+  #- RULE-SET,reject,REJECT
+  #- RULE-SET,icloud,DIRECT
+  #- RULE-SET,apple,DIRECT
+  #- RULE-SET,google,DIRECT
+  #- RULE-SET,proxy,Proxies
+  #- RULE-SET,direct,DIRECT
+  #- RULE-SET,lancidr,DIRECT
+  #- RULE-SET,cncidr,DIRECT
+  #- RULE-SET,telegramcidr,Proxies
   - GEOIP,LAN,DIRECT
+  - GEOIP,PRIVATE,DIRECT
+  - GEOIP,FACEBOOK,Proxies
+  - GEOIP,TWITTER,Proxies
+  - GEOIP,TELEGRAM,Proxies
+  - GEOIP,NETFLIX,Proxies
+  - GEOIP,US,US
+  - GEOIP,JP,JP
+  - GEOIP,HK,HK
+  - GEOIP,TW,TW
+  - GEOIP,SG,SG
   - GEOIP,CN,DIRECT
   - MATCH,Proxies
 
-  #Loyalsoldier黑名单模式
-  #- RULE-SET,applications,DIRECT
-  #- DOMAIN,clash.razord.top,DIRECT
-  #- DOMAIN,yacd.haishan.me,DIRECT
-  #- RULE-SET,private,DIRECT
-  #- RULE-SET,reject,ADB
-  #- RULE-SET,tld-not-cn,Proxies
-  #- RULE-SET,gfw,Proxies
-  #- RULE-SET,greatfire,Proxies
-  #- RULE-SET,telegramcidr,Proxies
-  #- MATCH,DIRECT
 proxy-providers: {}
 rule-providers:
   reject:
