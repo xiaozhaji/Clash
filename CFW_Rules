@@ -1,4 +1,4 @@
-#使用前先删除原始配置中的无规则策略组
+#使用前先删除原始配置中的无规则策略组并修改主策略组名称为Proxies
   - name: ADB
     type: select
     proxies:
