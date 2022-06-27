@@ -53,13 +53,13 @@ rules:
   - GEOIP,PRIVATE,DIRECT
   - GEOIP,FACEBOOK,Proxies
   - GEOIP,TWITTER,Proxies
-  - GEOIP,TELEGRAM,SG
+  - GEOIP,TELEGRAM,Proxies
   - GEOIP,NETFLIX,Proxies
-  - GEOIP,US,US
-  - GEOIP,JP,JP
-  - GEOIP,HK,HK
-  - GEOIP,TW,TW
-  - GEOIP,SG,SG
+  - GEOIP,US,Proxies
+  - GEOIP,JP,Proxies
+  - GEOIP,HK,Proxies
+  - GEOIP,TW,Proxies
+  - GEOIP,SG,Proxies
   - GEOIP,CN,DIRECT
   - MATCH,Proxies
 
