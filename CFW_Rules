@@ -38,6 +38,9 @@ rules:
   - DOMAIN-KEYWORD,ooklaserver.net,DIRECT
   - DOMAIN-SUFFIX,time.is,DIRECT
   - DOMAIN-SUFFIX,edu.cn,DIRECT
+  - DOMAIN,time.windows.com,DIRECT 
+  - DOMAIN,time.apple.com,DIRECT 
+  - DOMAIN,xiaozhaji.com,DIRECT
   #代理
   - PROCESS-NAME,OneDrive.exe,Proxies
   #微博
