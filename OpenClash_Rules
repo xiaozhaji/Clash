@@ -3,10 +3,9 @@
 #直连
 - DOMAIN-KEYWORD,synology,DIRECT
 - DOMAIN-KEYWORD,speedtest,DIRECT
-- DOMAIN-SUFFIX,dyndns.com,DIRECT
-- DOMAIN-SUFFIX,ipify.org,DIRECT
+- DOMAIN-SUFFIX,ooklaserver.net,DIRECT
 - DOMAIN-SUFFIX,time.is,DIRECT
-- DOMAIN-SUFFIX,ipip.net,DIRECT
+- DOMAIN-SUFFIX,edu.cn,DIRECT
 #代理
 - DOMAIN-SUFFIX,api.themoviedb.org,Proxies
 - DOMAIN-SUFFIX,thetvdb.com,Proxies
