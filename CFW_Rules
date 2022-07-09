@@ -34,13 +34,9 @@ rules:
   - PROCESS-NAME,Speedtest.exe,DIRECT
   - PROCESS-NAME,TeamViewer.exe,DIRECT
   - PROCESS-NAME,TeamViewer_Service.exe,DIRECT
-  - DOMAIN-KEYWORD,synology,DIRECT
   - DOMAIN-KEYWORD,speedtest,DIRECT
   - DOMAIN-KEYWORD,ooklaserver.net,DIRECT
-  - DOMAIN-SUFFIX,dyndns.com,DIRECT
-  - DOMAIN-SUFFIX,ipify.org,DIRECT
   - DOMAIN-SUFFIX,time.is,DIRECT
-  - DOMAIN-SUFFIX,ipip.net,DIRECT
   - DOMAIN-SUFFIX,edu.cn,DIRECT
   #代理
   - PROCESS-NAME,OneDrive.exe,Proxies
