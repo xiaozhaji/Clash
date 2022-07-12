@@ -6,8 +6,9 @@
 - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
 - DOMAIN-SUFFIX,time.is,DIRECT
 - DOMAIN-SUFFIX,edu.cn,DIRECT
-- DOMAIN,time.windows.com,DIRECT 
-- DOMAIN,time.apple.com,DIRECT 
+- DOMAIN,time.windows.com,DIRECT
+- DOMAIN,time.apple.com,DIRECT
+- DOMAIN-SUFFIX,pool.ntp.org,DIRECT
 - DOMAIN,xiaozhaji.com,DIRECT
 #代理
 - DOMAIN-SUFFIX,api.themoviedb.org,Proxies
