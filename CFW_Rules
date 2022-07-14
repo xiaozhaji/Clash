@@ -44,6 +44,7 @@ rules:
   - DOMAIN,xiaozhaji.com,DIRECT
   #代理
   - PROCESS-NAME,OneDrive.exe,Proxies
+  - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
   #微博
   - DOMAIN-SUFFIX,weibo.cn,Weibo
   - DOMAIN-SUFFIX,weibo.com,Weibo
