@@ -1,17 +1,8 @@
 #使用前先删除原始配置中的无规则策略组并修改主策略组名称为Proxies
-  #nameserver:
-    #- 223.6.6.6
-    #- 119.29.29.29
     #type: url-test
     #url: http://www.gstatic.com/generate_204
     #interval: 600
     
-  - name: ADB
-    type: select
-    proxies:
-      - DIRECT
-      - Proxies
-      - REJECT
   - name: Weibo
     type: select
     proxies:
@@ -34,14 +25,15 @@ rules:
   - PROCESS-NAME,Speedtest.exe,DIRECT
   - PROCESS-NAME,TeamViewer.exe,DIRECT
   - PROCESS-NAME,TeamViewer_Service.exe,DIRECT
+  - DOMAIN-KEYWORD,synology,DIRECT
   - DOMAIN-KEYWORD,speedtest,DIRECT
-  - DOMAIN-KEYWORD,ooklaserver.net,DIRECT
+  - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
   - DOMAIN-SUFFIX,time.is,DIRECT
   - DOMAIN-SUFFIX,edu.cn,DIRECT
   - DOMAIN,time.windows.com,DIRECT
   - DOMAIN,time.apple.com,DIRECT
-  - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
   - DOMAIN,xiaozhaji.com,DIRECT
+  - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
   #代理
   - PROCESS-NAME,OneDrive.exe,Proxies
   - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
@@ -80,11 +72,11 @@ rules:
   - GEOIP,TWITTER,Proxies
   - GEOIP,TELEGRAM,Telegram
   - GEOIP,NETFLIX,Proxies
-  - GEOIP,US,Proxies
-  - GEOIP,JP,Proxies
-  - GEOIP,HK,Proxies
-  - GEOIP,TW,Proxies
-  - GEOIP,SG,Proxies
+  - GEOIP,US,US
+  - GEOIP,JP,JP
+  - GEOIP,HK,HK
+  - GEOIP,TW,TW
+  - GEOIP,SG,SG
   - GEOIP,CN,DIRECT
   - MATCH,Proxies
 
