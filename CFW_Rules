@@ -1,6 +1,6 @@
 #使用前先删除原始配置中的无规则策略组并修改主策略组名称为Proxies
     #type: url-test
-    #url: http://www.gstatic.com/generate_204
+    #url: http://www.qualcomm.cn/generate_204
     #interval: 600
     
   - name: Weibo
