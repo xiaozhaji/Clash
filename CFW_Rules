@@ -46,12 +46,29 @@ rules:
   - PROCESS-NAME,OneDrive.exe,Proxies
   - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
   #微博
-  - DOMAIN-SUFFIX,weibo.cn,Weibo
+  # > Weibo
+  - DOMAIN-KEYWORD,weibo,Weibo
   - DOMAIN-SUFFIX,weibo.com,Weibo
-  - DOMAIN-SUFFIX,weibocdn.com,Weibo
-  - DOMAIN-SUFFIX,sinaimg.cn,Weibo
+  - DOMAIN-SUFFIX,weibo.cn,Weibo
   - DOMAIN-SUFFIX,sina.com.cn,Weibo
+  # > Weibo Api
+  - DOMAIN-SUFFIX,api.weibo.cn,Weibo
+  - DOMAIN-SUFFIX,api.weibo.com,Weibo
+  - DOMAIN-SUFFIX,dns.weibo.cn,Weibo
+  # > Weibo CDN
+  - DOMAIN-SUFFIX,weibocdn.com,Weibo
+  # > Weibo Client & SDK
+  - DOMAIN-SUFFIX,wbapp.mobile.sina.cn,REJECT
+  - DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
+  # > Weibo Img
   - DOMAIN-SUFFIX,sinajs.cn,Weibo
+  - DOMAIN-SUFFIX,vip.storage.weibo.com,Weibo
+  - DOMAIN-SUFFIX,simg.s.weibo.com,Weibo
+  - DOMAIN-SUFFIX,sinaimg.cn,Weibo
+  - DOMAIN-SUFFIX,miaozhen.com,Weibo
+  - DOMAIN-SUFFIX,data.kuiniuca.com,Weibo
+  # > Weibo Live
+  - DOMAIN-SUFFIX,live.weibo.com,Weibo
   
   #Loyalsoldier白名单模式
   - RULE-SET,applications,DIRECT
