@@ -1,8 +1,11 @@
 #使用前先删除原始配置中的无规则策略组并修改主策略组名称为Proxies
-    #type: url-test
-    #url: http://www.qualcomm.cn/generate_204
-    #interval: 600
+
+#自动选择
+    type: url-test
+    url: http://www.qualcomm.cn/generate_204
+    interval: 600
     
+#微博策略组
   - name: Weibo
     type: select
     proxies:
@@ -26,6 +29,8 @@ rules:
   - DOMAIN,time.apple.com,DIRECT
   - DOMAIN,xiaozhaji.com,DIRECT
   - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
   
   #代理
   - PROCESS-NAME,OneDrive.exe,Proxies
@@ -56,16 +61,3 @@ rules:
   # > Weibo Live
   - DOMAIN-SUFFIX,live.weibo.com,Weibo
   
-  #Loyalsoldier
-  - RULE-SET,applications,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-
-proxy-providers: {}
-rule-providers:
-  applications:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
-    path: ./ruleset/applications.yaml
-    interval: 86400
