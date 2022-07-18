@@ -1,3 +1,11 @@
+ #TUN
+ tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
  #自动选择
     type: url-test
     url: http://www.qualcomm.cn/generate_204
