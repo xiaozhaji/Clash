@@ -1,63 +1,59 @@
-#使用前先删除原始配置中的无规则策略组并修改主策略组名称为Proxies
-
-#自动选择
+ #自动选择
     type: url-test
     url: http://www.qualcomm.cn/generate_204
     interval: 600
     
-#微博策略组
+ #微博策略组
   - name: Weibo
     type: select
     proxies:
       - DIRECT
       - Proxies
 rules:
-  #拒绝
-  - PROCESS-NAME,CorelDRW.exe,REJECT
-  - DOMAIN-KEYWORD,corel,REJECT
+ #拒绝
+ - PROCESS-NAME,CorelDRW.exe,REJECT
+ - DOMAIN-KEYWORD,corel,REJECT
+
+ #直连
+ - PROCESS-NAME,Speedtest.exe,DIRECT
+ - PROCESS-NAME,TeamViewer.exe,DIRECT
+ - PROCESS-NAME,TeamViewer_Service.exe,DIRECT
+ - DOMAIN-KEYWORD,synology,DIRECT
+ - DOMAIN-KEYWORD,speedtest,DIRECT
+ - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
+ - DOMAIN-SUFFIX,time.is,DIRECT
+ - DOMAIN-SUFFIX,edu.cn,DIRECT
+ - DOMAIN,time.windows.com,DIRECT
+ - DOMAIN,time.apple.com,DIRECT
+ - DOMAIN,xiaozhaji.com,DIRECT
+ - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
+ - DOMAIN,clash.razord.top,DIRECT
+ - DOMAIN,yacd.haishan.me,DIRECT
+ #代理
+ - PROCESS-NAME,OneDrive.exe,Proxies
+ - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
   
-  #直连
-  - PROCESS-NAME,Speedtest.exe,DIRECT
-  - PROCESS-NAME,TeamViewer.exe,DIRECT
-  - PROCESS-NAME,TeamViewer_Service.exe,DIRECT
-  - DOMAIN-KEYWORD,synology,DIRECT
-  - DOMAIN-KEYWORD,speedtest,DIRECT
-  - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
-  - DOMAIN-SUFFIX,time.is,DIRECT
-  - DOMAIN-SUFFIX,edu.cn,DIRECT
-  - DOMAIN,time.windows.com,DIRECT
-  - DOMAIN,time.apple.com,DIRECT
-  - DOMAIN,xiaozhaji.com,DIRECT
-  - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  
-  #代理
-  - PROCESS-NAME,OneDrive.exe,Proxies
-  - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
-  
-  #微博
-  # > Weibo
-  - DOMAIN-KEYWORD,weibo,Weibo
-  - DOMAIN-SUFFIX,weibo.com,Weibo
-  - DOMAIN-SUFFIX,weibo.cn,Weibo
-  - DOMAIN-SUFFIX,sina.com.cn,Weibo
-  # > Weibo Api
-  - DOMAIN-SUFFIX,api.weibo.cn,Weibo
-  - DOMAIN-SUFFIX,api.weibo.com,Weibo
-  - DOMAIN-SUFFIX,dns.weibo.cn,Weibo
-  # > Weibo CDN
-  - DOMAIN-SUFFIX,weibocdn.com,Weibo
-  # > Weibo Client & SDK
-  - DOMAIN-SUFFIX,wbapp.mobile.sina.cn,REJECT
-  - DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
-  # > Weibo Img
-  - DOMAIN-SUFFIX,sinajs.cn,Weibo
-  - DOMAIN-SUFFIX,vip.storage.weibo.com,Weibo
-  - DOMAIN-SUFFIX,simg.s.weibo.com,Weibo
-  - DOMAIN-SUFFIX,sinaimg.cn,Weibo
-  - DOMAIN-SUFFIX,miaozhen.com,Weibo
-  - DOMAIN-SUFFIX,data.kuiniuca.com,Weibo
-  # > Weibo Live
-  - DOMAIN-SUFFIX,live.weibo.com,Weibo
-  
+ #微博
+ # > Weibo
+ - DOMAIN-KEYWORD,weibo,Weibo
+ - DOMAIN-SUFFIX,weibo.com,Weibo
+ - DOMAIN-SUFFIX,weibo.cn,Weibo
+ - DOMAIN-SUFFIX,sina.com.cn,Weibo
+ # > Weibo Api
+ - DOMAIN-SUFFIX,api.weibo.cn,Weibo
+ - DOMAIN-SUFFIX,api.weibo.com,Weibo
+ - DOMAIN-SUFFIX,dns.weibo.cn,Weibo
+ # > Weibo CDN
+ - DOMAIN-SUFFIX,weibocdn.com,Weibo
+ # > Weibo Client & SDK
+ - DOMAIN-SUFFIX,wbapp.mobile.sina.cn,REJECT
+ - DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
+ # > Weibo Img
+ - DOMAIN-SUFFIX,sinajs.cn,Weibo
+ - DOMAIN-SUFFIX,vip.storage.weibo.com,Weibo
+ - DOMAIN-SUFFIX,simg.s.weibo.com,Weibo
+ - DOMAIN-SUFFIX,sinaimg.cn,Weibo
+ - DOMAIN-SUFFIX,miaozhen.com,Weibo
+ - DOMAIN-SUFFIX,data.kuiniuca.com,Weibo
+ # > Weibo Live
+ - DOMAIN-SUFFIX,live.weibo.com,Weibo
