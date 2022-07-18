@@ -72,11 +72,11 @@ rules:
   - GEOIP,TWITTER,Proxies
   - GEOIP,TELEGRAM,Telegram
   - GEOIP,NETFLIX,Proxies
-  - GEOIP,US,US
-  - GEOIP,JP,JP
-  - GEOIP,HK,HK
-  - GEOIP,TW,TW
-  - GEOIP,SG,SG
+  - GEOIP,US,Proxies
+  - GEOIP,JP,Proxies
+  - GEOIP,HK,Proxies
+  - GEOIP,TW,Proxies
+  - GEOIP,SG,Proxies
   - GEOIP,CN,DIRECT
   - MATCH,Proxies
 
