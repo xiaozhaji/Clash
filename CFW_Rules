@@ -8,19 +8,11 @@
     proxies:
       - DIRECT
       - Proxies
-  - name: Telegram
-    type: select
-    proxies:
-      - Proxies
-      - HK
-      - JP
-      - SG
-      - TW
-      - US
 rules:
   #拒绝
   - PROCESS-NAME,CorelDRW.exe,REJECT
   - DOMAIN-KEYWORD,corel,REJECT
+  
   #直连
   - PROCESS-NAME,Speedtest.exe,DIRECT
   - PROCESS-NAME,TeamViewer.exe,DIRECT
@@ -34,9 +26,11 @@ rules:
   - DOMAIN,time.apple.com,DIRECT
   - DOMAIN,xiaozhaji.com,DIRECT
   - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
+  
   #代理
   - PROCESS-NAME,OneDrive.exe,Proxies
   - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
+  
   #微博
   # > Weibo
   - DOMAIN-KEYWORD,weibo,Weibo
@@ -62,23 +56,10 @@ rules:
   # > Weibo Live
   - DOMAIN-SUFFIX,live.weibo.com,Weibo
   
-  #Loyalsoldier白名单模式
+  #Loyalsoldier
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
-  - GEOIP,LAN,DIRECT
-  - GEOIP,PRIVATE,DIRECT
-  - GEOIP,FACEBOOK,Proxies
-  - GEOIP,TWITTER,Proxies
-  - GEOIP,TELEGRAM,Telegram
-  - GEOIP,NETFLIX,Proxies
-  - GEOIP,US,Proxies
-  - GEOIP,JP,Proxies
-  - GEOIP,HK,Proxies
-  - GEOIP,TW,Proxies
-  - GEOIP,SG,Proxies
-  - GEOIP,CN,DIRECT
-  - MATCH,Proxies
 
 proxy-providers: {}
 rule-providers:
