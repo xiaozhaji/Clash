@@ -1,3 +1,6 @@
+#fake-ip-filter:
+    - doh.pub
+    - dns.alidns.com
 #TUN
 tun:
   enable: true
