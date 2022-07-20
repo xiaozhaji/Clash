@@ -38,6 +38,9 @@ rules:
  - DOMAIN,clash.razord.top,DIRECT
  - DOMAIN,yacd.haishan.me,DIRECT
  - DOMAIN-KEYWORD,ipv6,DIRECT
+ - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
+ - DOMAIN-SUFFIX,msftncsi.com,DIRECT
+ 
  #代理
  - PROCESS-NAME,OneDrive.exe,Proxies
  - PROCESS-NAME,Telegram.exe,Proxies
