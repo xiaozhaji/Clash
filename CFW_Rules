@@ -43,6 +43,7 @@ rules:
  - DOMAIN-KEYWORD,ipv6,DIRECT
  - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
  - DOMAIN-SUFFIX,msftncsi.com,DIRECT
+ - DOMAIN,api.flowercloud.yt,DIRECT
  
  #代理
  - PROCESS-NAME,OneDrive.exe,Proxies
