@@ -8,10 +8,17 @@
 - DOMAIN-SUFFIX,edu.cn,DIRECT
 - DOMAIN,time.windows.com,DIRECT
 - DOMAIN,time.apple.com,DIRECT
-- DOMAIN-SUFFIX,pool.ntp.org,DIRECT
 - DOMAIN,xiaozhaji.com,DIRECT
+- DOMAIN-SUFFIX,pool.ntp.org,DIRECT
+- DOMAIN,clash.razord.top,DIRECT
+- DOMAIN,yacd.haishan.me,DIRECT
+- DOMAIN-KEYWORD,ipv6,DIRECT
+- DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
+- DOMAIN-SUFFIX,msftncsi.com,DIRECT
+- DOMAIN,api.flowercloud.yt,DIRECT
 #代理
 - DOMAIN-SUFFIX,api.themoviedb.org,Proxies
 - DOMAIN-SUFFIX,thetvdb.com,Proxies
 - DOMAIN-SUFFIX,assets.fanart.tv,Proxies
+- DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
 #OpenClash
