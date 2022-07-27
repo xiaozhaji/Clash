@@ -29,6 +29,9 @@ rules:
  - PROCESS-NAME,Speedtest.exe,DIRECT
  - PROCESS-NAME,TeamViewer.exe,DIRECT
  - PROCESS-NAME,TeamViewer_Service.exe,DIRECT
+ - PROCESS-NAME,LeagueClient.exe,DIRECT
+ - PROCESS-NAME,LeagueClientUxRender.exe,DIRECT
+ - PROCESS-NAME,wegame.exe,DIRECT
  - DOMAIN-KEYWORD,synology,DIRECT
  - DOMAIN-KEYWORD,speedtest,DIRECT
  - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
