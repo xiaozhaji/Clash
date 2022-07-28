@@ -13,12 +13,35 @@
 - DOMAIN,clash.razord.top,DIRECT
 - DOMAIN,yacd.haishan.me,DIRECT
 - DOMAIN-KEYWORD,ipv6,DIRECT
+- DOMAIN,api.flowercloud.yt,DIRECT
+#Microsoft
 - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
 - DOMAIN-SUFFIX,msftncsi.com,DIRECT
-- DOMAIN,api.flowercloud.yt,DIRECT
+- DOMAIN-SUFFIX,live.com,Proxies
+- DOMAIN-SUFFIX,microsoft.com,Proxies
+- DOMAIN-SUFFIX,s-microsoft.com,Proxies
+- DOMAIN-SUFFIX,msftauth.net,Proxies
+- DOMAIN-SUFFIX,msauth.net,Proxies
+- DOMAIN-SUFFIX,microsoftonline.com,Proxies
+- DOMAIN-SUFFIX,akamaized.net,Proxies
+- DOMAIN-SUFFIX,ms,Proxies
+- DOMAIN-SUFFIX,sharepoint.com,Proxies
+- DOMAIN-SUFFIX,sharepointonline.com,Proxies
+- DOMAIN-SUFFIX,office.net,Proxies
+- DOMAIN-SUFFIX,office.com,Proxies
+- DOMAIN-SUFFIX,xboxlive.com,Proxies
+- DOMAIN-SUFFIX,windows.com,Proxies
+- DOMAIN-SUFFIX,windows.net,Proxies
+- DOMAIN-SUFFIX,msedge.net,Proxies
+- DOMAIN-SUFFIX,azureedge.net,Proxies
+- DOMAIN-SUFFIX,azure.com,Proxies
+- DOMAIN-KEYWORD,microsoft,Proxies
+- DOMAIN-KEYWORD,msft,Proxies
 #代理
 - DOMAIN-SUFFIX,api.themoviedb.org,Proxies
 - DOMAIN-SUFFIX,thetvdb.com,Proxies
 - DOMAIN-SUFFIX,assets.fanart.tv,Proxies
 - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
+- DOMAIN-SUFFIX,adtidy.org,Proxies
+- DOMAIN-SUFFIX,deepl.com,Proxies
 #OpenClash
