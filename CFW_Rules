@@ -52,6 +52,27 @@ rules:
  - PROCESS-NAME,OneDrive.exe,Proxies
  - PROCESS-NAME,Telegram.exe,Proxies
  - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
+ - DOMAIN-SUFFIX,adtidy.org,Proxies
+ - DOMAIN-SUFFIX,deepl.com,Proxies
+
+ #Microsoft
+ - DOMAIN-SUFFIX,live.com,Proxies
+ - DOMAIN-SUFFIX,microsoft.com,Proxies
+ - DOMAIN-SUFFIX,s-microsoft.com,Proxies
+ - DOMAIN-SUFFIX,msftauth.net,Proxies
+ - DOMAIN-SUFFIX,microsoftonline.com,Proxies
+ - DOMAIN-SUFFIX,akamaized.net,Proxies
+ - DOMAIN-SUFFIX,appcenter.ms,Proxies
+ - DOMAIN-SUFFIX,sfx.ms,Proxies
+ - DOMAIN-SUFFIX,sharepoint.com,Proxies
+ - DOMAIN-SUFFIX,sharepointonline.com,Proxies
+ - DOMAIN-SUFFIX,office.net,Proxies
+ - DOMAIN-SUFFIX,office.com,Proxies
+ - DOMAIN-SUFFIX,xboxlive.com,Proxies
+ - DOMAIN-SUFFIX,windows.com,Proxies
+ - DOMAIN-SUFFIX,windows.net,Proxies
+ - DOMAIN-KEYWORD,microsoft,Proxies
+ - DOMAIN-KEYWORD,msft,Proxies
   
  #微博
  # > Weibo
