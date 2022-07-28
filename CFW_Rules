@@ -60,6 +60,7 @@ rules:
  - DOMAIN-SUFFIX,microsoft.com,Proxies
  - DOMAIN-SUFFIX,s-microsoft.com,Proxies
  - DOMAIN-SUFFIX,msftauth.net,Proxies
+ - DOMAIN-SUFFIX,msauth.net,Proxies
  - DOMAIN-SUFFIX,microsoftonline.com,Proxies
  - DOMAIN-SUFFIX,akamaized.net,Proxies
  - DOMAIN-SUFFIX,ms,Proxies
@@ -70,6 +71,9 @@ rules:
  - DOMAIN-SUFFIX,xboxlive.com,Proxies
  - DOMAIN-SUFFIX,windows.com,Proxies
  - DOMAIN-SUFFIX,windows.net,Proxies
+ - DOMAIN-SUFFIX,msedge.net,Proxies
+ - DOMAIN-SUFFIX,azureedge.net,Proxies
+ - DOMAIN-SUFFIX,azure.com,Proxies
  - DOMAIN-KEYWORD,microsoft,Proxies
  - DOMAIN-KEYWORD,msft,Proxies
   
