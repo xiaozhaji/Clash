@@ -62,8 +62,7 @@ rules:
  - DOMAIN-SUFFIX,msftauth.net,Proxies
  - DOMAIN-SUFFIX,microsoftonline.com,Proxies
  - DOMAIN-SUFFIX,akamaized.net,Proxies
- - DOMAIN-SUFFIX,appcenter.ms,Proxies
- - DOMAIN-SUFFIX,sfx.ms,Proxies
+ - DOMAIN-SUFFIX,ms,Proxies
  - DOMAIN-SUFFIX,sharepoint.com,Proxies
  - DOMAIN-SUFFIX,sharepointonline.com,Proxies
  - DOMAIN-SUFFIX,office.net,Proxies
