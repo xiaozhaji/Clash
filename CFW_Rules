@@ -44,8 +44,6 @@ rules:
  - DOMAIN,clash.razord.top,DIRECT
  - DOMAIN,yacd.haishan.me,DIRECT
  - DOMAIN-KEYWORD,ipv6,DIRECT
- - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
- - DOMAIN-SUFFIX,msftncsi.com,DIRECT
  - DOMAIN,api.flowercloud.yt,DIRECT
  
  #代理
@@ -56,6 +54,8 @@ rules:
  - DOMAIN-SUFFIX,deepl.com,Proxies
 
  #Microsoft
+ - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
+ - DOMAIN-SUFFIX,msftncsi.com,DIRECT
  - DOMAIN-SUFFIX,live.com,Proxies
  - DOMAIN-SUFFIX,microsoft.com,Proxies
  - DOMAIN-SUFFIX,s-microsoft.com,Proxies
