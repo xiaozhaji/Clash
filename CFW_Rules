@@ -49,6 +49,7 @@ rules:
  #代理
  - PROCESS-NAME,OneDrive.exe,Proxies
  - PROCESS-NAME,Telegram.exe,Proxies
+ - PROCESS-NAME,NatTypeTester.exe,Proxies
  - DOMAIN,emby.flowercloud.yt,🇭🇰 香港实验性 IEPL 中继 1
  - DOMAIN-SUFFIX,adtidy.org,Proxies
  - DOMAIN-SUFFIX,deepl.com,Proxies
