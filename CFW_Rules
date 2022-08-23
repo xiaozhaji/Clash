@@ -1,3 +1,11 @@
+#dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  nameserver:
+    - 223.5.5.5
+    - 223.6.6.6
+    - 119.29.29.29
 #fake-ip-filter:
     - doh.pub
     - dns.alidns.com
