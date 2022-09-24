@@ -41,6 +41,7 @@ rules:
  - PROCESS-NAME,LeagueClientUxRender.exe,DIRECT
  - PROCESS-NAME,wegame.exe,DIRECT
  - DOMAIN-KEYWORD,synology,DIRECT
+ - DOMAIN-KEYWORD,quickconnect,DIRECT
  - DOMAIN-KEYWORD,speedtest,DIRECT
  - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
  - DOMAIN-SUFFIX,time.is,DIRECT
