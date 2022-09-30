@@ -1,15 +1,32 @@
-#dns:
+dns:
   enable: true
   ipv6: false
-  enhanced-mode: fake-ip
   nameserver:
     - 223.5.5.5
-    - 223.6.6.6
     - 119.29.29.29
+    - 8.8.8.8
+  fallback:
+    - https://1.0.0.1/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - https://dns.twnic.tw/dns-query
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.gvt1.com
 #fake-ip-filter:
     - doh.pub
     - dns.alidns.com
-#TUN
+#TUN模式
 tun:
   enable: true
   stack: system
@@ -17,7 +34,7 @@ tun:
   auto-detect-interface: true
   dns-hijack:
     - any:53
- #自动选择
+ #节点自动选择
     type: url-test
     url: http://www.qualcomm.cn/generate_204
     interval: 600
@@ -40,6 +57,8 @@ rules:
  - PROCESS-NAME,LeagueClient.exe,DIRECT
  - PROCESS-NAME,LeagueClientUxRender.exe,DIRECT
  - PROCESS-NAME,wegame.exe,DIRECT
+ - PROCESS-NAME,cloud-drive-daemon.exe,DIRECT
+ - PROCESS-NAME, cloud-drive-connect.exe,DIRECT
  - DOMAIN-KEYWORD,synology,DIRECT
  - DOMAIN-KEYWORD,quickconnect,DIRECT
  - DOMAIN-KEYWORD,speedtest,DIRECT
@@ -61,6 +80,7 @@ rules:
  - DOMAIN,emby.flowercloud.yt,🇯🇵 日本实验性 IEPL 中继 1
  - DOMAIN-SUFFIX,adtidy.org,Proxies
  - DOMAIN-SUFFIX,deepl.com,Proxies
+ - DOMAIN-SUFFIX,translate.googleapis.com,Proxies
  - DOMAIN-KEYWORD,mtalk,Proxies
 
  #Microsoft
