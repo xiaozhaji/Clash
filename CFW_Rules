@@ -105,6 +105,7 @@ rules:
  - DOMAIN-SUFFIX,msedge.net,Proxies
  - DOMAIN-SUFFIX,azureedge.net,Proxies
  - DOMAIN-SUFFIX,azure.com,Proxies
+ - DOMAIN-SUFFIX,bing.net,Proxies
  - DOMAIN-KEYWORD,microsoft,Proxies
  - DOMAIN-KEYWORD,msft,Proxies
   
