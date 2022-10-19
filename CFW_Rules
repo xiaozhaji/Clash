@@ -82,6 +82,7 @@ rules:
  - DOMAIN-SUFFIX,deepl.com,Proxies
  - DOMAIN-SUFFIX,googleapis.com,Proxies
  - DOMAIN-SUFFIX,gstatic.com,Proxies
+ - DOMAIN-SUFFIX,doubleclick.net,Proxies
  - DOMAIN-KEYWORD,mtalk,Proxies
 
  #Microsoft
