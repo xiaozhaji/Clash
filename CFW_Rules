@@ -103,6 +103,7 @@ rules:
  - DOMAIN-SUFFIX,xboxlive.com,Proxies
  - DOMAIN-SUFFIX,windows.com,Proxies
  - DOMAIN-SUFFIX,windows.net,Proxies
+ - DOMAIN-SUFFIX,windowsupdate.com,Proxies
  - DOMAIN-SUFFIX,msedge.net,Proxies
  - DOMAIN-SUFFIX,azureedge.net,Proxies
  - DOMAIN-SUFFIX,azure.com,Proxies
