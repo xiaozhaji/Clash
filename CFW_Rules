@@ -1,10 +1,12 @@
 dns:
   enable: true
   ipv6: false
+  listen: 127.0.0.1:8853
+  enhanced-mode: fake-ip
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-    - 8.8.8.8
+    - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
+    - https://doh.pub/dns-query
   fallback:
     - https://1.0.0.1/dns-query
     - https://public.dns.iij.jp/dns-query
@@ -23,9 +25,6 @@ dns:
       - +.google.cn
       - +.googleapis.cn
       - +.gvt1.com
-#fake-ip-filter:
-    - doh.pub
-    - dns.alidns.com
 #TUN模式
 tun:
   enable: true
