@@ -19,5 +19,7 @@ payload:
   - DOMAIN,time.apple.com
   - DOMAIN,xiaozhaji.com
   - DOMAIN-SUFFIX,pool.ntp.org
+  - DOMAIN-SUFFIX,msftconnecttest.com
+  - DOMAIN-SUFFIX,msftncsi.com
   - DOMAIN,clash.razord.top
   - DOMAIN,yacd.haishan.me
