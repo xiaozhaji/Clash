@@ -24,7 +24,6 @@ rules:
  - RULE-SET,Direct,DIRECT
  - RULE-SET,ChinaMax,DIRECT
  
- 
  rule-providers:
   Reject:
     behavior: "classical"
