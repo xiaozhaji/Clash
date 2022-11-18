@@ -1,4 +1,3 @@
-#TUN模式
 tun:
   enable: true
   stack: system
@@ -6,15 +5,13 @@ tun:
   auto-detect-interface: true
   dns-hijack:
     - any:53
-    
- #微博策略组
+
   - name: Weibo
     type: select
     proxies:
       - DIRECT
       - Proxies
 rules:
- #拒绝
  - RULE-SET,Reject,REJECT
  - RULE-SET,Proxy,Proxies
  - RULE-SET,Netflix,Netflix
@@ -23,8 +20,8 @@ rules:
  - RULE-SET,Weibo,Weibo
  - RULE-SET,Direct,DIRECT
  - RULE-SET,ChinaMax,DIRECT
- 
- rule-providers:
+
+rule-providers:
   Reject:
     behavior: "classical"
     type: http
