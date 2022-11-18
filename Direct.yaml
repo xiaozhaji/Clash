@@ -1,0 +1,23 @@
+# NAME: Direct
+payload:
+  - PROCESS-NAME,Speedtest.exe,DIRECT
+  - PROCESS-NAME,TeamViewer.exe,DIRECT
+  - PROCESS-NAME,TeamViewer_Service.exe,DIRECT
+  - PROCESS-NAME,LeagueClient.exe,DIRECT
+  - PROCESS-NAME,LeagueClientUxRender.exe,DIRECT
+  - PROCESS-NAME,wegame.exe,DIRECT
+  - PROCESS-NAME,cloud-drive-daemon.exe,DIRECT
+  - PROCESS-NAME,cloud-drive-connect.exe,DIRECT
+  - DOMAIN-KEYWORD,synology,DIRECT
+  - DOMAIN-KEYWORD,quickconnect,DIRECT
+  - DOMAIN-KEYWORD,speedtest,DIRECT
+  - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
+  - DOMAIN-SUFFIX,time.is,DIRECT
+  - DOMAIN-SUFFIX,edu.cn,DIRECT
+  - DOMAIN-SUFFIX,gofile.me,DIRECT
+  - DOMAIN,time.windows.com,DIRECT
+  - DOMAIN,time.apple.com,DIRECT
+  - DOMAIN,xiaozhaji.com,DIRECT
+  - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
