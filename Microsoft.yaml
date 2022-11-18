@@ -1,5 +1,6 @@
 # NAME: Microsoft
 payload:
+  - PROCESS-NAME,OneDrive.exe
   - DOMAIN-SUFFIX,live.com
   - DOMAIN-SUFFIX,microsoft.com
   - DOMAIN-SUFFIX,s-microsoft.com
