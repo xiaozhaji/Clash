@@ -6,10 +6,6 @@ tun:
   auto-detect-interface: true
   dns-hijack:
     - any:53
- #节点自动选择
-    type: url-test
-    url: http://www.qualcomm.cn/generate_204
-    interval: 600
     
  #微博策略组
   - name: Weibo
@@ -19,91 +15,69 @@ tun:
       - Proxies
 rules:
  #拒绝
- - PROCESS-NAME,CorelDRW.exe,REJECT
- - DOMAIN-KEYWORD,corel,REJECT
-
- #直连
- - PROCESS-NAME,Speedtest.exe,DIRECT
- - PROCESS-NAME,TeamViewer.exe,DIRECT
- - PROCESS-NAME,TeamViewer_Service.exe,DIRECT
- - PROCESS-NAME,LeagueClient.exe,DIRECT
- - PROCESS-NAME,LeagueClientUxRender.exe,DIRECT
- - PROCESS-NAME,wegame.exe,DIRECT
- - PROCESS-NAME,cloud-drive-daemon.exe,DIRECT
- - PROCESS-NAME, cloud-drive-connect.exe,DIRECT
- - DOMAIN-KEYWORD,synology,DIRECT
- - DOMAIN-KEYWORD,quickconnect,DIRECT
- - DOMAIN-KEYWORD,speedtest,DIRECT
- - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
- - DOMAIN-SUFFIX,time.is,DIRECT
- - DOMAIN-SUFFIX,edu.cn,DIRECT
- - DOMAIN-SUFFIX,gofile.me,DIRECT
- - DOMAIN,time.windows.com,DIRECT
- - DOMAIN,time.apple.com,DIRECT
- - DOMAIN,xiaozhaji.com,DIRECT
- - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
- - DOMAIN,clash.razord.top,DIRECT
- - DOMAIN,yacd.haishan.me,DIRECT
- - DOMAIN-KEYWORD,ipv6,DIRECT
+ - RULE-SET,Reject,REJECT
+ - RULE-SET,Proxy,Proxies
+ - RULE-SET,Netflix,Netflix
+ - RULE-SET,Microsoft,Proxies
+ - RULE-SET,Global,Proxies
+ - RULE-SET,Weibo,Weibo
+ - RULE-SET,Direct,DIRECT
+ - RULE-SET,ChinaMax,DIRECT
  
- #代理
- - PROCESS-NAME,OneDrive.exe,Proxies
- - PROCESS-NAME,Telegram.exe,Proxies
- - PROCESS-NAME,NatTypeTester.exe,Proxies
- - DOMAIN-SUFFIX,adtidy.org,Proxies
- - DOMAIN-SUFFIX,deepl.com,Proxies
- - DOMAIN-SUFFIX,googleapis.com,Proxies
- - DOMAIN-SUFFIX,gstatic.com,Proxies
- - DOMAIN-SUFFIX,doubleclick.net,Proxies
- - DOMAIN-KEYWORD,mtalk,Proxies
+ 
+ rule-providers:
+  Reject:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Reject.yaml"
+    interval: 3600
+    path: ./Reject.yaml
+    
+  Proxy:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Proxy.yaml"
+    interval: 3600
+    path: ./Proxy.yaml
 
- #Microsoft
- - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
- - DOMAIN-SUFFIX,msftncsi.com,DIRECT
- - DOMAIN-SUFFIX,live.com,Proxies
- - DOMAIN-SUFFIX,microsoft.com,Proxies
- - DOMAIN-SUFFIX,s-microsoft.com,Proxies
- - DOMAIN-SUFFIX,msftauth.net,Proxies
- - DOMAIN-SUFFIX,msauth.net,Proxies
- - DOMAIN-SUFFIX,microsoftonline.com,Proxies
- - DOMAIN-SUFFIX,akamaized.net,Proxies
- - DOMAIN-SUFFIX,ms,Proxies
- - DOMAIN-SUFFIX,sharepoint.com,Proxies
- - DOMAIN-SUFFIX,sharepointonline.com,Proxies
- - DOMAIN-SUFFIX,office.net,Proxies
- - DOMAIN-SUFFIX,office.com,Proxies
- - DOMAIN-SUFFIX,xboxlive.com,Proxies
- - DOMAIN-SUFFIX,windows.com,Proxies
- - DOMAIN-SUFFIX,windows.net,Proxies
- - DOMAIN-SUFFIX,windowsupdate.com,Proxies
- - DOMAIN-SUFFIX,msedge.net,Proxies
- - DOMAIN-SUFFIX,azureedge.net,Proxies
- - DOMAIN-SUFFIX,azure.com,Proxies
- - DOMAIN-SUFFIX,bing.net,Proxies
- - DOMAIN-KEYWORD,microsoft,Proxies
- - DOMAIN-KEYWORD,msft,Proxies
-  
- #微博
- # > Weibo
- - DOMAIN-KEYWORD,weibo,Weibo
- - DOMAIN-SUFFIX,weibo.com,Weibo
- - DOMAIN-SUFFIX,weibo.cn,Weibo
- - DOMAIN-SUFFIX,sina.com.cn,Weibo
- # > Weibo Api
- - DOMAIN-SUFFIX,api.weibo.cn,Weibo
- - DOMAIN-SUFFIX,api.weibo.com,Weibo
- - DOMAIN-SUFFIX,dns.weibo.cn,Weibo
- # > Weibo CDN
- - DOMAIN-SUFFIX,weibocdn.com,Weibo
- # > Weibo Client & SDK
- - DOMAIN-SUFFIX,wbapp.mobile.sina.cn,REJECT
- - DOMAIN-SUFFIX,sdkapp.mobile.sina.cn,REJECT
- # > Weibo Img
- - DOMAIN-SUFFIX,sinajs.cn,Weibo
- - DOMAIN-SUFFIX,vip.storage.weibo.com,Weibo
- - DOMAIN-SUFFIX,simg.s.weibo.com,Weibo
- - DOMAIN-SUFFIX,sinaimg.cn,Weibo
- - DOMAIN-SUFFIX,miaozhen.com,Weibo
- - DOMAIN-SUFFIX,data.kuiniuca.com,Weibo
- # > Weibo Live
- - DOMAIN-SUFFIX,live.weibo.com,Weibo
+  Netflix:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
+    interval: 3600
+    path: ./Netflix.yaml
+    
+  Microsoft:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Microsoft.yaml"
+    interval: 3600
+    path: ./Microsoft.yaml
+    
+  Global:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
+    interval: 3600
+    path: ./Global.yaml
+    
+  Weibo:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Weibo.yaml"
+    interval: 3600
+    path: ./Weibo.yaml
+    
+  Direct:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Direct.yaml"
+    interval: 3600
+    path: ./Direct.yaml
+    
+  ChinaMax:
+    behavior: "classical"
+    type: http
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
+    interval: 3600
+    path: ./ChinaMax_Classical.yaml
