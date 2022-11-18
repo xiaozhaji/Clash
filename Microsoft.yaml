@@ -1,0 +1,24 @@
+# NAME: Microsoft
+payload:
+  - DOMAIN-SUFFIX,live.com
+  - DOMAIN-SUFFIX,microsoft.com
+  - DOMAIN-SUFFIX,s-microsoft.com
+  - DOMAIN-SUFFIX,msftauth.net
+  - DOMAIN-SUFFIX,msauth.net
+  - DOMAIN-SUFFIX,microsoftonline.com
+  - DOMAIN-SUFFIX,akamaized.net
+  - DOMAIN-SUFFIX,ms
+  - DOMAIN-SUFFIX,sharepoint.com
+  - DOMAIN-SUFFIX,sharepointonline.com
+  - DOMAIN-SUFFIX,office.net
+  - DOMAIN-SUFFIX,office.com
+  - DOMAIN-SUFFIX,xboxlive.com
+  - DOMAIN-SUFFIX,windows.com
+  - DOMAIN-SUFFIX,windows.net
+  - DOMAIN-SUFFIX,windowsupdate.com
+  - DOMAIN-SUFFIX,msedge.net
+  - DOMAIN-SUFFIX,azureedge.net
+  - DOMAIN-SUFFIX,azure.com
+  - DOMAIN-SUFFIX,bing.net
+  - DOMAIN-KEYWORD,microsoft
+  - DOMAIN-KEYWORD,msft
