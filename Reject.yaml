@@ -1,1 +1,4 @@
-
+# NAME: Reject
+payload:
+  - PROCESS-NAME,CorelDRW.exe
+  - DOMAIN-KEYWORD,corel
