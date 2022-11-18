@@ -1,6 +1,5 @@
 # NAME: Proxy
 payload:
-  - PROCESS-NAME,OneDrive.exe
   - PROCESS-NAME,Telegram.exe
   - PROCESS-NAME,NatTypeTester.exe
   - DOMAIN-SUFFIX,adtidy.org
