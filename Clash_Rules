@@ -13,12 +13,12 @@ tun:
       - Proxies
 rules:
  - RULE-SET,Reject,REJECT
+ - RULE-SET,Direct,DIRECT
  - RULE-SET,Proxy,Proxies
  - RULE-SET,Netflix,Netflix
  - RULE-SET,Microsoft,Proxies
  - RULE-SET,Global,Proxies
  - RULE-SET,Weibo,Weibo
- - RULE-SET,Direct,DIRECT
  - RULE-SET,ChinaMax,DIRECT
 
 rule-providers:
