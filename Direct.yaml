@@ -14,6 +14,7 @@ payload:
   - DOMAIN-SUFFIX,ooklaserver.net
   - DOMAIN-SUFFIX,time.is
   - DOMAIN-SUFFIX,edu.cn
+  - DOMAIN-SUFFIX,test-ipv6.com
   - DOMAIN-SUFFIX,gofile.me
   - DOMAIN,time.windows.com
   - DOMAIN,time.apple.com
