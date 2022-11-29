@@ -22,5 +22,6 @@ payload:
   - DOMAIN-SUFFIX,pool.ntp.org
   - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,msftncsi.com
+  - DOMAIN-SUFFIX,ip-api.com
   - DOMAIN,clash.razord.top
   - DOMAIN,yacd.haishan.me
