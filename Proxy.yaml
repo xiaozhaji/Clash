@@ -10,4 +10,8 @@ payload:
   - DOMAIN-SUFFIX,gstatic.com
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,fanart.tv
+  - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,tmdb.org
+  - DOMAIN-SUFFIX,thetvdb.com
+  - DOMAIN-SUFFIX,omdbapi.com
   - DOMAIN-KEYWORD,mtalk
