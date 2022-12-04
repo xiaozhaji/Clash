@@ -17,6 +17,7 @@ rules:
  - RULE-SET,Proxy,Proxies
  - RULE-SET,Netflix,Netflix
  - RULE-SET,Microsoft,Proxies
+ - RULE-SET,Apple,Apple
  - RULE-SET,Global,Proxies
  - RULE-SET,Weibo,Weibo
  - RULE-SET,ChinaMax,DIRECT
