@@ -15,3 +15,5 @@ payload:
   - DOMAIN-SUFFIX,thetvdb.com
   - DOMAIN-SUFFIX,omdbapi.com
   - DOMAIN-KEYWORD,mtalk
+  - DOMAIN-SUFFIX,ndmdhs.com
+  - DOMAIN,iosapps.itunes.apple.com
