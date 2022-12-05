@@ -1,11 +1,3 @@
-tun:
-  enable: true
-  stack: system
-  auto-route: true
-  auto-detect-interface: true
-  dns-hijack:
-    - any:53
-
   - name: Weibo
     type: select
     proxies:
