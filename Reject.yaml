@@ -2,8 +2,9 @@
 payload:
   - PROCESS-NAME,CorelDRW.exe
   - DOMAIN-KEYWORD,corel
-  - DOMAIN-SUFFIX,hub5btmain.sandai.net
-  - DOMAIN-SUFFIX,hub5emu.sandai.net
+  - DOMAIN,hub5idx.v6.shub.sandai.net
+  - DOMAIN,hub5emu.v6.shub.sandai.net
+  - DOMAIN,hub5btmain.v6.shub.sandai.net
   - DOMAIN-SUFFIX,refractivesoftware.com
   - DOMAIN-SUFFIX,octanerender.com
   - DOMAIN-SUFFIX,otoy.com
