@@ -18,62 +18,70 @@ rule-providers:
   Reject:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Reject.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Reject.yaml"
     interval: 3600
     path: ./Reject.yaml
     
   Proxy:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Proxy.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Proxy.yaml"
     interval: 3600
     path: ./Proxy.yaml
 
   Netflix:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
     interval: 3600
     path: ./Netflix.yaml
     
   Microsoft:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Microsoft.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Microsoft.yaml"
     interval: 3600
     path: ./Microsoft.yaml
     
   Apple:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
     interval: 3600
     path: ./Apple.yaml
     
   Global:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
     interval: 3600
     path: ./Global.yaml
     
   Weibo:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Weibo.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Weibo.yaml"
     interval: 3600
     path: ./Weibo.yaml
     
   Direct:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Direct.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Direct.yaml"
     interval: 3600
     path: ./Direct.yaml
     
   ChinaMax:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml"
     interval: 3600
     path: ./ChinaMax_Classical.yaml
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+    #- 223.5.5.5
+    - 114.114.114.114
+    - 119.29.29.29
