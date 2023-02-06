@@ -11,6 +11,7 @@ payload:
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,speedtest
+  - DOMAIN-SUFFIX,baidu.com
   - DOMAIN-SUFFIX,bcebos.com
   - DOMAIN-SUFFIX,ooklaserver.net
   - DOMAIN-SUFFIX,time.is
