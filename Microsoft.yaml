@@ -20,6 +20,8 @@ payload:
   - DOMAIN-SUFFIX,msedge.net
   - DOMAIN-SUFFIX,azureedge.net
   - DOMAIN-SUFFIX,azure.com
-  - DOMAIN-SUFFIX,bing.net
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,msn.com
+  - DOMAIN-SUFFIX,onedrive.com
   - DOMAIN-KEYWORD,microsoft
   - DOMAIN-KEYWORD,msft
