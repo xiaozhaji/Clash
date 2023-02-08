@@ -39,7 +39,7 @@ rule-providers:
   Microsoft:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Microsoft.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
     interval: 36000
     path: ./Microsoft.yaml
     
@@ -82,6 +82,6 @@ dns:
   enable: true
   enhanced-mode: fake-ip
   nameserver:
-    #- 223.5.5.5
-    - 114.114.114.114
+    - 223.5.5.5
     - 119.29.29.29
+    - 114.114.114.114
