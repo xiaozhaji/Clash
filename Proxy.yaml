@@ -1,6 +1,7 @@
 # NAME: Proxy
 payload:
   - PROCESS-NAME,NVIDIA GeForce Experience.exe
+  - PROCESS-NAME,nvcontainer.exe
   - PROCESS-NAME,Telegram.exe
   - PROCESS-NAME,NatTypeTester.exe
   - DOMAIN-SUFFIX,adtidy.org
