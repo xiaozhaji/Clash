@@ -1,5 +1,6 @@
 # NAME: Proxy
 payload:
+  - PROCESS-NAME,NVIDIA GeForce Experience.exe
   - PROCESS-NAME,Telegram.exe
   - PROCESS-NAME,NatTypeTester.exe
   - DOMAIN-SUFFIX,adtidy.org
@@ -13,6 +14,10 @@ payload:
   - DOMAIN-SUFFIX,tmdb.org
   - DOMAIN-SUFFIX,thetvdb.com
   - DOMAIN-SUFFIX,omdbapi.com
+  - DOMAIN-SUFFIX,nvidia.com
+  - DOMAIN-SUFFIX,nvidia.cn
+  - DOMAIN-SUFFIX,geforce.com
+  - DOMAIN-SUFFIX,geforce.cn
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
   - DOMAIN-SUFFIX,ndmdhs.com
