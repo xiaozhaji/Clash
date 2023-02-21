@@ -97,9 +97,12 @@ dns:
     - "*.msftncsi.com"
     - "*.msftconnecttest.com"
     - WORKGROUP
+    - ntp1.aliyun.com
+    - xiaozhaji.com
+    - jkm.xiaozhaji.com
 tun:
   enable: true
-  stack: gvisor
+  stack: system
   auto-route: true
   auto-detect-interface: true
   dns-hijack:
