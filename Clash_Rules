@@ -98,8 +98,7 @@ dns:
     - "*.msftconnecttest.com"
     - WORKGROUP
     - ntp1.aliyun.com
-    - xiaozhaji.com
-    - jkm.xiaozhaji.com
+    - "*.xiaozhaji.com"
 tun:
   enable: true
   stack: system
