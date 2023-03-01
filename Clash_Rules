@@ -99,6 +99,11 @@ dns:
     - WORKGROUP
     - ntp1.aliyun.com
     - "*.xiaozhaji.com"
+    - "*.windows.com"
+    - "*.*.windows.com"
+    - "*.microsoft.com"
+    - "*.bing.com"
+    - xiaozhaji.dsmynas.com
 tun:
   enable: true
   stack: system
