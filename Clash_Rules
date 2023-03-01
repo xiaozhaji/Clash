@@ -98,12 +98,12 @@ dns:
     - "*.msftconnecttest.com"
     - WORKGROUP
     - ntp1.aliyun.com
-    - "*.xiaozhaji.com"
-    - "*.windows.com"
-    - "*.*.windows.com"
-    - "*.microsoft.com"
-    - "*.bing.com"
-    - xiaozhaji.dsmynas.com
+    - +.windows.com
+    - +.microsoft.com
+    - +.bing.com
+    - +.xiaozhaji.com
+    - +.dsmynas.com
+    - +.DSmyNAS.com
 tun:
   enable: true
   stack: system
