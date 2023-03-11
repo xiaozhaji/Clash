@@ -1,3 +1,8 @@
+  - name: Microsoft
+    type: select
+    proxies:
+      - DIRECT
+      - Proxies
   - name: Weibo
     type: select
     proxies:
@@ -8,7 +13,7 @@ rules:
  - RULE-SET,Direct,DIRECT
  - RULE-SET,Proxy,Proxies
  - RULE-SET,Netflix,Netflix
- - RULE-SET,Microsoft,Proxies
+ - RULE-SET,Microsoft,Microsoft
  - RULE-SET,Apple,Apple
  - RULE-SET,Global,Proxies
  - RULE-SET,Weibo,Weibo
