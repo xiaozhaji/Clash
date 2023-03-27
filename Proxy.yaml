@@ -22,5 +22,5 @@ payload:
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
   - DOMAIN-SUFFIX,ndmdhs.com
+  - DOMAIN-SUFFIX,openai.com
   - DOMAIN,iosapps.itunes.apple.com
-  - DOMAIN,openai.com
