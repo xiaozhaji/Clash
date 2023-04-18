@@ -19,6 +19,7 @@ payload:
   - DOMAIN-SUFFIX,nvidia.cn
   - DOMAIN-SUFFIX,geforce.com
   - DOMAIN-SUFFIX,geforce.cn
+  - DOMAIN-SUFFIX,bing.com
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
   - DOMAIN-SUFFIX,ndmdhs.com
