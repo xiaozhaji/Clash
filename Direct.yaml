@@ -18,9 +18,10 @@ payload:
   - DOMAIN-SUFFIX,edu.cn
   - DOMAIN-SUFFIX,test-ipv6.com
   - DOMAIN-SUFFIX,gofile.me
+  - DOMAIN-SUFFIX,xiaozhaji.com
   - DOMAIN,time.windows.com
   - DOMAIN,time.apple.com
-  - DOMAIN,xiaozhaji.com
+  - DOMAIN,xiaozhaji.myds.me
   - DOMAIN-SUFFIX,pool.ntp.org
   - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,msftncsi.com
