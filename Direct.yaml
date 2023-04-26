@@ -32,7 +32,6 @@ payload:
   - DOMAIN-SUFFIX,pool.ntp.org
   - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,msftncsi.com
-  - DOMAIN-SUFFIX,ip-api.com
   - DOMAIN-SUFFIX,luciaz.me
   - DOMAIN-SUFFIX,ruanmei.com
   - DOMAIN-SUFFIX,91sotu.com
@@ -40,3 +39,26 @@ payload:
   - DOMAIN-SUFFIX,qx121.com
   - DOMAIN-SUFFIX,qweather.com
   - DOMAIN-SUFFIX,qweather.net
+  - DOMAIN-SUFFIX,ip138.com
+  - DOMAIN-SUFFIX,xsool.com
+  - DOMAIN-SUFFIX,ymtc.com
+  - DOMAIN-SUFFIX,ones.ai
+  - DOMAIN-SUFFIX,tlink.io
+  - DOMAIN-SUFFIX,fkw.com
+  - DOMAIN-SUFFIX,faiusr.com
+  - DOMAIN-SUFFIX,faisys.com
+  - DOMAIN-SUFFIX,51yuansu.com
+  - DOMAIN-SUFFIX,ibaotu.com
+  - DOMAIN-SUFFIX,aigei.com
+  - DOMAIN-SUFFIX,csvsc.com
+  - DOMAIN-SUFFIX,lookae.com
+  - DOMAIN-SUFFIX,didixk.com
+  - DOMAIN-SUFFIX,gfxcamp.com
+  - DOMAIN-SUFFIX,c4dsky.com
+  - DOMAIN-SUFFIX,kujiale.com
+  - DOMAIN-SUFFIX,dancf.com
+  - DOMAIN-SUFFIX,zhongguose.com
+  - DOMAIN-SUFFIX,eduwest.com
+  - DOMAIN-SUFFIX,utv4d.com
+  - DOMAIN-SUFFIX,btbat.com
+  - DOMAIN-SUFFIX,lizhi.io
