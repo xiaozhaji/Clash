@@ -16,6 +16,7 @@ payload:
   - DOMAIN,yacd.haishan.me
   - DOMAIN,sydney.bing.com
   - DOMAIN,tophub.today
+  - DOMAIN,ipv4.ddnspod.com
 
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
@@ -62,4 +63,3 @@ payload:
   - DOMAIN-SUFFIX,utv4d.com
   - DOMAIN-SUFFIX,btbat.com
   - DOMAIN-SUFFIX,lizhi.io
-  - DOMAIN-SUFFIX,ddnspod.com
