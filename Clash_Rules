@@ -87,8 +87,8 @@ dns:
   enhanced-mode: fake-ip
   ipv6: true
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - 119.29.29.29
+    - 223.5.5.5
   fallback: []
   fake-ip-filter:
     - +.stun.*.*
@@ -101,14 +101,8 @@ dns:
     - "*.*.xboxlive.com"
     - "*.msftncsi.com"
     - "*.msftconnecttest.com"
-    - WORKGROUP
     - ntp1.aliyun.com
-    - +.windows.com
-    - +.microsoft.com
-    - +.bing.com
-    - +.xiaozhaji.com
-    - +.dsmynas.com
-    - +.DSmyNAS.com
+    - WORKGROUP
 tun:
   enable: true
   stack: gvisor
