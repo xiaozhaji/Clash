@@ -8,9 +8,19 @@ payload:
   - PROCESS-NAME,wegame.exe
   - PROCESS-NAME,cloud-drive-daemon.exe
   - PROCESS-NAME,cloud-drive-connect.exe
+  
+  - DOMAIN,time.windows.com
+  - DOMAIN,time.apple.com
+  - DOMAIN,xiaozhaji.myds.me
+  - DOMAIN,clash.razord.top
+  - DOMAIN,yacd.haishan.me
+  - DOMAIN,sydney.bing.com
+  - DOMAIN,tophub.today
+
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,speedtest
+  
   - DOMAIN-SUFFIX,baidu.com
   - DOMAIN-SUFFIX,bcebos.com
   - DOMAIN-SUFFIX,ooklaserver.net
@@ -19,13 +29,14 @@ payload:
   - DOMAIN-SUFFIX,test-ipv6.com
   - DOMAIN-SUFFIX,gofile.me
   - DOMAIN-SUFFIX,xiaozhaji.com
-  - DOMAIN,time.windows.com
-  - DOMAIN,time.apple.com
-  - DOMAIN,xiaozhaji.myds.me
   - DOMAIN-SUFFIX,pool.ntp.org
   - DOMAIN-SUFFIX,msftconnecttest.com
   - DOMAIN-SUFFIX,msftncsi.com
   - DOMAIN-SUFFIX,ip-api.com
-  - DOMAIN,clash.razord.top
-  - DOMAIN,yacd.haishan.me
-  - DOMAIN,sydney.bing.com
+  - DOMAIN-SUFFIX,luciaz.me
+  - DOMAIN-SUFFIX,ruanmei.com
+  - DOMAIN-SUFFIX,91sotu.com
+  - DOMAIN-SUFFIX,momoyu.cc
+  - DOMAIN-SUFFIX,qx121.com
+  - DOMAIN-SUFFIX,qweather.com
+  - DOMAIN-SUFFIX,qweather.net
