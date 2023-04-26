@@ -3,11 +3,6 @@
     proxies:
       - DIRECT
       - Proxies
-  - name: Weibo
-    type: select
-    proxies:
-      - DIRECT
-      - Proxies
 rules:
  - RULE-SET,Reject,REJECT
  - RULE-SET,Direct,DIRECT
