@@ -21,6 +21,7 @@ payload:
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,speedtest
+  - DOMAIN-KEYWORD,aliyun
   
   - DOMAIN-SUFFIX,baidu.com
   - DOMAIN-SUFFIX,bcebos.com
