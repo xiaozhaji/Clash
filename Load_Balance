@@ -1,5 +1,5 @@
 parsers:
-  - reg: 'lb$'
+  - reg: 'lb$' #在订阅链接后加入#lb，更新后生效
     yaml:
       append-proxy-groups:
         - name: ⚖️ 负载均衡-散列
