@@ -1,2 +1,2 @@
 # Clash for Windows
-CFW 配置/规则集合
+自用CFW 配置/规则集合，部分设置可能不通用。
