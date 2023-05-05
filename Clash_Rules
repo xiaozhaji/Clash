@@ -18,14 +18,21 @@ rule-providers:
   Reject:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Reject.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Direct.yaml"
     interval: 36000
     path: ./Reject.yaml
+    
+  Direct:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Direct.yaml"
+    interval: 36000
+    path: ./Direct.yaml
     
   Proxy:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Proxy.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Proxy.yaml"
     interval: 36000
     path: ./Proxy.yaml
 
@@ -63,14 +70,7 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Weibo.yaml"
     interval: 36000
     path: ./Weibo.yaml
-    
-  Direct:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Direct.yaml"
-    interval: 36000
-    path: ./Direct.yaml
-    
+
   ChinaMax:
     behavior: "classical"
     type: http
