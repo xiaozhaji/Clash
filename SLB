@@ -13,7 +13,7 @@ parsers:
           interval: 120
           strategy: round-robin
       commands:
-        - proxy-groups.⚖️ 负载均衡-散列.proxies=[]proxyNames|^(?=.*香港)(?=.*标准).*
+        - proxy-groups.⚖️ 负载均衡-散列.proxies=[]proxyNames|^(?=.*(香港|日本|新加坡|狮城))^((?!IPLC|高级|标准).)*$
         - proxy-groups.0.proxies.0+⚖️ 负载均衡-散列
-        - proxy-groups.⚖️ 负载均衡-轮询.proxies=[]proxyNames|^(?=.*香港)(?=.*标准).*
+        - proxy-groups.⚖️ 负载均衡-轮询.proxies=[]proxyNames|^(?=.*(香港|日本|新加坡|狮城))^((?!IPLC|高级|标准).)*$
         - proxy-groups.0.proxies.0+⚖️ 负载均衡-轮询
