@@ -7,6 +7,8 @@ payload:
   
   - DOMAIN,iosapps.itunes.apple.com
   - DOMAIN,updates.cdn-apple.com
+  - DOMAIN,speedtest-univ-results-api.speedtest.net
+  - DOMAIN,user-api.speedtest.net
 
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
@@ -29,3 +31,5 @@ payload:
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,ndmdhs.com
   - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,itunes.apple.com
+  
