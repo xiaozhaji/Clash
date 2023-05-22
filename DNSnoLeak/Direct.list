@@ -63,8 +63,8 @@ DOMAIN-SUFFIX,eduwest.com
 DOMAIN-SUFFIX,utv4d.com
 DOMAIN-SUFFIX,btbat.com
 DOMAIN-SUFFIX,lizhi.io
-DOMAIN-SUFFIX,snssdk.com
-DOMAIN-SUFFIX,amemv.com
+#DOMAIN-SUFFIX,snssdk.com
+#DOMAIN-SUFFIX,amemv.com
 DOMAIN-SUFFIX,codelife.cc
 DOMAIN-SUFFIX,xiayigejiaqi.com
 DOMAIN-SUFFIX,ipchaxun.net
