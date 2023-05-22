@@ -18,7 +18,7 @@ rule-providers:
   Reject:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Direct.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Reject.yaml"
     interval: 36000
     path: ./Reject.yaml
     
@@ -100,7 +100,7 @@ dns:
     - WORKGROUP
 tun:
   enable: true
-  stack: gvisor
+  stack: system
   auto-route: true
   auto-detect-interface: true
   dns-hijack:
