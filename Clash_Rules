@@ -1,75 +1,45 @@
-  - name: Microsoft
-    type: select
-    proxies:
-      - DIRECT
-      - Proxies
-rules:
- - RULE-SET,Reject,REJECT
- - RULE-SET,Direct,DIRECT
- - RULE-SET,Proxy,Proxies
- - RULE-SET,Netflix,Netflix
- - RULE-SET,Microsoft,Microsoft
- - RULE-SET,Apple,Apple
- - RULE-SET,Global,Proxies
- - RULE-SET,Weibo,Weibo
- - RULE-SET,ChinaMax,DIRECT
+[custom]
+ruleset=🚀 节点选择,[]DOMAIN,iosapps.itunes.apple.com
+ruleset=🚀 节点选择,[]DOMAIN,updates.cdn-apple.com
+ruleset=🚀 节点选择,[]DOMAIN,speedtest-univ-results-api.speedtest.net
+ruleset=🚀 节点选择,[]DOMAIN,user-api.speedtest.net
+ruleset=🚀 节点选择,[]DOMAIN,sydney.bing.com
 
-rule-providers:
-  Reject:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Reject.yaml"
-    interval: 36000
-    path: ./Reject.yaml
-    
-  Direct:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Direct.yaml"
-    interval: 36000
-    path: ./Direct.yaml
-    
-  Proxy:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Proxy.yaml"
-    interval: 36000
-    path: ./Proxy.yaml
+ruleset=🚀 节点选择,[]DOMAIN-KEYWORD,openai
 
-  Netflix:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
-    interval: 36000
-    path: ./Netflix.yaml
-    
-  Microsoft:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
-    interval: 36000
-    path: ./Microsoft.yaml
-    
-  Apple:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml"
-    interval: 36000
-    path: ./Apple.yaml
-    
-  Global:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
-    interval: 36000
-    path: ./Global.yaml
-    
-  Weibo:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Weibo.yaml"
-    interval: 36000
-    path: ./Weibo.yaml
+ruleset=🚀 节点选择,[]DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+ruleset=🚀 节点选择,[]DOMAIN-SUFFIX,services.googleapis.cn
+ruleset=🚀 节点选择,[]DOMAIN-SUFFIX,itunes.apple.com
+ruleset=🚀 节点选择,[]DOMAIN-SUFFIX,snssdk.com
+ruleset=🚀 节点选择,[]DOMAIN-SUFFIX,amemv.com
+
+
+;固定自定义修正规则
+ruleset=REJECT,https://raw.githubusercontent.com/xiaozhaji/Clash/master/DNSnoLeak/Reject.list
+ruleset=DIRECT,https://raw.githubusercontent.com/xiaozhaji/Clash/master/DNSnoLeak/Direct.list
+
+;自定义代理规则
+ruleset=🚀 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list
+;ruleset=🚀 节点选择,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ByteDance/ByteDance.list
+
+;固定直连规则
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+ruleset=DIRECT,[]GEOIP,CN,no-resolve
+ruleset=🚀 节点选择,[]FINAL
+
+custom_proxy_group=🚀 节点选择`select`[]♻️ 自动选择`[]DIRECT`.*
+custom_proxy_group=♻️ 自动选择`url-test`.*`http://www.gstatic.com/generate_204`120,,10
+
+enable_rule_generator=true
+overwrite_original_rules=true
+
 
   ChinaMax:
     behavior: "classical"
@@ -82,8 +52,8 @@ dns:
   enhanced-mode: fake-ip
   ipv6: true
   nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   fallback: []
   fake-ip-filter:
     - +.stun.*.*
