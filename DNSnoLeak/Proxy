@@ -1,0 +1,30 @@
+host, receiptcheck.quantumult.app
+host, iosapps.itunes.apple.com
+host, updates.cdn-apple.com
+host, speedtest-univ-results-api.speedtest.net
+host, user-api.speedtest.net 
+host, sydney.bing.com
+
+host-keyword, mtalk
+host-keyword, googleapis
+
+host-suffix, adtidy.org
+host-suffix, deepl.com
+host-suffix, weather.com
+host-suffix, windy.com
+host-suffix, gstatic.com
+host-suffix, doubleclick.net
+host-suffix, fanart.tv
+host-suffix, themoviedb.org
+host-suffix, tmdb.org
+host-suffix, thetvdb.com
+host-suffix, omdbapi.com
+host-suffix, nvidia.com
+host-suffix, nvidia.cn
+host-suffix, geforce.com
+host-suffix, geforce.cn
+host-suffix, bing.com
+host-suffix, ndmdhs.com
+host-suffix, itunes.apple.com
+host-suffix, snssdk.com
+host-suffix, amemv.com
