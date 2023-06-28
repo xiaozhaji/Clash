@@ -1,30 +1,30 @@
-host, receiptcheck.quantumult.app
-host, iosapps.itunes.apple.com
-host, updates.cdn-apple.com
-host, speedtest-univ-results-api.speedtest.net
-host, user-api.speedtest.net 
-host, sydney.bing.com
+DOMAIN,receiptcheck.quantumult.app
+DOMAIN,iosapps.itunes.apple.com
+DOMAIN,updates.cdn-apple.com
+DOMAIN,speedtest-univ-results-api.speedtest.net
+DOMAIN,user-api.speedtest.net 
+DOMAIN,sydney.bing.com
 
-host-keyword, mtalk
-host-keyword, googleapis
+DOMAIN-KEYWORD,mtalk
+DOMAIN-KEYWORD,googleapis
 
-host-suffix, adtidy.org
-host-suffix, deepl.com
-host-suffix, weather.com
-host-suffix, windy.com
-host-suffix, gstatic.com
-host-suffix, doubleclick.net
-host-suffix, fanart.tv
-host-suffix, themoviedb.org
-host-suffix, tmdb.org
-host-suffix, thetvdb.com
-host-suffix, omdbapi.com
-host-suffix, nvidia.com
-host-suffix, nvidia.cn
-host-suffix, geforce.com
-host-suffix, geforce.cn
-host-suffix, bing.com
-host-suffix, ndmdhs.com
-host-suffix, itunes.apple.com
-host-suffix, snssdk.com
-host-suffix, amemv.com
+DOMAIN-SUFFIX,adtidy.org
+DOMAIN-SUFFIX,deepl.com
+DOMAIN-SUFFIX,weather.com
+DOMAIN-SUFFIX,windy.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,fanart.tv
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
+DOMAIN-SUFFIX,thetvdb.com
+DOMAIN-SUFFIX,omdbapi.com
+DOMAIN-SUFFIX,nvidia.com
+DOMAIN-SUFFIX,nvidia.cn
+DOMAIN-SUFFIX,geforce.com
+DOMAIN-SUFFIX,geforce.cn
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,ndmdhs.com
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,amemv.com
