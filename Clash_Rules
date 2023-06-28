@@ -40,7 +40,25 @@ custom_proxy_group=♻️ 自动选择`url-test`.*`http://www.gstatic.com/genera
 enable_rule_generator=true
 overwrite_original_rules=true
 
+#RuleSet
+rules:
+ - RULE-SET,Reject,REJECT
+ - RULE-SET,Direct,DIRECT
+ - RULE-SET,Proxy,Proxies
+ - RULE-SET,Netflix,Netflix
+ - RULE-SET,Microsoft,Microsoft
+ - RULE-SET,Apple,Apple
+ - RULE-SET,Global,Proxies
+ - RULE-SET,Weibo,Weibo
+ - RULE-SET,ChinaMax,DIRECT
 
+rule-providers:
+  Reject:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/RuleSet/Direct.yaml"
+    interval: 36000
+    path: ./Reject.yaml
   ChinaMax:
     behavior: "classical"
     type: http
