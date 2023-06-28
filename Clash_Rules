@@ -1,4 +1,3 @@
-#RuleSet
 rules:
  - RULE-SET,Reject,REJECT
 
@@ -9,6 +8,7 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml"
     interval: 3600
     path: ./Reject.yaml
+
 dns:
   enable: true
   enhanced-mode: fake-ip
@@ -28,7 +28,7 @@ dns:
     - "*.*.xboxlive.com"
     - "*.msftncsi.com"
     - "*.msftconnecttest.com"
-    - ntp1.aliyun.com
+    - ntp.aliyun.com
     - WORKGROUP
 tun:
   enable: true
