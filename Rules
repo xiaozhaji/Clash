@@ -1,20 +1,20 @@
 rules:
  - RULE-SET,LocalAreaNetwork,DIRECT
- - RULE-SET,BanAD
- - RULE-SET,BanProgramAD
- - RULE-SET,Reject
- - RULE-SET,Direct
- - RULE-SET,Proxy
- - RULE-SET,TikTok
- - RULE-SET,Netflix
- - RULE-SET,YouTube
- - RULE-SET,Google
- - RULE-SET,OpenAI
- - RULE-SET,Telegram
- - RULE-SET,Microsoft
- - RULE-SET,Apple
- - RULE-SET,Global
- - RULE-SET,ChinaMax
+ - RULE-SET,BanAD,REJECT
+ - RULE-SET,BanProgramAD,REJECT
+ - RULE-SET,Reject,REJECT
+ - RULE-SET,Direct,DIRECT
+ - RULE-SET,Proxy,Proxies
+ - RULE-SET,TikTok,Proxies
+ - RULE-SET,Netflix,Netflix
+ - RULE-SET,YouTube,YouTube
+ - RULE-SET,Google,Proxies
+ - RULE-SET,OpenAI.OpenAI
+ - RULE-SET,Telegram,Telegram
+ - RULE-SET,Microsoft,Proxies
+ - RULE-SET,Apple,Apple
+ - RULE-SET,Global,Proxies
+ - RULE-SET,ChinaMax,DIRECT
 
 rule-providers:
   LocalAreaNetwork:
