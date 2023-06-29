@@ -1,10 +1,10 @@
 rules:
  - RULE-SET,LocalAreaNetwork,DIRECT
+ - RULE-SET,Proxy,Proxies
+ - RULE-SET,Direct,DIRECT
+ - RULE-SET,Reject,REJECT
  - RULE-SET,BanAD,REJECT
  - RULE-SET,BanProgramAD,REJECT
- - RULE-SET,Reject,REJECT
- - RULE-SET,Direct,DIRECT
- - RULE-SET,Proxy,Proxies
  - RULE-SET,TikTok,Proxies
  - RULE-SET,Netflix,Netflix
  - RULE-SET,YouTube,YouTube
@@ -24,6 +24,27 @@ rule-providers:
     interval: 3600
     path: ./LocalAreaNetwork.yaml
 
+  Proxy:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml"
+    interval: 3600
+    path: ./Proxy.yaml
+
+  Direct:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
+    interval: 3600
+    path: ./Direct.yaml
+
+  Reject:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
+    interval: 3600
+    path: ./Reject.yaml
+
   BanAD:
     behavior: "classical"
     type: http
@@ -37,27 +58,6 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
     interval: 3600
     path: ./BanProgramAD.yaml
-
-  Reject:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
-    interval: 3600
-    path: ./Reject.yaml
-
-  Direct:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
-    interval: 3600
-    path: ./Direct.yaml
-
-  Proxy:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml"
-    interval: 3600
-    path: ./Proxy.yaml
 
   TikTok:
     behavior: "classical"
