@@ -1,30 +1,37 @@
-DOMAIN,receiptcheck.quantumult.app
-DOMAIN,iosapps.itunes.apple.com
-DOMAIN,updates.cdn-apple.com
-DOMAIN,speedtest-univ-results-api.speedtest.net
-DOMAIN,user-api.speedtest.net 
-DOMAIN,sydney.bing.com
+payload:
+  - DOMAIN,receiptcheck.quantumult.app
+  - DOMAIN,iosapps.itunes.apple.com
+  - DOMAIN,updates.cdn-apple.com
+  - DOMAIN,speedtest-univ-results-api.speedtest.net
+  - DOMAIN,user-api.speedtest.net 
+  - DOMAIN,sydney.bing.com
 
-DOMAIN-KEYWORD,mtalk
-DOMAIN-KEYWORD,googleapis
+  - DOMAIN-KEYWORD,mtalk
+  - DOMAIN-KEYWORD,googleapis
 
-DOMAIN-SUFFIX,adtidy.org
-DOMAIN-SUFFIX,deepl.com
-DOMAIN-SUFFIX,weather.com
-DOMAIN-SUFFIX,windy.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,doubleclick.net
-DOMAIN-SUFFIX,fanart.tv
-DOMAIN-SUFFIX,themoviedb.org
-DOMAIN-SUFFIX,tmdb.org
-DOMAIN-SUFFIX,thetvdb.com
-DOMAIN-SUFFIX,omdbapi.com
-DOMAIN-SUFFIX,nvidia.com
-DOMAIN-SUFFIX,nvidia.cn
-DOMAIN-SUFFIX,geforce.com
-DOMAIN-SUFFIX,geforce.cn
-DOMAIN-SUFFIX,bing.com
-DOMAIN-SUFFIX,ndmdhs.com
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,snssdk.com
-DOMAIN-SUFFIX,amemv.com
+  - DOMAIN-SUFFIX,refractivesoftware.com
+  - DOMAIN-SUFFIX,octanerender.com
+  - DOMAIN-SUFFIX,otoy.com
+  - DOMAIN-SUFFIX,otoylocal.com
+  - DOMAIN-SUFFIX,sentry.io
+
+  - DOMAIN-SUFFIX,adtidy.org
+  - DOMAIN-SUFFIX,deepl.com
+  - DOMAIN-SUFFIX,weather.com
+  - DOMAIN-SUFFIX,windy.com
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,doubleclick.net
+  - DOMAIN-SUFFIX,fanart.tv
+  - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,tmdb.org
+  - DOMAIN-SUFFIX,thetvdb.com
+  - DOMAIN-SUFFIX,omdbapi.com
+  - DOMAIN-SUFFIX,nvidia.com
+  - DOMAIN-SUFFIX,nvidia.cn
+  - DOMAIN-SUFFIX,geforce.com
+  - DOMAIN-SUFFIX,geforce.cn
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,ndmdhs.com
+  - DOMAIN-SUFFIX,itunes.apple.com
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,amemv.com
