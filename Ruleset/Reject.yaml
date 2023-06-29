@@ -1,0 +1,20 @@
+payload:
+  - PROCESS-NAME,CorelDRW.exe
+
+  - DOMAIN,hub5idx.v6.shub.sandai.net
+  - DOMAIN,hub5emu.v6.shub.sandai.net
+  - DOMAIN,hub5btmain.v6.shub.sandai.net
+  - DOMAIN,o33249.ingest.sentry.io
+
+  - DOMAIN-KEYWORD,corel
+
+  - DOMAIN-SUFFIX,refractivesoftware.com
+  - DOMAIN-SUFFIX,octanerender.com
+  - DOMAIN-SUFFIX,otoy.com
+  - DOMAIN-SUFFIX,otoylocal.com
+  - DOMAIN-SUFFIX,sentry.io
+
+  - IP-CIDR,54.243.210.230/32,no-resolve
+  - IP-CIDR,169.54.33.187/32,no-resolve
+  - IP-CIDR,58.20.196.160/32,no-resolve
+  - IP-CIDR,169.54.129.22/32,no-resolve
