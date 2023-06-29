@@ -23,105 +23,105 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
     interval: 3600
     path: ./LocalAreaNetwork.yaml
-rule-providers:
+
   BanAD:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanAD.yaml"
     interval: 3600
     path: ./BanAD.yaml
-rule-providers:
+
   BanProgramAD:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
     interval: 3600
     path: ./BanProgramAD.yaml
-rule-providers:
+
   Reject:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
     interval: 3600
     path: ./Reject.yaml
-rule-providers:
+
   Direct:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
     interval: 3600
     path: ./Direct.yaml
-rule-providers:
+
   Proxy:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml"
     interval: 3600
     path: ./Proxy.yaml
-rule-providers:
+
   TikTok:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
     interval: 3600
     path: ./TikTok.yaml
-rule-providers:
+
   Netflix:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical.yaml"
     interval: 3600
     path: ./Netflix.yaml
-rule-providers:
+
   YouTube:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
     interval: 3600
     path: ./YouTube.yaml
-rule-providers:
+
   Google:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
     interval: 3600
     path: ./Google.yaml
-rule-providers:
+
   OpenAI:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
     interval: 3600
     path: ./OpenAI.yaml
-rule-providers:
+
   Telegram:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
     interval: 3600
     path: ./Telegram.yaml
-rule-providers:
+
   Microsoft:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
     interval: 3600
     path: ./Microsoft.yaml
-rule-providers:
+
   Apple:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml"
     interval: 3600
     path: ./Apple.yaml
-rule-providers:
+
   Global:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml"
     interval: 3600
     path: ./Global.yaml
-rule-providers:
+
   ChinaMax:
     behavior: "classical"
     type: http
