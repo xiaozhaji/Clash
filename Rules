@@ -9,7 +9,7 @@ rules:
  - RULE-SET,Netflix,Netflix
  - RULE-SET,YouTube,YouTube
  - RULE-SET,Google,Proxies
- - RULE-SET,OpenAI.OpenAI
+ - RULE-SET,OpenAI,OpenAI
  - RULE-SET,Telegram,Telegram
  - RULE-SET,Microsoft,Proxies
  - RULE-SET,Apple,Apple
