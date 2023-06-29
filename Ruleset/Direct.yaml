@@ -15,7 +15,7 @@ payload:
   - DOMAIN,yacd.haishan.me
   - DOMAIN,tophub.today
   - DOMAIN,ipv4.ddnspod.com
-
+  - DOMAIN,pv.sohu.com
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,speedtest
