@@ -41,21 +41,21 @@ rule-providers:
   Reject:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
     interval: 3600
     path: ./Reject.yaml
 rule-providers:
   Direct:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
     interval: 3600
     path: ./Direct.yaml
 rule-providers:
   Proxy:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/BanProgramAD.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml"
     interval: 3600
     path: ./Proxy.yaml
 rule-providers:
