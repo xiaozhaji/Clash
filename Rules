@@ -1,8 +1,8 @@
 rules:
  - RULE-SET,LocalAreaNetwork,DIRECT
+ - RULE-SET,Reject,REJECT
  - RULE-SET,Proxy,Proxies
  - RULE-SET,Direct,DIRECT
- - RULE-SET,Reject,REJECT
  - RULE-SET,BanAD,REJECT
  - RULE-SET,BanProgramAD,REJECT
  - RULE-SET,TikTok,Proxies
@@ -24,6 +24,13 @@ rule-providers:
     interval: 3600
     path: ./LocalAreaNetwork.yaml
 
+  Reject:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
+    interval: 3600
+    path: ./Reject.yaml
+
   Proxy:
     behavior: "classical"
     type: http
@@ -37,13 +44,6 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
     interval: 3600
     path: ./Direct.yaml
-
-  Reject:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
-    interval: 3600
-    path: ./Reject.yaml
 
   BanAD:
     behavior: "classical"
