@@ -47,6 +47,6 @@ rule-providers:
   Global:
     behavior: "classical"
     type: http
-    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
     interval: 3600
     path: ./Global.yaml
