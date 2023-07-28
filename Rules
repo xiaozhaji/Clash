@@ -4,7 +4,7 @@ rules:
  - RULE-SET,Proxy,Proxies
  - RULE-SET,Direct,DIRECT
  - RULE-SET,Media,Proxies
- - RULE-SET,Global,DIRECT
+ - RULE-SET,Global,Proxies
  - GEOIP,CN,DIRECT
  - MATCH,Final
 
