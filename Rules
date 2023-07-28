@@ -5,6 +5,8 @@ rules:
  - RULE-SET,Direct,DIRECT
  - RULE-SET,Media,Proxies
  - RULE-SET,Global,DIRECT
+ - GEOIP,CN,DIRECT
+ - MATCH,Final
 
 rule-providers:
   LocalAreaNetwork:
