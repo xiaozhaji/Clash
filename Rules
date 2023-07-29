@@ -3,6 +3,7 @@ rules:
  - RULE-SET,Reject,REJECT
  - RULE-SET,Proxy,Proxies
  - RULE-SET,Direct,DIRECT
+ - RULE-SET,Microsoft,Proxies
  - RULE-SET,Media,Proxies
  - RULE-SET,Global,Proxies
  - GEOIP,CN,DIRECT
@@ -36,6 +37,13 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
     interval: 3600
     path: ./Direct.yaml
+
+  Microsoft:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+    interval: 3600
+    path: ./Microsoft.yaml
 
   Media:
     behavior: "classical"
