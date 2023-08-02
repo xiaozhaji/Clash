@@ -7,7 +7,49 @@ rules:
  - RULE-SET,Media,Proxies
  - RULE-SET,Global,Proxies
  - GEOIP,CN,DIRECT
- - MATCH,Final
+ - GEOIP,AE,Proxies
+ - GEOIP,AU,Proxies
+ - GEOIP,BR,Proxies
+ - GEOIP,CA,Proxies
+ - GEOIP,DE,Proxies
+ - GEOIP,DK,Proxies
+ - GEOIP,ES,Proxies
+ - GEOIP,FI,Proxies
+ - GEOIP,FR,Proxies
+ - GEOIP,GB,Proxies
+ - GEOIP,GR,Proxies
+ - GEOIP,HK,Proxies
+ - GEOIP,ID,Proxies
+ - GEOIP,IL,Proxies
+ - GEOIP,IN,Proxies
+ - GEOIP,IQ,Proxies
+ - GEOIP,IR,Proxies
+ - GEOIP,IT,Proxies
+ - GEOIP,JP,Proxies
+ - GEOIP,KR,Proxies
+ - GEOIP,MO,Proxies
+ - GEOIP,MY,Proxies
+ - GEOIP,NL,Proxies
+ - GEOIP,NO,Proxies
+ - GEOIP,NZ,Proxies
+ - GEOIP,PH,Proxies
+ - GEOIP,RU,Proxies
+ - GEOIP,SA,Proxies
+ - GEOIP,SG,Proxies
+ - GEOIP,TH,Proxies
+ - GEOIP,TR,Proxies
+ - GEOIP,TW,Proxies
+ - GEOIP,US,Proxies
+ - GEOIP,VN,Proxies
+ - GEOIP,CLOUDFLARE,Proxies
+ - GEOIP,CLOUDFRONT,Proxies
+ - GEOIP,FACEBOOK,Proxies
+ - GEOIP,FASTLY,Proxies
+ - GEOIP,GOOGLE,Proxies
+ - GEOIP,NETFLIX,Proxies
+ - GEOIP,TELEGRAM,Proxies
+ - GEOIP,TWITTER,Proxies
+ - MATCH,DIRECT
 
 rule-providers:
   LocalAreaNetwork:
