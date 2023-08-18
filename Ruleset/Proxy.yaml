@@ -6,7 +6,7 @@ payload:
   - DOMAIN,user-api.speedtest.net 
   - DOMAIN,sydney.bing.com
   - DOMAIN,bard.google.com
-  - DOMAIN,tosv.byted.org
+#  - DOMAIN,tosv.byted.org
 
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
@@ -33,4 +33,4 @@ payload:
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,ndmdhs.com
   - DOMAIN-SUFFIX,itunes.apple.com
-  - DOMAIN-SUFFIX,tiktokv.com
+#  - DOMAIN-SUFFIX,tiktokv.com
