@@ -1,1 +1,6 @@
-
+payload:
+#  - DOMAIN,tosv.byted.org
+  
+#  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-SUFFIX,snssdk.com
+  - DOMAIN-SUFFIX,amemv.com
