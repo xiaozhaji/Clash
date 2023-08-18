@@ -5,7 +5,7 @@ rules:
  - RULE-SET,Direct,DIRECT
  - RULE-SET,Microsoft,Proxies
  - RULE-SET,Media,Proxies
- - RULE-SET,Global,Proxies
+ - RULE-SET,GFW,Proxies
  - GEOIP,CN,DIRECT
  - GEOIP,AE,Proxies
  - GEOIP,AU,Proxies
@@ -94,9 +94,9 @@ rule-providers:
     interval: 3600
     path: ./Media.yaml
 
-  Global:
+  GFW:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
     interval: 3600
-    path: ./Global.yaml
+    path: ./GFW.yaml
