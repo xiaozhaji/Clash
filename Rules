@@ -1,64 +1,160 @@
+#============UserScript=============#
+# 填写订阅链接用于获取机场流量信息并在主页显示
+subscribe-url: null
+# 模式设置：rule（规则） / global（全局代理）/ direct（全局直连）
+mode: rule
+# 设置日志输出级别
+log-level: info
+# 允许局域网
+allow-lan: true
+# 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
+# bind-address: "*"
+# 混合端口，HTTP和SOCKS5用一个端口
+# mixed-port: 7890                   
+# 外部控制器监听地址，可以使用 RESTful API 来控制你的 clash 内核
+# external-controller: 127.0.0.1:9090
+# IPV6解析(开启 true|关闭 false)
+ipv6: true
+#===================================#
+# 禁用QUIC
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+#===================================#
+# DNS 服务器配置
+dns:
+  # 关闭将使用系统 DNS
+  enable: true
+  # IPV6解析开关；如果为false，将返回ipv6结果为空
+  ipv6: true
+  # 模式：redir-host或fake-ip
+  enhanced-mode: fake-ip
+  # DNS 监听地址
+  listen: 0.0.0.0:1053
+  # 解析非IP的dns用的dns服务器，只支持纯IP
+  default-nameserver:
+    - 114.114.114.114
+    - 202.141.176.93
+    - 202.141.178.13
+    - 117.50.10.10
+    - 223.5.5.5
+    - 119.29.29.29
+    - 119.28.28.28
+    - 180.184.1.1
+    - 180.184.2.2
+    - 8.8.8.8
+  #  - system
+  # 解析地址池
+  fake-ip-range: 198.18.0.1/16
+  # 过滤列表中的域名返回真实IP
+  fake-ip-filter:
+    - +.lan
+    - +.stun.*.*
+    - +.stun.*.*.*
+    - +.stun.*.*.*.*
+    - +.stun.*.*.*.*.*
+    - lens.l.google.com
+    - '*.n.n.srv.nintendo.net'
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.xboxlive.com
+    - xbox.*.*.microsoft.com
+    - '*.*.xboxlive.com'
+    - '*.msftncsi.com'
+    - '*.msftconnecttest.com'
+    - '*.mcdn.bilivideo.cn'
+    - localhost.ptlogin2.qq.com
+    - '*.battlenet.com.cn'
+    - '*.battlenet.com'
+    - '*.blzstatic.cn'
+    - '*.battle.net'
+  fallback:
+    - https://1.0.0.1/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - tls://8.8.4.4:853
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+  # DNS服务器
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  # 跳过证书验证，解决部分兼容性问题
+  skip-cert-verify: true
+#===================================#
+# 代理组
+
+
+
+#===================================#
+# 策略组
+proxy-groups:
+  - name: 节点选择
+
+
+
+#===================================#
+# 规则集
 rules:
- - RULE-SET,LocalAreaNetwork,DIRECT
+ - SCRIPT,quic,REJECT
+ - DOMAIN,ip-api.com,节点选择
+ - DOMAIN,tosv.byted.org,节点选择
+ - DOMAIN-SUFFIX,tiktokv.com,节点选择
  - RULE-SET,Reject,REJECT
- - RULE-SET,Proxy,Proxies
+ - RULE-SET,Proxy,节点选择
  - RULE-SET,Direct,DIRECT
- - RULE-SET,Microsoft,Proxies
- - RULE-SET,Media,Proxies
- - RULE-SET,GFW,Proxies
+ - GEOIP,NETFLIX,节点选择
+ - RULE-SET,Media,节点选择
+ - RULE-SET,Microsoft,节点选择
+ - GEOIP,FACEBOOK,节点选择
+ - GEOIP,GOOGLE,节点选择
+ - GEOIP,TELEGRAM,节点选择
+ - GEOIP,TWITTER,节点选择
+ - GEOIP,FASTLY,节点选择
+ - GEOIP,CLOUDFLARE,节点选择
+ - GEOIP,CLOUDFRONT,节点选择
+ - RULE-SET,GFW,节点选择
+ - GEOIP,AE,节点选择
+ - GEOIP,AU,节点选择
+ - GEOIP,BR,节点选择
+ - GEOIP,CA,节点选择
+ - GEOIP,DE,节点选择
+ - GEOIP,DK,节点选择
+ - GEOIP,ES,节点选择
+ - GEOIP,FI,节点选择
+ - GEOIP,FR,节点选择
+ - GEOIP,GB,节点选择
+ - GEOIP,GR,节点选择
+ - GEOIP,HK,节点选择
+ - GEOIP,ID,节点选择
+ - GEOIP,IL,节点选择
+ - GEOIP,IN,节点选择
+ - GEOIP,IQ,节点选择
+ - GEOIP,IR,节点选择
+ - GEOIP,IT,节点选择
+ - GEOIP,JP,节点选择
+ - GEOIP,KR,节点选择
+ - GEOIP,MO,节点选择
+ - GEOIP,MY,节点选择
+ - GEOIP,NL,节点选择
+ - GEOIP,NO,节点选择
+ - GEOIP,NZ,节点选择
+ - GEOIP,PH,节点选择
+ - GEOIP,RU,节点选择
+ - GEOIP,SA,节点选择
+ - GEOIP,SG,节点选择
+ - GEOIP,TH,节点选择
+ - GEOIP,TR,节点选择
+ - GEOIP,TW,节点选择
+ - GEOIP,US,节点选择
+ - GEOIP,VN,节点选择
  - GEOIP,CN,DIRECT
- - GEOIP,AE,Proxies
- - GEOIP,AU,Proxies
- - GEOIP,BR,Proxies
- - GEOIP,CA,Proxies
- - GEOIP,DE,Proxies
- - GEOIP,DK,Proxies
- - GEOIP,ES,Proxies
- - GEOIP,FI,Proxies
- - GEOIP,FR,Proxies
- - GEOIP,GB,Proxies
- - GEOIP,GR,Proxies
- - GEOIP,HK,Proxies
- - GEOIP,ID,Proxies
- - GEOIP,IL,Proxies
- - GEOIP,IN,Proxies
- - GEOIP,IQ,Proxies
- - GEOIP,IR,Proxies
- - GEOIP,IT,Proxies
- - GEOIP,JP,Proxies
- - GEOIP,KR,Proxies
- - GEOIP,MO,Proxies
- - GEOIP,MY,Proxies
- - GEOIP,NL,Proxies
- - GEOIP,NO,Proxies
- - GEOIP,NZ,Proxies
- - GEOIP,PH,Proxies
- - GEOIP,RU,Proxies
- - GEOIP,SA,Proxies
- - GEOIP,SG,Proxies
- - GEOIP,TH,Proxies
- - GEOIP,TR,Proxies
- - GEOIP,TW,Proxies
- - GEOIP,US,Proxies
- - GEOIP,VN,Proxies
- - GEOIP,CLOUDFLARE,Proxies
- - GEOIP,CLOUDFRONT,Proxies
- - GEOIP,FACEBOOK,Proxies
- - GEOIP,FASTLY,Proxies
- - GEOIP,GOOGLE,Proxies
- - GEOIP,NETFLIX,Proxies
- - GEOIP,TELEGRAM,Proxies
- - GEOIP,TWITTER,Proxies
  - MATCH,DIRECT
-
+#===================================#
+# 远程规则集
 rule-providers:
-  LocalAreaNetwork:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/LocalAreaNetwork.yaml"
-    interval: 3600
-    path: ./LocalAreaNetwork.yaml
-
   Reject:
     behavior: "classical"
     type: http
@@ -85,7 +181,7 @@ rule-providers:
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
     interval: 3600
-    path: ./Microsoft.yaml
+    path: ./Microsoft.yaml    
 
   Media:
     behavior: "classical"
