@@ -10,6 +10,9 @@ allow-lan: true
 # mixed-port: 7890                   
 # 外部控制器监听地址，可以使用 RESTful API 来控制你的 clash 内核
 # external-controller: 127.0.0.1:9090
+#实验性功能
+experimental:
+  sniff-tls-sni: true
 # IPV6解析(开启 true|关闭 false)
 ipv6: true
 #===================================#
