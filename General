@@ -1,6 +1,3 @@
-#============UserScript=============#
-# 填写订阅链接用于获取机场流量信息并在主页显示
-subscribe-url: null
 # 模式设置：rule（规则） / global（全局代理）/ direct（全局直连）
 mode: rule
 # 设置日志输出级别
