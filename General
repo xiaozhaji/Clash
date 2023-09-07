@@ -100,7 +100,6 @@ proxy-groups:
 rules:
  - SCRIPT,quic,REJECT
  - DOMAIN,ip-api.com,节点选择
- - DOMAIN,tosv.byted.org,节点选择
  - DOMAIN-SUFFIX,tiktokv.com,节点选择
  - RULE-SET,Reject,REJECT
  - RULE-SET,Proxy,节点选择
