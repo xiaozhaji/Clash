@@ -6,7 +6,6 @@ payload:
   - DOMAIN,user-api.speedtest.net 
   - DOMAIN,sydney.bing.com
   - DOMAIN,bard.google.com
-#  - DOMAIN,tosv.byted.org
 
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
@@ -16,9 +15,9 @@ payload:
   - DOMAIN-SUFFIX,otoy.com
   - DOMAIN-SUFFIX,otoylocal.com
   - DOMAIN-SUFFIX,adtidy.org
-#  - DOMAIN-SUFFIX,deepl.com
-#  - DOMAIN-SUFFIX,weather.com
-#  - DOMAIN-SUFFIX,windy.com
+  - DOMAIN-SUFFIX,deepl.com
+  - DOMAIN-SUFFIX,weather.com
+  - DOMAIN-SUFFIX,windy.com
   - DOMAIN-SUFFIX,gstatic.com
   - DOMAIN-SUFFIX,doubleclick.net
   - DOMAIN-SUFFIX,fanart.tv
@@ -33,4 +32,4 @@ payload:
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,ndmdhs.com
   - DOMAIN-SUFFIX,itunes.apple.com
-#  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-SUFFIX,tiktokv.com
