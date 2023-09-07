@@ -64,9 +64,6 @@ payload:
   - DOMAIN-SUFFIX,btbat.com
   - DOMAIN-SUFFIX,lizhi.io
   - DOMAIN-SUFFIX,douyin.com
-  - DOMAIN-SUFFIX,douyincdn.com
-  - DOMAIN-SUFFIX,douyinvod.com
-  - DOMAIN-SUFFIX,douyinpic.com
   - DOMAIN-SUFFIX,codelife.cc
   - DOMAIN-SUFFIX,xiayigejiaqi.com
   - DOMAIN-SUFFIX,ipchaxun.net
