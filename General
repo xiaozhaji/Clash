@@ -113,14 +113,14 @@ rule-providers:
   GeoIPSite:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GeoIPSite.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml"
     interval: 3600
     path: ./GeoIPSite.yaml
 
   GeoIPGlobal:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GeoIPGlobal.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml"
     interval: 3600
     path: ./GeoIPGlobal.yaml
 
