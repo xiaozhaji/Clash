@@ -74,52 +74,11 @@ rules:
  - RULE-SET,Reject,REJECT
  - RULE-SET,Proxy,节点选择
  - RULE-SET,Direct,DIRECT
- - GEOIP,NETFLIX,节点选择
  - RULE-SET,Media,节点选择
+ - RULE-SET,GEOIPSITE,节点选择
+ - RULE-SET,GEOIPGLOBAL,节点选择
  - RULE-SET,Microsoft,节点选择
- - GEOIP,FACEBOOK,节点选择
- - GEOIP,GOOGLE,节点选择
- - GEOIP,TELEGRAM,节点选择
- - GEOIP,TWITTER,节点选择
- - GEOIP,FASTLY,节点选择
- - GEOIP,CLOUDFLARE,节点选择
- - GEOIP,CLOUDFRONT,节点选择
  - RULE-SET,GFW,节点选择
- - GEOIP,AE,节点选择
- - GEOIP,AU,节点选择
- - GEOIP,BR,节点选择
- - GEOIP,CA,节点选择
- - GEOIP,DE,节点选择
- - GEOIP,DK,节点选择
- - GEOIP,ES,节点选择
- - GEOIP,FI,节点选择
- - GEOIP,FR,节点选择
- - GEOIP,GB,节点选择
- - GEOIP,GR,节点选择
- - GEOIP,HK,节点选择
- - GEOIP,ID,节点选择
- - GEOIP,IL,节点选择
- - GEOIP,IN,节点选择
- - GEOIP,IQ,节点选择
- - GEOIP,IR,节点选择
- - GEOIP,IT,节点选择
- - GEOIP,JP,节点选择
- - GEOIP,KR,节点选择
- - GEOIP,MO,节点选择
- - GEOIP,MY,节点选择
- - GEOIP,NL,节点选择
- - GEOIP,NO,节点选择
- - GEOIP,NZ,节点选择
- - GEOIP,PH,节点选择
- - GEOIP,RU,节点选择
- - GEOIP,SA,节点选择
- - GEOIP,SG,节点选择
- - GEOIP,TH,节点选择
- - GEOIP,TR,节点选择
- - GEOIP,TW,节点选择
- - GEOIP,US,节点选择
- - GEOIP,VN,节点选择
- - GEOIP,CN,DIRECT
  - MATCH,DIRECT
 rule-providers:
   Reject:
@@ -143,19 +102,33 @@ rule-providers:
     interval: 3600
     path: ./Direct.yaml
 
-  Microsoft:
-    behavior: "classical"
-    type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
-    interval: 3600
-    path: ./Microsoft.yaml    
-
   Media:
     behavior: "classical"
     type: http
     url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
     interval: 3600
     path: ./Media.yaml
+
+  GEOIPSITE:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GEOIPSITE.yaml"
+    interval: 3600
+    path: ./GEOIPSITE.yaml
+
+  GEOIPGLOBAL:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GEOIPGLOBAL.yaml"
+    interval: 3600
+    path: ./GEOIPGLOBAL.yaml
+
+  Microsoft:
+    behavior: "classical"
+    type: http
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+    interval: 3600
+    path: ./Microsoft.yaml    
 
   GFW:
     behavior: "classical"
