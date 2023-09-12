@@ -1,179 +1,179 @@
 payload:
 #GEOIP全球
-  -GEOIP,jp
-  -GEOIP,kr
-  -GEOIP,hk
-  -GEOIP,tw
-  -GEOIP,sg
-  -GEOIP,us
+  - GEOIP,jp
+  - GEOIP,kr
+  - GEOIP,hk
+  - GEOIP,tw
+  - GEOIP,sg
+  - GEOIP,us
 
-  -GEOIP,kp
-  -GEOIP,mn
+  - GEOIP,kp
+  - GEOIP,mn
   
-  -GEOIP,mo
-  -GEOIP,la
-  -GEOIP,mm
-  -GEOIP,vn
-  -GEOIP,th
-  -GEOIP,ph
-  -GEOIP,id
-  -GEOIP,my
-  -GEOIP,tl
+  - GEOIP,mo
+  - GEOIP,la
+  - GEOIP,mm
+  - GEOIP,vn
+  - GEOIP,th
+  - GEOIP,ph
+  - GEOIP,id
+  - GEOIP,my
+  - GEOIP,tl
 
-  -GEOIP,bd
-  -GEOIP,bn
-  -GEOIP,bt
-  -GEOIP,cc
-  -GEOIP,cx
-  -GEOIP,in
-  -GEOIP,kh
-  -GEOIP,lk
-  -GEOIP,mv
-  -GEOIP,np
+  - GEOIP,bd
+  - GEOIP,bn
+  - GEOIP,bt
+  - GEOIP,cc
+  - GEOIP,cx
+  - GEOIP,in
+  - GEOIP,kh
+  - GEOIP,lk
+  - GEOIP,mv
+  - GEOIP,np
 
-  -GEOIP,kg
-  -GEOIP,kz
-  -GEOIP,pk
-  -GEOIP,tm
-  -GEOIP,tj
-  -GEOIP,uz
+  - GEOIP,kg
+  - GEOIP,kz
+  - GEOIP,pk
+  - GEOIP,tm
+  - GEOIP,tj
+  - GEOIP,uz
 
-  -GEOIP,af
-  -GEOIP,az
-  -GEOIP,bh
-  -GEOIP,il
-  -GEOIP,ir
-  -GEOIP,iq
-  -GEOIP,jo
-  -GEOIP,kw
-  -GEOIP,lb
-  -GEOIP,om
-  -GEOIP,qa
-  -GEOIP,sa
-  -GEOIP,sy
-  -GEOIP,ye
+  - GEOIP,af
+  - GEOIP,az
+  - GEOIP,bh
+  - GEOIP,il
+  - GEOIP,ir
+  - GEOIP,iq
+  - GEOIP,jo
+  - GEOIP,kw
+  - GEOIP,lb
+  - GEOIP,om
+  - GEOIP,qa
+  - GEOIP,sa
+  - GEOIP,sy
+  - GEOIP,ye
 
-  -GEOIP,au
-  -GEOIP,ck
-  -GEOIP,fj
-  -GEOIP,fm
-  -GEOIP,gu
-  -GEOIP,ki
-  -GEOIP,mh
-  -GEOIP,nr
-  -GEOIP,nu
-  -GEOIP,nz
-  -GEOIP,pw
-  -GEOIP,pg
-  -GEOIP,pn
-  -GEOIP,sb
-  -GEOIP,to
-  -GEOIP,tv
-  -GEOIP,vu
+  - GEOIP,au
+  - GEOIP,ck
+  - GEOIP,fj
+  - GEOIP,fm
+  - GEOIP,gu
+  - GEOIP,ki
+  - GEOIP,mh
+  - GEOIP,nr
+  - GEOIP,nu
+  - GEOIP,nz
+  - GEOIP,pw
+  - GEOIP,pg
+  - GEOIP,pn
+  - GEOIP,sb
+  - GEOIP,to
+  - GEOIP,tv
+  - GEOIP,vu
 
-  -GEOIP,ad
-  -GEOIP,al
-  -GEOIP,am
-  -GEOIP,at
-  -GEOIP,az
-  -GEOIP,ax
-  -GEOIP,ba
-  -GEOIP,be
-  -GEOIP,bg
-  -GEOIP,by
-  -GEOIP,ch
-  -GEOIP,cy
-  -GEOIP,cz
-  -GEOIP,de
-  -GEOIP,dk
-  -GEOIP,ee
-  -GEOIP,es
-  -GEOIP,fi
-  -GEOIP,fr
-  -GEOIP,gb
-  -GEOIP,ge
-  -GEOIP,gr
-  -GEOIP,hr
-  -GEOIP,hu
-  -GEOIP,ie
-  -GEOIP,il
-  -GEOIP,is
-  -GEOIP,it
-  -GEOIP,kz
-  -GEOIP,lv
-  -GEOIP,lt
-  -GEOIP,lu
-  -GEOIP,mk
-  -GEOIP,mt
-  -GEOIP,nl
-  -GEOIP,no
-  -GEOIP,pl
-  -GEOIP,pt
-  -GEOIP,ro
-  -GEOIP,ru
-  -GEOIP,se
-  -GEOIP,si
-  -GEOIP,sj
-  -GEOIP,sk
-  -GEOIP,tr
-  -GEOIP,ua
-  -GEOIP,uk
+  - GEOIP,ad
+  - GEOIP,al
+  - GEOIP,am
+  - GEOIP,at
+  - GEOIP,az
+  - GEOIP,ax
+  - GEOIP,ba
+  - GEOIP,be
+  - GEOIP,bg
+  - GEOIP,by
+  - GEOIP,ch
+  - GEOIP,cy
+  - GEOIP,cz
+  - GEOIP,de
+  - GEOIP,dk
+  - GEOIP,ee
+  - GEOIP,es
+  - GEOIP,fi
+  - GEOIP,fr
+  - GEOIP,gb
+  - GEOIP,ge
+  - GEOIP,gr
+  - GEOIP,hr
+  - GEOIP,hu
+  - GEOIP,ie
+  - GEOIP,il
+  - GEOIP,is
+  - GEOIP,it
+  - GEOIP,kz
+  - GEOIP,lv
+  - GEOIP,lt
+  - GEOIP,lu
+  - GEOIP,mk
+  - GEOIP,mt
+  - GEOIP,nl
+  - GEOIP,no
+  - GEOIP,pl
+  - GEOIP,pt
+  - GEOIP,ro
+  - GEOIP,ru
+  - GEOIP,se
+  - GEOIP,si
+  - GEOIP,sj
+  - GEOIP,sk
+  - GEOIP,tr
+  - GEOIP,ua
+  - GEOIP,uk
 
-  -GEOIP,ca
-  -GEOIP,mx
-  -GEOIP,tt
+  - GEOIP,ca
+  - GEOIP,mx
+  - GEOIP,tt
 
-  -GEOIP,ar
-  -GEOIP,bo
-  -GEOIP,br
-  -GEOIP,cl
-  -GEOIP,co
-  -GEOIP,ec
-  -GEOIP,gf
-  -GEOIP,gy
-  -GEOIP,pe
+  - GEOIP,ar
+  - GEOIP,bo
+  - GEOIP,br
+  - GEOIP,cl
+  - GEOIP,co
+  - GEOIP,ec
+  - GEOIP,gf
+  - GEOIP,gy
+  - GEOIP,pe
 
-  -GEOIP,ao
-  -GEOIP,bj
-  -GEOIP,bw
-  -GEOIP,cd
-  -GEOIP,cg
-  -GEOIP,ci
-  -GEOIP,cm
-  -GEOIP,dz
-  -GEOIP,eg
-  -GEOIP,gq
-  -GEOIP,ga
-  -GEOIP,gm
-  -GEOIP,gh
-  -GEOIP,gn
-  -GEOIP,gw
-  -GEOIP,ke
-  -GEOIP,ls
-  -GEOIP,lr
-  -GEOIP,ly
-  -GEOIP,ma
-  -GEOIP,mg
-  -GEOIP,ml
-  -GEOIP,mr
-  -GEOIP,mw
-  -GEOIP,mz
-  -GEOIP,na
-  -GEOIP,ne
-  -GEOIP,ng
-  -GEOIP,rw
-  -GEOIP,sc
-  -GEOIP,sd
-  -GEOIP,sl
-  -GEOIP,so
-  -GEOIP,sn
-  -GEOIP,st
-  -GEOIP,sz
-  -GEOIP,tg
-  -GEOIP,tn
-  -GEOIP,tz
-  -GEOIP,ug
-  -GEOIP,za
-  -GEOIP,zw
+  - GEOIP,ao
+  - GEOIP,bj
+  - GEOIP,bw
+  - GEOIP,cd
+  - GEOIP,cg
+  - GEOIP,ci
+  - GEOIP,cm
+  - GEOIP,dz
+  - GEOIP,eg
+  - GEOIP,gq
+  - GEOIP,ga
+  - GEOIP,gm
+  - GEOIP,gh
+  - GEOIP,gn
+  - GEOIP,gw
+  - GEOIP,ke
+  - GEOIP,ls
+  - GEOIP,lr
+  - GEOIP,ly
+  - GEOIP,ma
+  - GEOIP,mg
+  - GEOIP,ml
+  - GEOIP,mr
+  - GEOIP,mw
+  - GEOIP,mz
+  - GEOIP,na
+  - GEOIP,ne
+  - GEOIP,ng
+  - GEOIP,rw
+  - GEOIP,sc
+  - GEOIP,sd
+  - GEOIP,sl
+  - GEOIP,so
+  - GEOIP,sn
+  - GEOIP,st
+  - GEOIP,sz
+  - GEOIP,tg
+  - GEOIP,tn
+  - GEOIP,tz
+  - GEOIP,ug
+  - GEOIP,za
+  - GEOIP,zw
 
-  -GEOIP,aq
+  - GEOIP,aq
