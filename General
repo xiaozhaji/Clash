@@ -76,8 +76,8 @@ rules:
  - RULE-SET,Proxy,节点选择
  - RULE-SET,Direct,DIRECT
  - RULE-SET,Media,节点选择
- - RULE-SET,GEOIPSITE,节点选择
- - RULE-SET,GEOIPGLOBAL,节点选择
+ - RULE-SET,GeoIPSite,节点选择
+ - RULE-SET,GeoIPGlobal,节点选择
  - RULE-SET,Microsoft,节点选择
  - RULE-SET,GFW,节点选择
  - MATCH,DIRECT
@@ -110,19 +110,19 @@ rule-providers:
     interval: 3600
     path: ./Media.yaml
 
-  GEOIPSITE:
+  GeoIPSite:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GEOIPSITE.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GeoIPSite.yaml"
     interval: 3600
-    path: ./GEOIPSITE.yaml
+    path: ./GeoIPSite.yaml
 
-  GEOIPGLOBAL:
+  GeoIPGlobal:
     behavior: "classical"
     type: http
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GEOIPGLOBAL.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/GeoIPGlobal.yaml"
     interval: 3600
-    path: ./GEOIPGLOBAL.yaml
+    path: ./GeoIPGlobal.yaml
 
   Microsoft:
     behavior: "classical"
