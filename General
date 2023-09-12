@@ -1,35 +1,16 @@
-# 模式设置：rule（规则） / global（全局代理）/ direct（全局直连）
 mode: rule
-# 设置日志输出级别
 log-level: info
-# 允许局域网
 allow-lan: true
 # 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
 # bind-address: "*"
-# 混合端口，HTTP和SOCKS5用一个端口
-# mixed-port: 7890                   
-# 外部控制器监听地址，可以使用 RESTful API 来控制你的 clash 内核
-# external-controller: 127.0.0.1:9090
-#实验性功能
+mixed-port: 7890
 experimental:
   sniff-tls-sni: true
-# IPV6解析(开启 true|关闭 false)
 ipv6: true
-#===================================#
-# 禁用QUIC
-script:
-  shortcuts:
-    quic: network == 'udp' and dst_port == 443
-#===================================#
-# DNS 服务器配置
 dns:
-  # 关闭将使用系统 DNS
   enable: true
-  # IPV6解析开关；如果为false，将返回ipv6结果为空
   ipv6: true
-  # 模式：redir-host或fake-ip
   enhanced-mode: fake-ip
-  # DNS 监听地址
   listen: 0.0.0.0:1053
   # 解析非IP的dns用的dns服务器，只支持纯IP
   default-nameserver:
@@ -43,7 +24,6 @@ dns:
     - 180.184.1.1
     - 180.184.2.2
     - 8.8.8.8
-  #  - system
   # 解析地址池
   fake-ip-range: 198.18.0.1/16
   # 过滤列表中的域名返回真实IP
@@ -84,21 +64,13 @@ dns:
   # 跳过证书验证，解决部分兼容性问题
   skip-cert-verify: true
 #===================================#
-# 代理组
-
-
-
-#===================================#
 # 策略组
 proxy-groups:
   - name: 节点选择
 
-
-
 #===================================#
 # 规则集
 rules:
- - SCRIPT,quic,REJECT
  - RULE-SET,Reject,REJECT
  - RULE-SET,Proxy,节点选择
  - RULE-SET,Direct,DIRECT
@@ -149,8 +121,6 @@ rules:
  - GEOIP,VN,节点选择
  - GEOIP,CN,DIRECT
  - MATCH,DIRECT
-#===================================#
-# 远程规则集
 rule-providers:
   Reject:
     behavior: "classical"
