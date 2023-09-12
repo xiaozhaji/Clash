@@ -49,8 +49,9 @@ dns:
     - '*.blzstatic.cn'
     - '*.battle.net'
   fallback:
-    - https://1.0.0.1/dns-query
+    - https://dns.google/dns-query
     - https://public.dns.iij.jp/dns-query
+    - https://1.0.0.1/dns-query
     - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
