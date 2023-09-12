@@ -1,7 +1,6 @@
 payload:
 #GEOIP全球
 # ⬇️指定地区
-
   -GEOIP,jp
   -GEOIP,kr
   -GEOIP,hk
@@ -10,12 +9,10 @@ payload:
   -GEOIP,us
 
 # ⬇️东亚
-
   -GEOIP,kp
   -GEOIP,mn
-
+  
 # ⬇️东南亚
-
   -GEOIP,mo
   -GEOIP,la
   -GEOIP,mm
@@ -26,10 +23,7 @@ payload:
   -GEOIP,my
   -GEOIP,tl
 
-
-
 # ⬇️南亚
-
   -GEOIP,bd
   -GEOIP,bn
   -GEOIP,bt
@@ -42,7 +36,6 @@ payload:
   -GEOIP,np
 
 # ⬇️中亚
-
   -GEOIP,kg
   -GEOIP,kz
   -GEOIP,pk
@@ -50,9 +43,7 @@ payload:
   -GEOIP,tj
   -GEOIP,uz
 
-
 # ⬇️西亚
-
   -GEOIP,af
   -GEOIP,az
   -GEOIP,bh
@@ -69,7 +60,6 @@ payload:
   -GEOIP,ye
 
 # ⬇️大洋洲
-
   -GEOIP,au
   -GEOIP,ck
   -GEOIP,fj
@@ -89,7 +79,6 @@ payload:
   -GEOIP,vu
 
 # ⬇️欧洲
-
   -GEOIP,ad
   -GEOIP,al
   -GEOIP,am
@@ -139,13 +128,11 @@ payload:
   -GEOIP,uk
 
 # ⬇️北美洲
-
   -GEOIP,ca
   -GEOIP,mx
   -GEOIP,tt
 
 # ⬇️南美洲
-
   -GEOIP,ar
   -GEOIP,bo
   -GEOIP,br
@@ -157,7 +144,6 @@ payload:
   -GEOIP,pe
 
 # ⬇️非洲
-
   -GEOIP,ao
   -GEOIP,bj
   -GEOIP,bw
@@ -200,7 +186,6 @@ payload:
   -GEOIP,ug
   -GEOIP,za
   -GEOIP,zw
-
 # ⬇️南极洲
 
   -GEOIP,aq
