@@ -175,6 +175,5 @@ payload:
   -GEOIP,ug
   -GEOIP,za
   -GEOIP,zw
-# ⬇️南极洲
 
   -GEOIP,aq
