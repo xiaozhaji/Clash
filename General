@@ -1,8 +1,6 @@
 mode: rule
 log-level: info
 allow-lan: true
-# 监听IP白名单，可绑定单个IPv4和v6地址，"*" 为绑定所有IP地址，仅在将allow-lan设置为true时适用
-# bind-address: "*"
 mixed-port: 7890
 experimental:
   sniff-tls-sni: true
@@ -12,7 +10,6 @@ dns:
   ipv6: true
   enhanced-mode: fake-ip
   listen: 0.0.0.0:1053
-  # 解析非IP的dns用的dns服务器，只支持纯IP
   default-nameserver:
     - 114.114.114.114
     - 202.141.176.93
@@ -24,9 +21,7 @@ dns:
     - 180.184.1.1
     - 180.184.2.2
     - 8.8.8.8
-  # 解析地址池
   fake-ip-range: 198.18.0.1/16
-  # 过滤列表中的域名返回真实IP
   fake-ip-filter:
     - +.lan
     - +.stun.*.*
@@ -48,21 +43,9 @@ dns:
     - '*.battlenet.com'
     - '*.blzstatic.cn'
     - '*.battle.net'
-  fallback:
-    - https://dns.google/dns-query
-    - https://public.dns.iij.jp/dns-query
-    - https://1.0.0.1/dns-query
-    - tls://8.8.4.4:853
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-  # DNS服务器
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  # 跳过证书验证，解决部分兼容性问题
   skip-cert-verify: true
 #===================================#
 # 策略组
