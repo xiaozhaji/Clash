@@ -1,15 +1,14 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
 mode: rule
 log-level: info
-allow-lan: true
-mixed-port: 7890
-experimental:
-  sniff-tls-sni: true
 ipv6: true
 dns:
   enable: true
-  ipv6: true
-  enhanced-mode: fake-ip
-  listen: 0.0.0.0:1053
+  listen: 127.0.0.1:8853
   default-nameserver:
     - 114.114.114.114
     - 202.141.176.93
@@ -21,7 +20,14 @@ dns:
     - 180.184.1.1
     - 180.184.2.2
     - 8.8.8.8
-  fake-ip-range: 198.18.0.1/16
+  ipv6: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.4.4
+    #- https://dns.alidns.com/dns-query
+    #- https://doh.pub/dns-query
   fake-ip-filter:
     - +.lan
     - +.stun.*.*
@@ -43,10 +49,6 @@ dns:
     - '*.battlenet.com'
     - '*.blzstatic.cn'
     - '*.battle.net'
-  nameserver:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  skip-cert-verify: true
 #===================================#
 # 策略组
 proxy-groups:
