@@ -7,7 +7,7 @@ payload:
   - DOMAIN,o33249.ingest.sentry.io
 
   - DOMAIN-KEYWORD,corel
-  - DOMAIN-KEYWORD,adobe,REJECT
+  - DOMAIN-KEYWORD,adobe,节点选择
 
 
   - DOMAIN-SUFFIX,refractivesoftware.com
