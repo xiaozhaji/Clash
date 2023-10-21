@@ -5,6 +5,7 @@ payload:
   - DOMAIN,sydney.bing.com
   - DOMAIN,bard.google.com
   - DOMAIN,ip-api.com
+  - DOMAIN,tosv.byted.org
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
