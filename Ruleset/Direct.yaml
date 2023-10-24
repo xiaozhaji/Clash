@@ -77,3 +77,4 @@ payload:
   - DOMAIN-SUFFIX,apple.com
   - DOMAIN-SUFFIX,zjcdn.com
   - DOMAIN-SUFFIX,douyincdn.com
+  - DOMAIN-SUFFIX,ghproxy.com
