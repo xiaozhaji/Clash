@@ -15,6 +15,7 @@ payload:
   - DOMAIN-SUFFIX,otoy.com
   - DOMAIN-SUFFIX,otoylocal.com
   - DOMAIN-SUFFIX,sentry.io
+  - DOMAIN-SUFFIX,anticheatexpert.com
 
   - IP-CIDR,54.243.210.230/32,no-resolve
   - IP-CIDR,169.54.33.187/32,no-resolve
