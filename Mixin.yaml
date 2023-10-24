@@ -1,0 +1,111 @@
+# 使用Mixin重写原始配置文件
+mixin: # 注意下面缩进
+  interface-name: WLAN #以太网
+  dns:
+    enable: true
+    listen: 127.0.0.1:8853
+    default-nameserver:
+      - 223.5.5.5
+      - 119.29.29.29
+      - 1.0.0.1
+      - 8.8.8.8
+    ipv6: false
+    enhanced-mode: fake-ip
+    nameserver:
+      - 223.5.5.5
+      - 1.0.0.1
+      #- https://dns.alidns.com/dns-query
+      #- https://doh.pub/dns-query
+    fake-ip-filter:
+      - +.lan
+      - +.stun.*.*
+      - +.stun.*.*.*
+      - +.stun.*.*.*.*
+      - +.stun.*.*.*.*.*
+      - lens.l.google.com
+      - '*.n.n.srv.nintendo.net'
+      - +.srv.nintendo.net
+      - +.stun.playstation.net
+      - +.xboxlive.com
+      - xbox.*.*.microsoft.com
+      - '*.*.xboxlive.com'
+      - '*.msftncsi.com'
+      - '*.msftconnecttest.com'
+      - '*.mcdn.bilivideo.cn'
+      - localhost.ptlogin2.qq.com
+      - '*.battlenet.com.cn'
+      - '*.battlenet.com'
+      - '*.blzstatic.cn'
+      - '*.battle.net'
+  tun:
+    enable: true
+    stack: system
+    auto-route: true
+    dns-hijack:
+      - any:53
+  rules:
+   - RULE-SET,Reject,REJECT
+   - RULE-SET,Proxy,Proxies #修改为机场提供的策略组名称
+   - RULE-SET,Direct,DIRECT
+   - RULE-SET,Media,Proxies #修改为机场提供的策略组名称
+   - RULE-SET,GeoIPSite,Proxies #修改为机场提供的策略组名称
+   - RULE-SET,GeoIPGlobal,Proxies #修改为机场提供的策略组名称
+   - RULE-SET,Microsoft,Proxies #修改为机场提供的策略组名称
+   - RULE-SET,GFW,Proxies #修改为机场提供的策略组名称
+   - MATCH,DIRECT
+  rule-providers:
+    Reject:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
+      interval: 3600
+      path: ./Reject.yaml
+
+    Proxy:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml"
+      interval: 3600
+      path: ./Proxy.yaml
+
+    Direct:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
+      interval: 3600
+      path: ./Direct.yaml
+
+    Media:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
+      interval: 3600
+      path: ./Media.yaml
+
+    GeoIPSite:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml"
+      interval: 3600
+      path: ./GeoIPSite.yaml
+
+    GeoIPGlobal:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml"
+      interval: 3600
+      path: ./GeoIPGlobal.yaml
+
+    Microsoft:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+      interval: 3600
+      path: ./Microsoft.yaml    
+
+    GFW:
+      behavior: "classical"
+      type: http
+      url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
+      interval: 3600
+      path: ./GFW.yaml
