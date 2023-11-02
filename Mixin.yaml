@@ -30,55 +30,55 @@ mixin: # 注意下面缩进
     Reject:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
+      url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml"
       interval: 3600
       path: ./Reject.yaml
 
     Proxy:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml"
+      url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml"
       interval: 3600
       path: ./Proxy.yaml
 
     Direct:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
+      url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml"
       interval: 3600
       path: ./Direct.yaml
 
     Media:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
+      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml"
       interval: 3600
       path: ./Media.yaml
 
     GeoIPSite:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml"
+      url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml"
       interval: 3600
       path: ./GeoIPSite.yaml
 
     GeoIPGlobal:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml"
+      url: "https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml"
       interval: 3600
       path: ./GeoIPGlobal.yaml
 
     Microsoft:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
+      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml"
       interval: 3600
       path: ./Microsoft.yaml    
 
     GFW:
       behavior: "classical"
       type: http
-      url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
+      url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml"
       interval: 3600
       path: ./GFW.yaml
