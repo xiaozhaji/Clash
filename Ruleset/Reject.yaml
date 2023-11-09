@@ -16,6 +16,7 @@ payload:
   - DOMAIN-SUFFIX,otoylocal.com
   - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,anticheatexpert.com
+  - DOMAIN-SUFFIX,aida64.com
 
   - IP-CIDR,54.243.210.230/32,no-resolve
   - IP-CIDR,169.54.33.187/32,no-resolve
