@@ -9,7 +9,6 @@ payload:
   - DOMAIN-KEYWORD,corel
 #  - DOMAIN-KEYWORD,adobe
 
-
   - DOMAIN-SUFFIX,refractivesoftware.com
   - DOMAIN-SUFFIX,octanerender.com
   - DOMAIN-SUFFIX,otoy.com
@@ -17,6 +16,7 @@ payload:
   - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,anticheatexpert.com
   - DOMAIN-SUFFIX,aida64.com
+  - DOMAIN-SUFFIX,amplitude.com
 
   - IP-CIDR,54.243.210.230/32,no-resolve
   - IP-CIDR,169.54.33.187/32,no-resolve
