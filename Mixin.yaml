@@ -9,7 +9,7 @@ mixin: # 注意下面缩进
     dns-hijack:
       - any:53
   #proxy-groups:
-      - { name: Adobe, type: select, proxies: [MESL, DIRECT, REJECT] }
+      #- { name: Adobe, type: select, proxies: [MESL, DIRECT, REJECT] }
   rule-providers:
       Reject: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml', interval: 86400, path: ./Reject.yaml }
       Proxy: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml', interval: 86400, path: ./Proxy.yaml }
