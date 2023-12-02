@@ -1,6 +1,5 @@
 payload:
-#  - GEOIP全球
-
+# GEOIP全球
 # ⬇️指定地区
 
   - GEOIP,jp
@@ -26,8 +25,6 @@ payload:
   - GEOIP,id
   - GEOIP,my
   - GEOIP,tl
-
-
 
 # ⬇️南亚
 
