@@ -6,6 +6,7 @@ payload:
   - DOMAIN,bard.google.com
   - DOMAIN,ip-api.com
   - DOMAIN,tosv.byted.org
+  - DOMAIN,apptrailers.itunes.apple.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
@@ -30,3 +31,4 @@ payload:
   - DOMAIN-SUFFIX,tiktokv.com
   #- DOMAIN-SUFFIX,itunes.apple.com
   - DOMAIN-SUFFIX,twimg.com
+  - DOMAIN-SUFFIX,tv.apple.com
