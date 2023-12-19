@@ -8,6 +8,7 @@ payload:
   - DOMAIN,tosv.byted.org
   - DOMAIN,apptrailers.itunes.apple.com
   - DOMAIN,music.apple.com
+  - DOMAIN,wetype.weixin.qq.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
