@@ -9,6 +9,7 @@ payload:
   - DOMAIN,apptrailers.itunes.apple.com
   - DOMAIN,music.apple.com
   - DOMAIN,wetype.weixin.qq.com
+  - DOMAIN,firefly-ps.adobe.io #Adobe创成式填充服务
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
@@ -33,3 +34,4 @@ payload:
   - DOMAIN-SUFFIX,tiktokv.com
   - DOMAIN-SUFFIX,twimg.com
   - DOMAIN-SUFFIX,tv.apple.com
+  - DOMAIN-SUFFIX,adobelogin.com #Adobe账户认证
