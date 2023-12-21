@@ -1,44 +1,86 @@
-# 使用Mixin重写原始配置文件
-mixin: # 注意下面缩进
-  dns:
-      enable: true
-      ipv6: false
-      listen: '0.0.0.0:1053'
-      use-hosts: true
-      default-nameserver: [1.0.0.1]
-      nameserver: [https://dns.alidns.com/dns-query]
-      fake-ip-range: 198.18.0.1/16
-      fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', swscan.apple.com, mesu.apple.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, localhost.ptlogin2.qq.com, '*.msftconnecttest.com', '*.msftncsi.com', '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*', speedtest.cros.wr.pvp.net, +.jjvip8.com, www.douyu.com, activityapi.huya.com, activityapi.huya.com.w.cdngslb.com, www.bilibili.com, api.bilibili.com, a.w.bilicdn1.com]
-  experimental:
-    sniff-tls-sni: true
-  tun:
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false
+mode: Rule
+log-level: info
+ipv6: false
+hosts: null
+external-controller: '127.0.0.1:9090'
+clash-for-android:
+    append-system-dns: false
+experimental:
+  sniff-tls-sni: true
+tun:
     enable: true
     stack: system
     auto-route: true
     dns-hijack:
-      - any:53
-  #proxy-groups:
-      #- { name: Adobe, type: select, proxies: [MESL, DIRECT, REJECT] }
-  rule-providers:
-      Reject: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml', interval: 86400, path: ./Reject.yaml }
-      Proxy: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml', interval: 86400, path: ./Proxy.yaml }
-      Direct: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml', interval: 86400, path: ./Direct.yaml }
-      Media: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml', interval: 86400, path: ./Media.yaml }
-      GeoIPSite: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml', interval: 86400, path: ./GeoIPSite.yaml }
-      GeoIPGlobal: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml', interval: 86400, path: ./GeoIPGlobal.yaml }
-      Microsoft: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml', interval: 86400, path: ./Microsoft.yaml }
-      GFW: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml', interval: 86400, path: ./GFW.yaml }
-  rules:
-      #Proxies修改为机场提供的策略组名称
-      - DOMAIN,firefly-ps.adobe.io,MESL #Adobe创成式填充服务
-      - DOMAIN-SUFFIX,adobelogin.com,MESL #Adobe账户认证
-      - DOMAIN-KEYWORD,adobe,Adobe #可在分组选择拒绝Adobe其他域名以避免盗版软件弹窗
-      - RULE-SET,Reject,REJECT
-      - RULE-SET,Proxy,MESL
-      - RULE-SET,Direct,DIRECT
-      - RULE-SET,Media,MESL
-      - RULE-SET,GeoIPSite,MESL
-      - RULE-SET,GeoIPGlobal,MESL
-      - RULE-SET,Microsoft,MESL
-      - RULE-SET,GFW,MESL
-      - MATCH,DIRECT
+        - any:53
+dns:
+    enable: true
+    ipv6: false
+    listen: '0.0.0.0:1053'
+    use-hosts: true
+    default-nameserver: [1.0.0.1]
+    nameserver: [https://dns.alidns.com/dns-query,https://1.0.0.1/dns-query]
+    fake-ip-range: 198.18.0.1/16
+    fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', swscan.apple.com, mesu.apple.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, localhost.ptlogin2.qq.com, '*.msftconnecttest.com', '*.msftncsi.com', '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*', speedtest.cros.wr.pvp.net, +.jjvip8.com, www.douyu.com, activityapi.huya.com, activityapi.huya.com.w.cdngslb.com, www.bilibili.com, api.bilibili.com, a.w.bilicdn1.com]
+proxy-providers:
+  MESL-Nodelist:
+    type: http
+    path: ./profiles/proxies/MESL-Nodelist.yaml
+    url: https://example.com/nodelist
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.qualcomm.cn/generate_204
+      interval: 300
+  WB-Nodelist:
+    type: http
+    path: ./profiles/proxies/WB-Nodelist.yaml
+    url: https://example.com/nodelist
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.qualcomm.cn/generate_204
+      interval: 300
+  HX-Nodelist:
+    type: http
+    path: ./profiles/proxies/HX-Nodelist.yaml
+    url: https://example.com/nodelist
+    interval: 3600
+    health-check:
+      enable: true
+      url: http://www.qualcomm.cn/generate_204
+      interval: 300
+proxy-groups:
+    - { name: Proxies, type: select, proxies: [MESL, WB, HX, DIRECT] }
+    - { name: MESL, type: select, url: http://www.qualcomm.cn/generate_204, Interval: 3600, use: [MESL-Nodelist], proxies: [] }
+    - { name: WB, type: select, url: http://www.qualcomm.cn/generate_204, Interval: 3600, use: [WB-Nodelist], proxies: [] }
+    - { name: HX, type: select, url: http://www.qualcomm.cn/generate_204, Interval: 3600, use: [HX-Nodelist], proxies: [] }
+    - { name: Adobe, type: select, proxies: [Proxies, DIRECT, REJECT] }
+rule-providers:
+    Reject: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml', interval: 86400, path: ./Reject.yaml }
+    Proxy: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml', interval: 86400, path: ./Proxy.yaml }
+    Direct: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml', interval: 86400, path: ./Direct.yaml }
+    Media: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyMedia.yaml', interval: 86400, path: ./Media.yaml }
+    GeoIPSite: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml', interval: 86400, path: ./GeoIPSite.yaml }
+    GeoIPGlobal: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml', interval: 86400, path: ./GeoIPGlobal.yaml }
+    Microsoft: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml', interval: 86400, path: ./Microsoft.yaml }
+    GFW: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml', interval: 86400, path: ./GFW.yaml }
+rules:
+    #Proxies修改为机场提供的策略组名称
+    - DOMAIN,firefly-ps.adobe.io,Proxies #Adobe创成式填充服务
+    - DOMAIN-SUFFIX,adobelogin.com,Proxies #Adobe账户认证
+    - DOMAIN-KEYWORD,adobe,Adobe #可在分组选择拒绝Adobe其他域名以避免盗版软件弹窗
+    - RULE-SET,Reject,REJECT
+    - RULE-SET,Proxy,Proxies
+    - RULE-SET,Direct,DIRECT
+    - RULE-SET,Media,Proxies
+    - RULE-SET,GeoIPSite,Proxies
+    - RULE-SET,GeoIPGlobal,Proxies
+    - RULE-SET,Microsoft,Proxies
+    - RULE-SET,GFW,Proxies
+    - MATCH,DIRECT
