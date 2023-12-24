@@ -12,6 +12,7 @@ payload:
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
+  - DOMAIN-KEYWORD,openai
 
   - DOMAIN-SUFFIX,adtidy.org
   - DOMAIN-SUFFIX,deepl.com
@@ -31,5 +32,7 @@ payload:
   - DOMAIN-SUFFIX,bing.com
   - DOMAIN-SUFFIX,ndmdhs.com
   - DOMAIN-SUFFIX,tiktokv.com
-  - DOMAIN-SUFFIX,twimg.com
   - DOMAIN-SUFFIX,tv.apple.com
+  - DOMAIN-SUFFIX,twimg.com
+  - DOMAIN-SUFFIX,twitter.com
+  - DOMAIN-SUFFIX,openai.com
