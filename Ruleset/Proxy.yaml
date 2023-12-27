@@ -9,6 +9,10 @@ payload:
   - DOMAIN,apptrailers.itunes.apple.com
   - DOMAIN,music.apple.com
   - DOMAIN,wetype.weixin.qq.com
+  - DOMAIN,hls.itunes.apple.com
+  - DOMAIN,hls-svod.itunes.apple.com
+  - DOMAIN,itunes.apple.com
+  - DOMAIN,hls-amt.itunes.apple.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
