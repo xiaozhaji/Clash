@@ -16,6 +16,7 @@ payload:
   - DOMAIN,tophub.today
   - DOMAIN,ipv4.ddnspod.com
   - DOMAIN,pv.sohu.com
+  - DOMAIN,ipv6-test.com
   
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
