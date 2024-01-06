@@ -15,6 +15,8 @@ payload:
   - DOMAIN,hls-amt.itunes.apple.com
   - DOMAIN,mvod.itunes.apple.com
   - DOMAIN,aod.itunes.apple.com
+  - DOMAIN,testflight.apple.com
+  - DOMAIN,amp-api-edge.apps.apple.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
