@@ -5,7 +5,7 @@ mixed-port: 7893
 allow-lan: true
 mode: Rule
 log-level: info
-ipv6: false
+ipv6: true
 #hosts: null
 external-controller: '127.0.0.1:9090'
 #clash-for-android:
@@ -14,7 +14,7 @@ experimental:
   sniff-tls-sni: true
 dns:
     enable: true
-    ipv6: false
+    ipv6: true
     listen: '0.0.0.0:1053'
     #use-hosts: true
     default-nameserver: [1.0.0.1]
@@ -25,7 +25,7 @@ proxy-providers:
   MESL-Nodelist:
     type: http
     path: ./profiles/proxies/MESL-Nodelist.yaml
-    url: https://example.com/nodelist
+    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=#&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false&udp=true
     interval: 3600
     health-check:
       enable: true
@@ -34,26 +34,16 @@ proxy-providers:
   WB-Nodelist:
     type: http
     path: ./profiles/proxies/WB-Nodelist.yaml
-    url: https://example.com/nodelist
-    interval: 3600
-    health-check:
-      enable: true
-      url: http://www.qualcomm.cn/generate_204
-      interval: 300
-  HX-Nodelist:
-    type: http
-    path: ./profiles/proxies/HX-Nodelist.yaml
-    url: https://example.com/nodelist
+    url: https://sub.xeton.dev/sub?target=clash&new_name=true&url=#&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&tfo=false&scv=false&fdn=false&sort=false&udp=true
     interval: 3600
     health-check:
       enable: true
       url: http://www.qualcomm.cn/generate_204
       interval: 300
 proxy-groups:
-    - { name: Proxies, type: select, proxies: [MESL, WB, HX, DIRECT] }
+    - { name: Proxies, type: select, proxies: [MESL, WB, DIRECT] }
     - { name: MESL, type: select, url: http://www.qualcomm.cn/generate_204, Interval: 3600, use: [MESL-Nodelist], proxies: [] }
     - { name: WB, type: select, url: http://www.qualcomm.cn/generate_204, Interval: 3600, use: [WB-Nodelist], proxies: [] }
-    - { name: HX, type: select, url: http://www.qualcomm.cn/generate_204, Interval: 3600, use: [HX-Nodelist], proxies: [] }
     - { name: Adobe, type: select, proxies: [Proxies, DIRECT, REJECT] }
 rule-providers:
     Reject: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml', interval: 86400, path: ./Reject.yaml }
