@@ -18,6 +18,7 @@ payload:
   - DOMAIN,testflight.apple.com
   - DOMAIN,amp-api-edge.apps.apple.com
   - DOMAIN,monitor.qq.com
+  - DOMAIN,generativelanguage.googleapis.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
