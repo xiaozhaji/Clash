@@ -19,6 +19,14 @@ payload:
   - DOMAIN,amp-api-edge.apps.apple.com
   - DOMAIN,monitor.qq.com
   - DOMAIN,generativelanguage.googleapis.com
+  - DOMAIN,probe.icloud.com
+  - DOMAIN,gateway.icloud.com
+  - DOMAIN,setup.icloud.com
+  - DOMAIN,metrics.icloud.com
+  - DOMAIN,ocsp.pki.goog
+  - DOMAIN,ca.iadsdk.apple.com
+  - DOMAIN,xp.apple.com
+  - DOMAIN,fpinit.itunes.apple.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
@@ -47,3 +55,6 @@ payload:
   - DOMAIN-SUFFIX,twitter.com
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,mzstatic.com
+  - DOMAIN-SUFFIX,tv.apple.com
+  - DOMAIN-SUFFIX,ls.apple.com
+  - DOMAIN-SUFFIX,push.apple.com
