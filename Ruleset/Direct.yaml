@@ -75,13 +75,13 @@ payload:
   - DOMAIN-SUFFIX,lusun.com
   - DOMAIN-SUFFIX,weixinbridge.com
   - DOMAIN-SUFFIX,icloud.com
-  - DOMAIN-SUFFIX,apple.com
+  #- DOMAIN-SUFFIX,apple.com
   - DOMAIN-SUFFIX,zjcdn.com
   - DOMAIN-SUFFIX,douyincdn.com
   - DOMAIN-SUFFIX,ghproxy.com
-  - DOMAIN-SUFFIX,icloud-content.com
+  #- DOMAIN-SUFFIX,icloud-content.com
   - DOMAIN-SUFFIX,alipay.com
   - DOMAIN-SUFFIX,xhscdn.net
   - DOMAIN-SUFFIX,qq.com
   - DOMAIN-SUFFIX,ithome.com
-  - DOMAIN-SUFFIX,cdn-apple.com
+  #- DOMAIN-SUFFIX,cdn-apple.com
