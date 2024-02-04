@@ -74,7 +74,7 @@ payload:
   - DOMAIN-SUFFIX,ladydaily.com
   - DOMAIN-SUFFIX,lusun.com
   - DOMAIN-SUFFIX,weixinbridge.com
-  - DOMAIN-SUFFIX,icloud.com
+  #- DOMAIN-SUFFIX,icloud.com
   #- DOMAIN-SUFFIX,apple.com
   - DOMAIN-SUFFIX,zjcdn.com
   - DOMAIN-SUFFIX,douyincdn.com
