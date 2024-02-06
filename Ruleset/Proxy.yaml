@@ -58,3 +58,4 @@ payload:
   #- DOMAIN-SUFFIX,tv.apple.com
   #- DOMAIN-SUFFIX,ls.apple.com
   #- DOMAIN-SUFFIX,push.apple.com
+  - DOMAIN-SUFFIX,googlevideo.com
