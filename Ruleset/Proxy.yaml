@@ -27,6 +27,7 @@ payload:
   #- DOMAIN,ca.iadsdk.apple.com
   #- DOMAIN,xp.apple.com
   #- DOMAIN,fpinit.itunes.apple.com
+  - DOMAIN,gemini.google.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
