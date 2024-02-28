@@ -5,6 +5,8 @@ payload:
   - DOMAIN,hub5emu.v6.shub.sandai.net
   - DOMAIN,hub5btmain.v6.shub.sandai.net
   - DOMAIN,o33249.ingest.sentry.io
+  - DOMAIN,monitor.qq.com
+  - DOMAIN,rmonitor.qq.com
 
   - DOMAIN-KEYWORD,corel
 #  - DOMAIN-KEYWORD,adobe
