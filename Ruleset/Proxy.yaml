@@ -16,7 +16,6 @@ payload:
   #- DOMAIN,aod.itunes.apple.com
   #- DOMAIN,testflight.apple.com
   #- DOMAIN,amp-api-edge.apps.apple.com
-  - DOMAIN,monitor.qq.com
   - DOMAIN,generativelanguage.googleapis.com
   #- DOMAIN,probe.icloud.com
   #- DOMAIN,gateway.icloud.com
