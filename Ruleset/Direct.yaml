@@ -23,6 +23,8 @@ payload:
   - DOMAIN-KEYWORD,quickconnect
   - DOMAIN-KEYWORD,speedtest
   - DOMAIN-KEYWORD,aliyun
+  - DOMAIN-KEYWORD,yuheng
+  - DOMAIN-KEYWORD,yqc-premium
 
   - DOMAIN-SUFFIX,baidu.com
   - DOMAIN-SUFFIX,bcebos.com
@@ -75,14 +77,10 @@ payload:
   - DOMAIN-SUFFIX,ladydaily.com
   - DOMAIN-SUFFIX,lusun.com
   - DOMAIN-SUFFIX,weixinbridge.com
-  #- DOMAIN-SUFFIX,icloud.com
-  #- DOMAIN-SUFFIX,apple.com
   - DOMAIN-SUFFIX,zjcdn.com
   - DOMAIN-SUFFIX,douyincdn.com
   - DOMAIN-SUFFIX,ghproxy.com
-  #- DOMAIN-SUFFIX,icloud-content.com
   - DOMAIN-SUFFIX,alipay.com
   - DOMAIN-SUFFIX,xhscdn.net
   - DOMAIN-SUFFIX,qq.com
   - DOMAIN-SUFFIX,ithome.com
-  #- DOMAIN-SUFFIX,cdn-apple.com
