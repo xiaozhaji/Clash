@@ -7,6 +7,9 @@ payload:
   - DOMAIN,o33249.ingest.sentry.io
   - DOMAIN,monitor.qq.com
   - DOMAIN,rmonitor.qq.com
+  - DOMAIN,googleadservices-cn.com
+  - DOMAIN,googleads.g.doubleclick-cn.net
+  - DOMAIN,googleadsserving.cn
 
   - DOMAIN-KEYWORD,corel
 #  - DOMAIN-KEYWORD,adobe
