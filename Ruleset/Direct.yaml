@@ -17,6 +17,7 @@ payload:
   - DOMAIN,ipv4.ddnspod.com
   - DOMAIN,pv.sohu.com
   - DOMAIN,ipv6-test.com
+  - DOMAIN,maps.weather.gov.hk
   
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
