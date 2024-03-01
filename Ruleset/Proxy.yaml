@@ -37,3 +37,4 @@ payload:
   - DOMAIN-SUFFIX,twitter.com
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,tv.apple.com
