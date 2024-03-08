@@ -18,8 +18,8 @@ dns:
     fake-ip-range: 198.18.0.1/16
     fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', '*.msftconnecttest.com', '*.msftncsi.com', +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*']
 proxies:
-  - {name: "ZeroTrust",type: wireguard,server: 162.159.195.44,port: 8742,ip: 172.16.0.2,private-key: *****,public-key: *****,,remote-dns-resolve: true,udp: true}
-  - {name: "WARP+",type: wireguard,server: 162.159.195.44,port: 8742,ip: 172.16.0.2,private-key: *****,,public-key: *****,,remote-dns-resolve: true,udp: true}
+  - {name: "ZeroTrust",type: wireguard,server: 162.159.195.44,port: 8742,ip: 172.16.0.2,private-key: *****,public-key: *****,remote-dns-resolve: true,udp: true}
+  - {name: "WARP+",type: wireguard,server: 162.159.195.44,port: 8742,ip: 172.16.0.2,private-key: *****,public-key: *****,remote-dns-resolve: true,udp: true}
 proxy-providers:
   MESL-Nodelist:
     type: http
