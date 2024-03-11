@@ -38,3 +38,5 @@ payload:
   - DOMAIN-SUFFIX,openai.com
   - DOMAIN-SUFFIX,googlevideo.com
   - DOMAIN-SUFFIX,tv.apple.com
+  - DOMAIN-SUFFIX,chatgpt.com
+
