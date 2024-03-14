@@ -10,7 +10,6 @@ payload:
 
   - DOMAIN,time.windows.com
   - DOMAIN,time.apple.com
-  - DOMAIN,xiaozhaji.myds.me
   - DOMAIN,clash.razord.top
   - DOMAIN,yacd.haishan.me
   - DOMAIN,tophub.today
@@ -84,3 +83,5 @@ payload:
   - DOMAIN-SUFFIX,xhscdn.net
   - DOMAIN-SUFFIX,qq.com
   - DOMAIN-SUFFIX,ithome.com
+  - DOMAIN-SUFFIX,amemv.com
+  - DOMAIN-SUFFIX,ls.apple.com
