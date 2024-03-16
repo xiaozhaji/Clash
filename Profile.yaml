@@ -47,10 +47,11 @@ rule-providers:
     Reject: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml', interval: 86400, path: ./Reject.yaml }
     Proxy: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml', interval: 86400, path: ./Proxy.yaml }
     Direct: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml', interval: 86400, path: ./Direct.yaml }
+    Microsoft: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml', interval: 86400, path: ./Microsoft.yaml }
+    Telegram: { type: http, behavior: ipcidr, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt', interval: 86400, path: ./Telegram.yaml }
+    GFW: { type: http, behavior: domain, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt', interval: 86400, path: ./GFW.yaml }
     GeoIPSite: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml', interval: 86400, path: ./GeoIPSite.yaml }
     GeoIPGlobal: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml', interval: 86400, path: ./GeoIPGlobal.yaml }
-    Microsoft: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Microsoft.yaml', interval: 86400, path: ./Microsoft.yaml }
-    GFW: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml', interval: 86400, path: ./GFW.yaml }
 rules:
     #Proxies修改为机场提供的策略组名称
     - DOMAIN,firefly-ps.adobe.io,Proxies #Adobe创成式填充服务
@@ -59,8 +60,10 @@ rules:
     - RULE-SET,Reject,REJECT
     - RULE-SET,Proxy,Proxies
     - RULE-SET,Direct,DIRECT
+    - RULE-SET,Microsoft,Proxies
+    - RULE-SET,Telegram,Proxies
+    - RULE-SET,GFW,Proxies
     - RULE-SET,GeoIPSite,Proxies
     - RULE-SET,GeoIPGlobal,Proxies
-    - RULE-SET,Microsoft,Proxies
-    - RULE-SET,GFW,Proxies
+    - GEOIP,CN,DIRECT
     - MATCH,DIRECT
