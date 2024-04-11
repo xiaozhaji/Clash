@@ -17,7 +17,6 @@ payload:
   - DOMAIN,pv.sohu.com
   - DOMAIN,ipv6-test.com
   - DOMAIN,maps.weather.gov.hk
-  - DOMAIN,ip.zxinc.org
   
   - DOMAIN-KEYWORD,synology
   - DOMAIN-KEYWORD,quickconnect
@@ -86,3 +85,4 @@ payload:
   - DOMAIN-SUFFIX,ithome.com
   - DOMAIN-SUFFIX,amemv.com
   - DOMAIN-SUFFIX,ls.apple.com
+  - DOMAIN-SUFFIX,zxinc.org
