@@ -4,7 +4,6 @@ payload:
   - DOMAIN,user-api.speedtest.net 
   - DOMAIN,sydney.bing.com
   - DOMAIN,ip-api.com
-  - DOMAIN,tosv.byted.org
   - DOMAIN,mvod.itunes.apple.com
   - DOMAIN,generativelanguage.googleapis.com
   - DOMAIN,ocsp.pki.goog
