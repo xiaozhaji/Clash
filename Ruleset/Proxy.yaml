@@ -8,10 +8,14 @@ payload:
   - DOMAIN,generativelanguage.googleapis.com
   - DOMAIN,ocsp.pki.goog
   - DOMAIN,gemini.google.com
+  - DOMAIN,iosapps.itunes.apple.com
   
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
   - DOMAIN-KEYWORD,openai
+  - DOMAIN-KEYWORD,wbyun
+  - DOMAIN-KEYWORD,wbno1
+  - DOMAIN-KEYWORD,bailukeai
 
   - DOMAIN-SUFFIX,adtidy.org
   - DOMAIN-SUFFIX,deepl.com
