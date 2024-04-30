@@ -7,9 +7,7 @@ payload:
   - DOMAIN,o33249.ingest.sentry.io
   - DOMAIN,monitor.qq.com
   - DOMAIN,rmonitor.qq.com
-  - DOMAIN,googleadservices-cn.com
   - DOMAIN,googleads.g.doubleclick-cn.net
-  - DOMAIN,googleadsserving.cn
   - DOMAIN,tosv.byted.org
 
   - DOMAIN-KEYWORD,corel
@@ -23,7 +21,9 @@ payload:
   - DOMAIN-SUFFIX,anticheatexpert.com
   - DOMAIN-SUFFIX,aida64.com
   - DOMAIN-SUFFIX,amplitude.com
-
+  - DOMAIN-SUFFIX,googleadservices-cn.com
+  - DOMAIN-SUFFIX,googleadsserving.cn
+  
   - IP-CIDR,54.243.210.230/32,no-resolve
   - IP-CIDR,169.54.33.187/32,no-resolve
   - IP-CIDR,58.20.196.160/32,no-resolve
