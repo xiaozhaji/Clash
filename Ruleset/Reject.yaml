@@ -10,6 +10,7 @@ payload:
   - DOMAIN,googleadservices-cn.com
   - DOMAIN,googleads.g.doubleclick-cn.net
   - DOMAIN,googleadsserving.cn
+  - DOMAIN,tosv.byted.org
 
   - DOMAIN-KEYWORD,corel
 #  - DOMAIN-KEYWORD,adobe
