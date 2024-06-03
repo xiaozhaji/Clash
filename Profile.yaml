@@ -58,7 +58,7 @@ rules:
     - DOMAIN,firefly-ps.adobe.io,Proxies #Adobe创成式填充服务
     - DOMAIN-SUFFIX,adobelogin.com,Proxies #Adobe账户认证
     - DOMAIN-KEYWORD,adobe,Adobe #可在分组选择拒绝Adobe其他域名以避免盗版软件弹窗
-    - PROCESS-NAME,TeamViewer_Service.exe,Apple TV
+    #- PROCESS-NAME,TeamViewer_Service.exe,Apple TV
     - RULE-SET,Reject,REJECT
     - RULE-SET,Proxy,Proxies
     - RULE-SET,Direct,DIRECT
