@@ -9,7 +9,8 @@ payload:
   - DOMAIN,ocsp.pki.goog
   - DOMAIN,gemini.google.com
   - DOMAIN,iosapps.itunes.apple.com
-  
+  - DOMAIN,events-delivery.apple.com
+
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
   - DOMAIN-KEYWORD,openai
@@ -41,4 +42,4 @@ payload:
   - DOMAIN-SUFFIX,googlevideo.com
   - DOMAIN-SUFFIX,tv.apple.com
   - DOMAIN-SUFFIX,chatgpt.com
-
+  - DOMAIN-SUFFIX,smoot.apple.com
