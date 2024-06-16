@@ -10,6 +10,7 @@ payload:
   - DOMAIN,gemini.google.com
   - DOMAIN,iosapps.itunes.apple.com
   - DOMAIN,events-delivery.apple.com
+  - DOMAIN,apptrailers.itunes.apple.com
 
   - DOMAIN-KEYWORD,mtalk
   - DOMAIN-KEYWORD,googleapis
