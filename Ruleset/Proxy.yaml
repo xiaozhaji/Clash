@@ -43,3 +43,6 @@ payload:
   - DOMAIN-SUFFIX,tv.apple.com
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,smoot.apple.com
+  - DOMAIN-SUFFIX,googletagmanager.com
+  - DOMAIN-SUFFIX,googleadservices.com
+  - DOMAIN-SUFFIX,google.com
