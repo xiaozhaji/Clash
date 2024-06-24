@@ -6,7 +6,6 @@ payload:
   - DOMAIN,hub5btmain.v6.shub.sandai.net
   - DOMAIN,o33249.ingest.sentry.io
   - DOMAIN,googleads.g.doubleclick-cn.net
-  - DOMAIN,tosv.byted.org
 
   - DOMAIN-KEYWORD,corel
 #  - DOMAIN-KEYWORD,adobe
