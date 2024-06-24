@@ -22,8 +22,11 @@ dns:
     fake-ip-range: 198.18.0.1/16
     fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', '*.msftconnecttest.com', '*.msftncsi.com', +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*']
 proxies:
-  - {name: "ZeroTrust",type: wireguard,server: 162.159.192.136,port: 3854,ip: 172.16.0.2,private-key: ******,public-key: ******,remote-dns-resolve: true,udp: true}
   - {name: "Apple TV",type: ss,server: ******,port: 8889,cipher: aes-128-gcm,password: ******,udp: true}
+  - { name: '🇭🇰 HK3 Gcore [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
+  - { name: '🇸🇬 SG1 Gcore [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
+  - { name: '🇨🇳 TW1 Hinet [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
+  - { name: '🇯🇵 JP1 Gcore [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
 proxy-providers:
   MESL-Nodelist:
     type: http
@@ -44,8 +47,9 @@ proxy-providers:
       url: http://captive.apple.com/generate_204
       interval: 300
 proxy-groups:
-    - { name: Proxies, type: select, proxies: [MESL, WB, ZeroTrust, Apple TV, DIRECT] }
+    - { name: Proxies, type: select, proxies: [MESL, WB, 0.2X Auto, Apple TV, DIRECT] }
     - { name: MESL, type: select, url: http://captive.apple.com/generate_204, Interval: 3600, use: [MESL-Nodelist], proxies: [] }
+    - { name: 0.2X Auto, type: url-test, proxies: ['🇭🇰 HK3 Gcore [0.2X]', '🇸🇬 SG1 Gcore [0.2X]', '🇨🇳 TW1 Hinet [0.2X]', '🇯🇵 JP1 Gcore [0.2X]'], url: 'http://captive.apple.com/generate_204', interval: 300 }
     - { name: WB, type: select, url: http://captive.apple.com/generate_204, Interval: 3600, use: [WB-Nodelist], proxies: [] }
     - { name: Adobe, type: select, proxies: [Proxies, DIRECT, REJECT] }
 rule-providers:
@@ -63,6 +67,7 @@ rules:
     - DOMAIN-SUFFIX,adobelogin.com,Proxies #Adobe账户认证
     - DOMAIN-KEYWORD,adobe,Adobe #可在分组选择拒绝Adobe其他域名以避免盗版软件弹窗
     #- PROCESS-NAME,TeamViewer_Service.exe,Apple TV
+    - IP-CIDR,10.0.0.1/32,Proxies
     - RULE-SET,Reject,REJECT
     - RULE-SET,Proxy,Proxies
     - RULE-SET,Direct,DIRECT
