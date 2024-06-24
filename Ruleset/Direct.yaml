@@ -83,6 +83,8 @@ payload:
   - DOMAIN-SUFFIX,xhscdn.net
   - DOMAIN-SUFFIX,qq.com
   - DOMAIN-SUFFIX,ithome.com
-  - DOMAIN-SUFFIX,amemv.com
   - DOMAIN-SUFFIX,ls.apple.com
   - DOMAIN-SUFFIX,zxinc.org
+  - DOMAIN-SUFFIX,ipinfo.io
+  - DOMAIN-SUFFIX,ip.sb
+  - DOMAIN-SUFFIX,ipip.net
