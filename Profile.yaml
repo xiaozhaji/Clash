@@ -69,13 +69,13 @@ rule-providers:
     Lan: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan_No_Resolve.yaml', interval: 86400, path: ./Lan.yaml }
     ChinaMax: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml', interval: 86400, path: ./ChinaMax.yaml }
 rules:
-#Adobe
+# > Adobe
     - DOMAIN,firefly-ps.adobe.io,Proxies #Adobe创成式填充服务
     - DOMAIN-SUFFIX,adobelogin.com,Proxies #Adobe账户认证
     - DOMAIN-KEYWORD,adobe,Adobe #可在分组选择拒绝Adobe其他域名以避免盗版软件弹窗
-#防止应用循环请求
+# > 防止应用循环请求
     - IP-CIDR,0.0.0.0/32,REJECT,no-resolve
-#拒绝
+# > 拒绝
     - DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
     - DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
     - DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
@@ -96,7 +96,7 @@ rules:
     - IP-CIDR,169.54.33.187/32,REJECT,no-resolve
     - IP-CIDR,58.20.196.160/32,REJECT,no-resolve
     - IP-CIDR,169.54.129.22/32,REJECT,no-resolve
-#代理
+# > 代理
     - DOMAIN,receiptcheck.quantumult.app,Proxies
     - DOMAIN,speedtest-univ-results-api.speedtest.net,Proxies
     - DOMAIN,user-api.speedtest.net,Proxies
@@ -144,7 +144,7 @@ rules:
     - DOMAIN-SUFFIX,google.com,Proxies
     - DOMAIN-SUFFIX,google-analytics.com,Proxies
     - IP-CIDR,10.0.0.1/32,Proxies,no-resolve
-#直连
+# > 直连
     - DOMAIN,time.windows.com,DIRECT
     - DOMAIN,time.apple.com,DIRECT
     - DOMAIN,clash.razord.top,DIRECT
@@ -226,10 +226,11 @@ rules:
 # > IP反追踪 抖音
     - DOMAIN-SUFFIX,amemv.com,DIRECT
     - DOMAIN-SUFFIX,zijieapi.com,DIRECT
-# > 苹果服务
+# > 苹果服务ASN
     - IP-ASN,6185,Proxies
     - IP-ASN,714,Proxies
-#调用规则集
+# > 调用规则集
+# > 苹果服务
     - RULE-SET,Apple,DIRECT
 # > Microsoft
     - RULE-SET,Microsoft,Proxies
