@@ -2,79 +2,253 @@ port: 7890
 socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
-allow-lan: true
+allow-lan: false
 mode: Rule
 log-level: info
 ipv6: true
 hosts: null
-external-controller: '127.0.0.1:9090'
-clash-for-android:
-    append-system-dns: false
-experimental:
-  sniff-tls-sni: true
 dns:
     enable: true
     ipv6: true
     listen: '0.0.0.0:1053'
     use-hosts: true
-    default-nameserver: [223.5.5.5, 1.0.0.1]
+    default-nameserver: [119.29.29.29, 8.8.8.8, 1.1.1.1]
     nameserver: [223.5.5.5, 119.29.29.29]
     fake-ip-range: 198.18.0.1/16
-    fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', '*.msftconnecttest.com', '*.msftncsi.com', +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*']
-proxies:
-  - {name: "Apple TV",type: ss,server: ******,port: 8889,cipher: aes-128-gcm,password: ******,udp: true}
-  - { name: '🇭🇰 HK3 Gcore [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
-  - { name: '🇸🇬 SG1 Gcore [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
-  - { name: '🇨🇳 TW1 Hinet [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
-  - { name: '🇯🇵 JP1 Gcore [0.2X]', type: ss, server: ******, port: ******, cipher: aes-128-gcm, password: ******, udp: true }
+    fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', swscan.apple.com, mesu.apple.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, localhost.ptlogin2.qq.com, '*.msftconnecttest.com', '*.msftncsi.com', '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*', speedtest.cros.wr.pvp.net, +.jjvip8.com, www.douyu.com, activityapi.huya.com, activityapi.huya.com.w.cdngslb.com, www.bilibili.com, api.bilibili.com, a.w.bilicdn1.com]
+external-controller: '127.0.0.1:9090'
+clash-for-android:
+    append-system-dns: false
+experimental:
+  sniff-tls-sni: true
 proxy-providers:
   MESL-Nodelist:
     type: http
     path: ./profiles/proxies/MESL-Nodelist.yaml
-    url: https://******
-    interval: 3600
+    url: https://
+    interval: 300
     health-check:
       enable: true
-      url: http://captive.apple.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
+      interval: 300
+  0.2X:
+    type: http
+    path: ./profiles/proxies/0.2X.yaml
+    url: https://
+    interval: 300
+    health-check:
+      enable: true
+      url: http://cp.cloudflare.com/generate_204
       interval: 300
   WB-Nodelist:
     type: http
     path: ./profiles/proxies/WB-Nodelist.yaml
-    url: https://******
-    interval: 3600
+    url: https://
+    interval: 300
     health-check:
       enable: true
-      url: http://captive.apple.com/generate_204
+      url: http://cp.cloudflare.com/generate_204
       interval: 300
 proxy-groups:
-    - { name: Proxies, type: select, proxies: [MESL, WB, 0.2X Auto, Apple TV, DIRECT] }
-    - { name: MESL, type: select, url: http://captive.apple.com/generate_204, Interval: 3600, use: [MESL-Nodelist], proxies: [] }
-    - { name: 0.2X Auto, type: url-test, proxies: ['🇭🇰 HK3 Gcore [0.2X]', '🇸🇬 SG1 Gcore [0.2X]', '🇨🇳 TW1 Hinet [0.2X]', '🇯🇵 JP1 Gcore [0.2X]'], url: 'http://captive.apple.com/generate_204', interval: 300 }
-    - { name: WB, type: select, url: http://captive.apple.com/generate_204, Interval: 3600, use: [WB-Nodelist], proxies: [] }
-    - { name: Adobe, type: select, proxies: [Proxies, DIRECT, REJECT] }
+    - { name: Proxies, type: select, proxies: [MESL, WB, 0.2X Auto, DIRECT] }
+    - { name: MESL, type: select, url: http://cp.cloudflare.com/generate_204, Interval: 3600, use: [MESL-Nodelist], proxies: [] }
+    - { name: 0.2X Auto, type: url-test, url: http://cp.cloudflare.com/generate_204, interval: 300, use: [0.2X], proxies: [] }
+    - { name: WB, type: select, url: http://cp.cloudflare.com/generate_204, Interval: 3600, use: [WB-Nodelist], proxies: [] }
+    - { name: Adobe, type: select, proxies: [REJECT, Proxies, DIRECT] }
 rule-providers:
-    Reject: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Reject.yaml', interval: 86400, path: ./Reject.yaml }
-    Proxy: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Proxy.yaml', interval: 86400, path: ./Proxy.yaml }
-    Direct: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/Direct.yaml', interval: 86400, path: ./Direct.yaml }
-    Microsoft: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml', interval: 86400, path: ./Microsoft.yaml }
-    Telegram: { type: http, behavior: ipcidr, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt', interval: 86400, path: ./Telegram.yaml }
-    GFW: { type: http, behavior: domain, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/gfw.txt', interval: 86400, path: ./GFW.yaml }
-    GeoIPSite: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPSite.yaml', interval: 86400, path: ./GeoIPSite.yaml }
-    GeoIPGlobal: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/xiaozhaji/Clash/master/Ruleset/GeoIPGlobal.yaml', interval: 86400, path: ./GeoIPGlobal.yaml }
+    Apple: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml', interval: 86400, path: ./Apple.yaml }
+    Microsoft: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml', interval: 86400, path: ./Microsoft.yaml }
+    Telegram: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml', interval: 86400, path: ./Telegram.yaml }
+    Twitter: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml', interval: 86400, path: ./Twitter.yaml }
+    Instagram: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram_No_Resolve.yaml', interval: 86400, path: ./Instagram.yaml }
+    Facebook: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml', interval: 86400, path: ./Facebook.yaml }
+    Netflix: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml', interval: 86400, path: ./Netflix.yaml }
+    YouTube: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml', interval: 86400, path: ./YouTube.yaml }
+    Google: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml', interval: 86400, path: ./Google.yaml }
+    Proxy: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical_No_Resolve.yaml', interval: 86400, path: ./Proxy.yaml }
+    Lan: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan_No_Resolve.yaml', interval: 86400, path: ./Lan.yaml }
+    ChinaMax: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml', interval: 86400, path: ./ChinaMax.yaml }
 rules:
-    #Proxies修改为机场提供的策略组名称
+#Adobe
     - DOMAIN,firefly-ps.adobe.io,Proxies #Adobe创成式填充服务
     - DOMAIN-SUFFIX,adobelogin.com,Proxies #Adobe账户认证
     - DOMAIN-KEYWORD,adobe,Adobe #可在分组选择拒绝Adobe其他域名以避免盗版软件弹窗
-    #- PROCESS-NAME,TeamViewer_Service.exe,Apple TV
-    - IP-CIDR,10.0.0.1/32,Proxies
-    - RULE-SET,Reject,REJECT
-    - RULE-SET,Proxy,Proxies
-    - RULE-SET,Direct,DIRECT
+#防止应用循环请求
+    - IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+#拒绝
+    - DOMAIN,hub5idx.v6.shub.sandai.net,REJECT
+    - DOMAIN,hub5emu.v6.shub.sandai.net,REJECT
+    - DOMAIN,hub5btmain.v6.shub.sandai.net,REJECT
+    - DOMAIN,o33249.ingest.sentry.io,REJECT
+    - DOMAIN,googleads.g.doubleclick-cn.net,REJECT
+    - DOMAIN-KEYWORD,corel,REJECT
+    - DOMAIN-SUFFIX,refractivesoftware.com,REJECT
+    - DOMAIN-SUFFIX,octanerender.com,REJECT
+    - DOMAIN-SUFFIX,otoy.com,REJECT
+    - DOMAIN-SUFFIX,otoylocal.com,REJECT
+    - DOMAIN-SUFFIX,sentry.io,REJECT
+    - DOMAIN-SUFFIX,anticheatexpert.com,REJECT
+    - DOMAIN-SUFFIX,aida64.com,REJECT
+    - DOMAIN-SUFFIX,amplitude.com,REJECT
+    - DOMAIN-SUFFIX,googleadservices-cn.com,REJECT
+    - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+    - IP-CIDR,54.243.210.230/32,REJECT,no-resolve
+    - IP-CIDR,169.54.33.187/32,REJECT,no-resolve
+    - IP-CIDR,58.20.196.160/32,REJECT,no-resolve
+    - IP-CIDR,169.54.129.22/32,REJECT,no-resolve
+#代理
+    - DOMAIN,receiptcheck.quantumult.app,Proxies
+    - DOMAIN,speedtest-univ-results-api.speedtest.net,Proxies
+    - DOMAIN,user-api.speedtest.net,Proxies
+    - DOMAIN,sydney.bing.com,Proxies
+    - DOMAIN,ip-api.com,Proxies
+    - DOMAIN,mvod.itunes.apple.com,Proxies
+    - DOMAIN,generativelanguage.googleapis.com,Proxies
+    - DOMAIN,ocsp.pki.goog,Proxies
+    - DOMAIN,gemini.google.com,Proxies
+    - DOMAIN,iosapps.itunes.apple.com,Proxies
+    - DOMAIN,events-delivery.apple.com,Proxies
+    - DOMAIN,apptrailers.itunes.apple.com,Proxies
+    - DOMAIN-KEYWORD,mtalk,Proxies
+    - DOMAIN-KEYWORD,googleapis,Proxies
+    - DOMAIN-KEYWORD,openai,Proxies
+    - DOMAIN-KEYWORD,wbyun,Proxies
+    - DOMAIN-KEYWORD,wbno1,Proxies
+    - DOMAIN-KEYWORD,bailukeai,Proxies
+    - DOMAIN-SUFFIX,tv.apple.com,0.2X Auto
+    - DOMAIN-SUFFIX,adtidy.org,Proxies
+    - DOMAIN-SUFFIX,deepl.com,Proxies
+    - DOMAIN-SUFFIX,weather.com,Proxies
+    - DOMAIN-SUFFIX,windy.com,Proxies
+    - DOMAIN-SUFFIX,gstatic.com,Proxies
+    - DOMAIN-SUFFIX,doubleclick.net,Proxies
+    - DOMAIN-SUFFIX,fanart.tv,Proxies
+    - DOMAIN-SUFFIX,themoviedb.org,Proxies
+    - DOMAIN-SUFFIX,tmdb.org,Proxies
+    - DOMAIN-SUFFIX,thetvdb.com,Proxies
+    - DOMAIN-SUFFIX,omdbapi.com,Proxies
+    - DOMAIN-SUFFIX,nvidia.com,Proxies
+    - DOMAIN-SUFFIX,nvidia.cn,Proxies
+    - DOMAIN-SUFFIX,geforce.com,Proxies
+    - DOMAIN-SUFFIX,geforce.cn,Proxies
+    - DOMAIN-SUFFIX,bing.com,Proxies
+    - DOMAIN-SUFFIX,ndmdhs.com,Proxies
+    - DOMAIN-SUFFIX,tiktokv.com,Proxies
+    - DOMAIN-SUFFIX,twimg.com,Proxies
+    - DOMAIN-SUFFIX,twitter.com,Proxies
+    - DOMAIN-SUFFIX,openai.com,Proxies
+    - DOMAIN-SUFFIX,googlevideo.com,0.2X Auto
+    - DOMAIN-SUFFIX,chatgpt.com,Proxies
+    - DOMAIN-SUFFIX,googletagmanager.com,Proxies
+    - DOMAIN-SUFFIX,googleadservices.com,Proxies
+    - DOMAIN-SUFFIX,google.com,Proxies
+    - DOMAIN-SUFFIX,google-analytics.com,Proxies
+    - IP-CIDR,10.0.0.1/32,Proxies,no-resolve
+#直连
+    - DOMAIN,time.windows.com,DIRECT
+    - DOMAIN,time.apple.com,DIRECT
+    - DOMAIN,clash.razord.top,DIRECT
+    - DOMAIN,yacd.haishan.me,DIRECT
+    - DOMAIN,tophub.today,DIRECT
+    - DOMAIN,ipv4.ddnspod.com,DIRECT
+    - DOMAIN,pv.sohu.com,DIRECT
+    - DOMAIN,ipv6-test.com,DIRECT
+    - DOMAIN,maps.weather.gov.hk,DIRECT
+    - DOMAIN-KEYWORD,synology,DIRECT
+    - DOMAIN-KEYWORD,quickconnect,DIRECT
+    - DOMAIN-KEYWORD,speedtest,DIRECT
+    - DOMAIN-KEYWORD,aliyun,DIRECT
+    - DOMAIN-KEYWORD,yuheng,DIRECT
+    - DOMAIN-KEYWORD,yqc-premium,DIRECT
+    - DOMAIN-SUFFIX,amemv.com,DIRECT
+    - DOMAIN-SUFFIX,baidu.com,DIRECT
+    - DOMAIN-SUFFIX,bcebos.com,DIRECT
+    - DOMAIN-SUFFIX,ooklaserver.net,DIRECT
+    - DOMAIN-SUFFIX,time.is,DIRECT
+    - DOMAIN-SUFFIX,edu.cn,DIRECT
+    - DOMAIN-SUFFIX,test-ipv6.com,DIRECT
+    - DOMAIN-SUFFIX,gofile.me,DIRECT
+    - DOMAIN-SUFFIX,xiaozhaji.com,DIRECT
+    - DOMAIN-SUFFIX,pool.ntp.org,DIRECT
+    - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
+    - DOMAIN-SUFFIX,msftncsi.com,DIRECT
+    - DOMAIN-SUFFIX,luciaz.me,DIRECT
+    - DOMAIN-SUFFIX,ruanmei.com,DIRECT
+    - DOMAIN-SUFFIX,91sotu.com,DIRECT
+    - DOMAIN-SUFFIX,momoyu.cc,DIRECT
+    - DOMAIN-SUFFIX,qx121.com,DIRECT
+    - DOMAIN-SUFFIX,qweather.com,DIRECT
+    - DOMAIN-SUFFIX,qweather.net,DIRECT
+    - DOMAIN-SUFFIX,ip138.com,DIRECT
+    - DOMAIN-SUFFIX,xsool.com,DIRECT
+    - DOMAIN-SUFFIX,ymtc.com,DIRECT
+    - DOMAIN-SUFFIX,ones.ai,DIRECT
+    - DOMAIN-SUFFIX,tlink.io,DIRECT
+    - DOMAIN-SUFFIX,fkw.com,DIRECT
+    - DOMAIN-SUFFIX,faiusr.com,DIRECT
+    - DOMAIN-SUFFIX,faisys.com,DIRECT
+    - DOMAIN-SUFFIX,51yuansu.com,DIRECT
+    - DOMAIN-SUFFIX,ibaotu.com,DIRECT
+    - DOMAIN-SUFFIX,aigei.com,DIRECT
+    - DOMAIN-SUFFIX,csvsc.com,DIRECT
+    - DOMAIN-SUFFIX,lookae.com,DIRECT
+    - DOMAIN-SUFFIX,didixk.com,DIRECT
+    - DOMAIN-SUFFIX,gfxcamp.com,DIRECT
+    - DOMAIN-SUFFIX,c4dsky.com,DIRECT
+    - DOMAIN-SUFFIX,kujiale.com,DIRECT
+    - DOMAIN-SUFFIX,dancf.com,DIRECT
+    - DOMAIN-SUFFIX,zhongguose.com,DIRECT
+    - DOMAIN-SUFFIX,eduwest.com,DIRECT
+    - DOMAIN-SUFFIX,utv4d.com,DIRECT
+    - DOMAIN-SUFFIX,btbat.com,DIRECT
+    - DOMAIN-SUFFIX,lizhi.io,DIRECT
+    - DOMAIN-SUFFIX,lizhi.shop,DIRECT
+    - DOMAIN-SUFFIX,codelife.cc,DIRECT
+    - DOMAIN-SUFFIX,xiayigejiaqi.com,DIRECT
+    - DOMAIN-SUFFIX,ipchaxun.net,DIRECT
+    - DOMAIN-SUFFIX,lesignstatic.com,DIRECT
+    - DOMAIN-SUFFIX,jin10.com,DIRECT
+    - DOMAIN-SUFFIX,ladydaily.com,DIRECT
+    - DOMAIN-SUFFIX,lusun.com,DIRECT
+    - DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+    - DOMAIN-SUFFIX,zjcdn.com,DIRECT
+    - DOMAIN-SUFFIX,douyincdn.com,DIRECT
+    - DOMAIN-SUFFIX,ghproxy.com,DIRECT
+    - DOMAIN-SUFFIX,alipay.com,DIRECT
+    - DOMAIN-SUFFIX,xhscdn.net,DIRECT
+    - DOMAIN-SUFFIX,qq.com,DIRECT
+    - DOMAIN-SUFFIX,ithome.com,DIRECT
+    - DOMAIN-SUFFIX,zxinc.org,DIRECT
+    - DOMAIN-SUFFIX,ipinfo.io,DIRECT
+    - DOMAIN-SUFFIX,ip.sb,DIRECT
+    - DOMAIN-SUFFIX,ipip.net,DIRECT
+    - DOMAIN-SUFFIX,whatshub.top,DIRECT
+# > IP反追踪 抖音
+    - DOMAIN-SUFFIX,amemv.com,DIRECT
+    - DOMAIN-SUFFIX,zijieapi.com,DIRECT
+# > 苹果服务
+    - IP-ASN,6185,Proxies
+    - IP-ASN,714,Proxies
+#调用规则集
+    - RULE-SET,Apple,DIRECT
+# > Microsoft
     - RULE-SET,Microsoft,Proxies
+# > Telegram
     - RULE-SET,Telegram,Proxies
-    #- RULE-SET,GFW,Proxies
-    - RULE-SET,GeoIPSite,Proxies
-    - RULE-SET,GeoIPGlobal,Proxies
-    #- GEOIP,CN,DIRECT,no-resolve
-    - MATCH,DIRECT
+# > 社交平台
+    - RULE-SET,Twitter,Proxies
+    - RULE-SET,Instagram,Proxies
+    - RULE-SET,Facebook,Proxies
+# > 流媒体
+    - RULE-SET,Netflix,0.2X Auto
+    - RULE-SET,YouTube,0.2X Auto
+# > 谷歌服务
+    - RULE-SET,Google,Proxies
+# > Proxy
+    - RULE-SET,Proxy,Proxies
+# > 局域网
+    - RULE-SET,Lan,DIRECT
+# > ChinaMax
+    - RULE-SET,ChinaMax,DIRECT
+# > 无任何规则匹配走 Final 规则
+    - MATCH,Proxies
