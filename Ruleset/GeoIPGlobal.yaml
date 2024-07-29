@@ -1,200 +1,200 @@
 payload:
-# GEOIP全球
+#  GEOIP全球
 # ⬇️指定地区
 
-  - GEOIP,jp
-  - GEOIP,kr
-  - GEOIP,hk
-  - GEOIP,tw
-  - GEOIP,sg
-  - GEOIP,us
+  - GEOIP,JP
+  - GEOIP,KR
+  - GEOIP,HK
+  - GEOIP,TW
+  - GEOIP,SG
+  - GEOIP,US
 
 # ⬇️东亚
 
-  - GEOIP,kp
-  - GEOIP,mn
+  - GEOIP,KP
+  - GEOIP,MN
 
 # ⬇️东南亚
 
-  - GEOIP,mo
-  - GEOIP,la
-  - GEOIP,mm
-  - GEOIP,vn
-  - GEOIP,th
-  - GEOIP,ph
-  - GEOIP,id
-  - GEOIP,my
-  - GEOIP,tl
+  - GEOIP,MO
+  - GEOIP,LA
+  - GEOIP,MM
+  - GEOIP,VN
+  - GEOIP,TH
+  - GEOIP,PH
+  - GEOIP,ID
+  - GEOIP,MY
+  - GEOIP,TL
 
 # ⬇️南亚
 
-  - GEOIP,bd
-  - GEOIP,bn
-  - GEOIP,bt
-  - GEOIP,cc
-  - GEOIP,cx
-  - GEOIP,in
-  - GEOIP,kh
-  - GEOIP,lk
-  - GEOIP,mv
-  - GEOIP,np
+  - GEOIP,BD
+  - GEOIP,BN
+  - GEOIP,BT
+  - GEOIP,CC
+  - GEOIP,CX
+  - GEOIP,IN
+  - GEOIP,KH
+  - GEOIP,LK
+  - GEOIP,MV
+  - GEOIP,NP
 
 # ⬇️中亚
 
-  - GEOIP,kg
-  - GEOIP,kz
-  - GEOIP,pk
-  - GEOIP,tm
-  - GEOIP,tj
-  - GEOIP,uz
+  - GEOIP,KG
+  - GEOIP,KZ
+  - GEOIP,PK
+  - GEOIP,TM
+  - GEOIP,TJ
+  - GEOIP,UZ
 
 
 # ⬇️西亚
 
-  - GEOIP,af
-  - GEOIP,az
-  - GEOIP,bh
-  - GEOIP,il
-  - GEOIP,ir
-  - GEOIP,iq
-  - GEOIP,jo
-  - GEOIP,kw
-  - GEOIP,lb
-  - GEOIP,om
-  - GEOIP,qa
-  - GEOIP,sa
-  - GEOIP,sy
-  - GEOIP,ye
+  - GEOIP,AF
+  - GEOIP,AZ
+  - GEOIP,BN
+  - GEOIP,IL
+  - GEOIP,IR
+  - GEOIP,IQ
+  - GEOIP,JO
+  - GEOIP,KW
+  - GEOIP,LB
+  - GEOIP,OM
+  - GEOIP,QA
+  - GEOIP,SA
+  - GEOIP,SY
+  - GEOIP,YE
 
 # ⬇️大洋洲
 
-  - GEOIP,au
-  - GEOIP,ck
-  - GEOIP,fj
-  - GEOIP,fm
-  - GEOIP,gu
-  - GEOIP,ki
-  - GEOIP,mh
-  - GEOIP,nr
-  - GEOIP,nu
-  - GEOIP,nz
-  - GEOIP,pw
-  - GEOIP,pg
-  - GEOIP,pn
-  - GEOIP,sb
-  - GEOIP,to
-  - GEOIP,tv
-  - GEOIP,vu
+  - GEOIP,AU
+  - GEOIP,CK
+  - GEOIP,FJ
+  - GEOIP,FM
+  - GEOIP,GU
+  - GEOIP,KI
+  - GEOIP,MH
+  - GEOIP,NR
+  - GEOIP,NU
+  - GEOIP,NZ
+  - GEOIP,PW
+  - GEOIP,PG
+  - GEOIP,PN
+  - GEOIP,SB
+  - GEOIP,TO
+  - GEOIP,TV
+  - GEOIP,VU
 
 # ⬇️欧洲
 
-  - GEOIP,ad
-  - GEOIP,al
-  - GEOIP,am
-  - GEOIP,at
-  - GEOIP,ax
-  - GEOIP,ba
-  - GEOIP,be
-  - GEOIP,bg
-  - GEOIP,by
-  - GEOIP,ch
-  - GEOIP,cy
-  - GEOIP,cz
-  - GEOIP,de
-  - GEOIP,dk
-  - GEOIP,ee
-  - GEOIP,es
-  - GEOIP,fi
-  - GEOIP,fr
-  - GEOIP,gb
-  - GEOIP,ge
-  - GEOIP,gr
-  - GEOIP,hr
-  - GEOIP,hu
-  - GEOIP,ie
-  - GEOIP,is
-  - GEOIP,it
-  - GEOIP,lv
-  - GEOIP,lt
-  - GEOIP,lu
-  - GEOIP,mk
-  - GEOIP,mt
-  - GEOIP,nl
-  - GEOIP,no
-  - GEOIP,pl
-  - GEOIP,pt
-  - GEOIP,ro
-  - GEOIP,ru
-  - GEOIP,se
-  - GEOIP,si
-  - GEOIP,sj
-  - GEOIP,sk
-  - GEOIP,tr
-  - GEOIP,ua
+  - GEOIP,AD
+  - GEOIP,AL
+  - GEOIP,AM
+  - GEOIP,AT
+  - GEOIP,AX
+  - GEOIP,BA
+  - GEOIP,BE
+  - GEOIP,BG
+  - GEOIP,BY
+  - GEOIP,CH
+  - GEOIP,CY
+  - GEOIP,CZ
+  - GEOIP,DE
+  - GEOIP,DK
+  - GEOIP,EE
+  - GEOIP,ES
+  - GEOIP,FI
+  - GEOIP,FR
+  - GEOIP,GB
+  - GEOIP,GE
+  - GEOIP,GR
+  - GEOIP,HR
+  - GEOIP,HU
+  - GEOIP,IE
+  - GEOIP,IS
+  - GEOIP,IT
+  - GEOIP,LV
+  - GEOIP,LT
+  - GEOIP,LU
+  - GEOIP,MK
+  - GEOIP,MT
+  - GEOIP,NL
+  - GEOIP,NO
+  - GEOIP,PL
+  - GEOIP,PT
+  - GEOIP,RO
+  - GEOIP,RU
+  - GEOIP,SE
+  - GEOIP,SI
+  - GEOIP,SJ
+  - GEOIP,SK
+  - GEOIP,TR
+  - GEOIP,UA
 
 # ⬇️北美洲
 
-  - GEOIP,ca
-  - GEOIP,mx
-  - GEOIP,tt
+  - GEOIP,CA
+  - GEOIP,MX
+  - GEOIP,TT
 
 # ⬇️南美洲
 
-  - GEOIP,ar
-  - GEOIP,bo
-  - GEOIP,br
-  - GEOIP,cl
-  - GEOIP,co
-  - GEOIP,ec
-  - GEOIP,gf
-  - GEOIP,gy
-  - GEOIP,pe
+  - GEOIP,AR
+  - GEOIP,BO
+  - GEOIP,BR
+  - GEOIP,CL
+  - GEOIP,CO
+  - GEOIP,EC
+  - GEOIP,GF
+  - GEOIP,GY
+  - GEOIP,PE
 
 # ⬇️非洲
 
-  - GEOIP,ao
-  - GEOIP,bj
-  - GEOIP,bw
-  - GEOIP,cd
-  - GEOIP,cg
-  - GEOIP,ci
-  - GEOIP,cm
-  - GEOIP,dz
-  - GEOIP,eg
-  - GEOIP,gq
-  - GEOIP,ga
-  - GEOIP,gm
-  - GEOIP,gh
-  - GEOIP,gn
-  - GEOIP,gw
-  - GEOIP,ke
-  - GEOIP,ls
-  - GEOIP,lr
-  - GEOIP,ly
-  - GEOIP,ma
-  - GEOIP,mg
-  - GEOIP,ml
-  - GEOIP,mr
-  - GEOIP,mw
-  - GEOIP,mz
-  - GEOIP,na
-  - GEOIP,ne
-  - GEOIP,ng
-  - GEOIP,rw
-  - GEOIP,sc
-  - GEOIP,sd
-  - GEOIP,sl
-  - GEOIP,so
-  - GEOIP,sn
-  - GEOIP,st
-  - GEOIP,sz
-  - GEOIP,tg
-  - GEOIP,tn
-  - GEOIP,tz
-  - GEOIP,ug
-  - GEOIP,za
-  - GEOIP,zw
+  - GEOIP,AO
+  - GEOIP,BJ
+  - GEOIP,BW
+  - GEOIP,CD
+  - GEOIP,CG
+  - GEOIP,CI
+  - GEOIP,CM
+  - GEOIP,DZ
+  - GEOIP,EG
+  - GEOIP,GQ
+  - GEOIP,GA
+  - GEOIP,GM
+  - GEOIP,GH
+  - GEOIP,GN
+  - GEOIP,GW
+  - GEOIP,KE
+  - GEOIP,LS
+  - GEOIP,LR
+  - GEOIP,LY
+  - GEOIP,MA
+  - GEOIP,MG
+  - GEOIP,ML
+  - GEOIP,MR
+  - GEOIP,MW
+  - GEOIP,MZ
+  - GEOIP,NA
+  - GEOIP,NE
+  - GEOIP,NG
+  - GEOIP,RW
+  - GEOIP,SC
+  - GEOIP,SD
+  - GEOIP,SL
+  - GEOIP,SO
+  - GEOIP,SN
+  - GEOIP,ST
+  - GEOIP,SZ
+  - GEOIP,TG
+  - GEOIP,TN
+  - GEOIP,TZ
+  - GEOIP,UG
+  - GEOIP,ZA
+  - GEOIP,ZW
 
 # ⬇️南极洲
 
-  - GEOIP,aq
+  - GEOIP,AQ
