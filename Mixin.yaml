@@ -1,9 +1,0 @@
-# 使用Mixin重写原始配置文件
-mixin: # 注意下面缩进
-  tun:
-    enable: true
-    stack: gvisor
-    auto-route: true
-    auto-detect-interface: true
-    dns-hijack:
-      - any:53
