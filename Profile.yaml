@@ -3,30 +3,39 @@ socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
 allow-lan: false
-mode: Rule
+mode: rule
 log-level: info
 ipv6: true
-hosts: null
+# > 开启统一延迟时，会计算 RTT ，以消除连接握手等带来的不同类型节点的延迟差异
+unified-delay: true
+# > TCP 并发
+tcp-concurrent: true
+# > 更改 geoip 使用文件，mmdb 或者 dat，可选 true/false,true为 dat，此项有默认值 false
+geodata-mode: false
+# > 可选的加载模式如下 > standard：标准加载器 | memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geodata-loader: standard
+# > 自动更新 GEO
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip.dat"
+  mmdb: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb"
 dns:
     enable: true
     ipv6: true
     listen: '0.0.0.0:1053'
     use-hosts: true
     default-nameserver: [223.5.5.5, 119.29.29.29, 1.0.0.1]
-    nameserver: [192.168.1.1]
+    nameserver: [system]
     fake-ip-range: 198.18.0.1/16
     fake-ip-filter: ['*.lan', '*.localdomain', '*.example', '*.invalid', '*.localhost', '*.test', '*.local', '*.home.arpa', 'time.*.com', 'time.*.gov', 'time.*.edu.cn', 'time.*.apple.com', 'time1.*.com', 'time2.*.com', 'time3.*.com', 'time4.*.com', 'time5.*.com', 'time6.*.com', 'time7.*.com', 'ntp.*.com', 'ntp1.*.com', 'ntp2.*.com', 'ntp3.*.com', 'ntp4.*.com', 'ntp5.*.com', 'ntp6.*.com', 'ntp7.*.com', '*.time.edu.cn', '*.ntp.org.cn', +.pool.ntp.org, time1.cloud.tencent.com, 'stun.*.*', 'stun.*.*.*', swscan.apple.com, mesu.apple.com, music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, localhost.ptlogin2.qq.com, '*.msftconnecttest.com', '*.msftncsi.com', '*.xiami.com', '*.music.migu.cn', music.migu.cn, +.wotgame.cn, +.wggames.cn, +.wowsgame.cn, +.wargaming.net, '*.*.*.srv.nintendo.net', '*.*.stun.playstation.net', 'xbox.*.*.microsoft.com', '*.*.xboxlive.com', '*.ipv6.microsoft.com', 'teredo.*.*.*', 'teredo.*.*', speedtest.cros.wr.pvp.net, +.jjvip8.com, www.douyu.com, activityapi.huya.com, activityapi.huya.com.w.cdngslb.com, www.bilibili.com, api.bilibili.com, a.w.bilicdn1.com]
 external-controller: '127.0.0.1:9090'
-clash-for-android:
-    append-system-dns: false
-experimental:
-  sniff-tls-sni: true
 proxy-providers:
   MESL-Nodelist:
     type: http
     path: ./profiles/proxies/MESL-Nodelist.yaml
     url: https://
-    interval: 300
+    interval: 3600
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
@@ -35,7 +44,7 @@ proxy-providers:
     type: http
     path: ./profiles/proxies/0.2X.yaml
     url: https://
-    interval: 300
+    interval: 3600
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
@@ -44,16 +53,16 @@ proxy-providers:
     type: http
     path: ./profiles/proxies/WB-Nodelist.yaml
     url: https://
-    interval: 300
+    interval: 3600
     health-check:
       enable: true
       url: http://cp.cloudflare.com/generate_204
       interval: 300
 proxy-groups:
     - { name: Proxies, type: select, proxies: [MESL, WB, 0.2X Auto, DIRECT] }
-    - { name: MESL, type: select, url: http://cp.cloudflare.com/generate_204, Interval: 3600, use: [MESL-Nodelist], proxies: [] }
+    - { name: MESL, type: select, url: http://cp.cloudflare.com/generate_204, Interval: 300, use: [MESL-Nodelist], proxies: [] }
     - { name: 0.2X Auto, type: url-test, url: http://cp.cloudflare.com/generate_204, interval: 300, use: [0.2X], proxies: [] }
-    - { name: WB, type: select, url: http://cp.cloudflare.com/generate_204, Interval: 3600, use: [WB-Nodelist], proxies: [] }
+    - { name: WB, type: select, url: http://cp.cloudflare.com/generate_204, Interval: 300, use: [WB-Nodelist], proxies: [] }
     - { name: Adobe, type: select, proxies: [REJECT, Proxies, DIRECT] }
 rule-providers:
     Apple: { type: http, behavior: classical, url: 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml', interval: 86400, path: ./Apple.yaml }
@@ -144,6 +153,8 @@ rules:
     - DOMAIN-SUFFIX,google.com,Proxies
     - DOMAIN-SUFFIX,google-analytics.com,Proxies
     - DOMAIN-SUFFIX,githubusercontent.com,Proxies
+    - DOMAIN-SUFFIX,ipinfo.io,Proxies
+    - DOMAIN-SUFFIX,ip.sb,Proxies
     - IP-CIDR,10.0.0.1/32,Proxies,no-resolve
 # > 直连
     - DOMAIN,time.windows.com,DIRECT
@@ -220,16 +231,14 @@ rules:
     - DOMAIN-SUFFIX,qq.com,DIRECT
     - DOMAIN-SUFFIX,ithome.com,DIRECT
     - DOMAIN-SUFFIX,zxinc.org,DIRECT
-    - DOMAIN-SUFFIX,ipinfo.io,DIRECT
-    - DOMAIN-SUFFIX,ip.sb,DIRECT
     - DOMAIN-SUFFIX,ipip.net,DIRECT
     - DOMAIN-SUFFIX,whatshub.top,DIRECT
 # > IP反追踪 抖音
     - DOMAIN-SUFFIX,amemv.com,DIRECT
     - DOMAIN-SUFFIX,zijieapi.com,DIRECT
 # > 苹果服务ASN
-    - IP-ASN,6185,Proxies
-    - IP-ASN,714,Proxies
+    - IP-ASN,6185,Proxies,no-resolve
+    - IP-ASN,714,Proxies,no-resolve
 # > 调用规则集
 # > 苹果服务
     - RULE-SET,Apple,DIRECT
@@ -251,6 +260,8 @@ rules:
 # > 局域网
     - RULE-SET,Lan,DIRECT
 # > ChinaMax
-    - RULE-SET,ChinaMax,DIRECT
+    - RULE-SET,ChinaMax,DIRECT,no-resolve
+# > GEOIP 补全
+    - GEOIP, CN, DIRECT
 # > 无任何规则匹配走 Final 规则
     - MATCH,Proxies
